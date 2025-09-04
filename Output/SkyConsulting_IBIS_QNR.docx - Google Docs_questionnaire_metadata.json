@@ -1,0 +1,636 @@
+[
+  {
+    "question_code": "S1_RECODE",
+    "question_text": "Age groups",
+    "type": "single",
+    "possible_answers": {
+      "1": "18-34",
+      "2": "35-54",
+      "3": "55+"
+    },
+    "recode_from": [
+      "S1"
+    ]
+  },
+  {
+    "question_code": "U3",
+    "question_text": "Among the following list, at which hotel brand(s) belonging to the affordable category did you stay over the past 12 months?",
+    "type": "multi",
+    "possible_answers": {
+      "98": "Other",
+      "99": "None of the above"
+    }
+  },
+  {
+    "question_code": "U3_RECODE",
+    "question_text": "Answers from U3",
+    "type": "single",
+    "possible_answers": {
+      "1": "Ibis",
+      "2": "Accor",
+      "3": "Competition"
+    },
+    "recode_from": [
+      "U3"
+    ]
+  },
+  {
+    "question_code": "U5_RECODE",
+    "question_text": "Occasion type",
+    "type": "single",
+    "possible_answers": {
+      "1": "Personal",
+      "2": "Professional"
+    },
+    "recode_from": [
+      "U5"
+    ]
+  },
+  {
+    "question_code": "U6",
+    "question_text": "Among the following stays you mentioned, please select the most recent 3 ones?",
+    "type": "multi",
+    "possible_answers": {}
+  },
+  {
+    "question_code": "U6_RECODE",
+    "question_text": "Occasion recode",
+    "type": "single",
+    "possible_answers": {
+      "1": "Occasion 1",
+      "2": "Occasion 2",
+      "3": "Occasion 3"
+    },
+    "recode_from": [
+      "U6"
+    ]
+  },
+  {
+    "question_code": "U7",
+    "question_text": "Apart from hotels, which accommodation type(s) have you used for each of the following occasions, during the last 12 months?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "All-inclusive resort",
+      "2": "Hostel / youth hostel",
+      "3": "Serviced apartment",
+      "4": "Short-term rental (e.g. Airbnb) or home sharing",
+      "5": "Serviced Bed & Breakfast or guesthouse (e.g. Gîtes de France)",
+      "6": "Caravan / camping",
+      "7": "Stayed with friends or family",
+      "8": "Other",
+      "9": "None of these"
+    }
+  },
+  {
+    "question_code": "U9",
+    "question_text": "Who did you travel with on each of the following occasions?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Solo trip",
+      "2": "Couple trip without children",
+      "3": "Child / children",
+      "4": "Friends",
+      "5": "Family (other than couple or children)",
+      "6": "Colleagues / professional partners or peers",
+      "7": "Pet(s)",
+      "8": "Other"
+    }
+  },
+  {
+    "question_code": "U15",
+    "question_text": "For each of the following occasions, which channel(s) do you usually use to book a hotel stay?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Hotel official website/application",
+      "2": "Phone call to the hotel",
+      "3": "Websites for booking (e.g. Booking.com, [customized list by country from \"Top3 Booking Websites by Country\" file]...)",
+      "4": "Travel agency",
+      "5": "Hotel loyalty programme/application",
+      "6": "Others"
+    }
+  },
+  {
+    "question_code": "D1",
+    "question_text": "For each of the following occasions, what are the most important criteria when you choose a hotel belonging to the affordable category, such as [brands examples customized by country]?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Price",
+      "2": "Hotels approved by my company",
+      "3": "Localization",
+      "4": "Accessibility",
+      "5": "View",
+      "6": "Cleanliness",
+      "7": "Comfortable bedding",
+      "8": "Quiet/soundproofing",
+      "9": "Welcoming staff / atmosphere",
+      "10": "Staff presence",
+      "11": "High number of floors for security purposes",
+      "12": "Security staff",
+      "13": "High-speed Wi-Fi",
+      "14": "Qualitative breakfast",
+      "15": "Breakfast included",
+      "16": "Flexible cancellation",
+      "17": "Good value for money",
+      "18": "Online reviews",
+      "19": "Design/decoration/aesthetics",
+      "20": "Environmental responsibility",
+      "21": "Loyalty programme",
+      "22": "No additional fees for single travelers",
+      "23": "Room service/delivery",
+      "24": "Spacious rooms",
+      "25": "Contactless service",
+      "26": "Family rooms / interconnecting rooms",
+      "27": "Self/easy check-in",
+      "28": "Self/late check-out",
+      "29": "Promotions, discounts",
+      "30": "Facilities and services (spa, gym, bar/restaurant, parking...)",
+      "31": "Reliable infrastructures and risk prevention (fire alarm, clear evacuation maps...)",
+      "32": "Hotel brand reputation",
+      "33": "Remote work facilities available (e.g., printing, desk space)",
+      "34": "Co-working spaces available within the hotel",
+      "35": "Services dedicated to Children (Children's play kits, dedicated play space inside the hotel",
+      "36": "Robots used for guest servicing",
+      "37": "Very large TV screen in room",
+      "38": "Option to stream content from your smartphone to the TV (e.g., Netflix, personal accounts)",
+      "39": "Others, please, specify:"
+    }
+  },
+  {
+    "question_code": "D2",
+    "question_text": "Where was your hotel belonging to the affordable category, such as [brands examples customized by country], located on each of the following occasions?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Near transportation (e.g. public transports, taxis...)",
+      "2": "Near airport / train station",
+      "3": "In the city center",
+      "4": "In my family / friends' neighborhood",
+      "5": "Near shopping malls",
+      "6": "Near other places of interests (e.g. cultural sites, tourist attractions, beach...)",
+      "7": "Other"
+    }
+  },
+  {
+    "question_code": "D3",
+    "question_text": "On each of the following occasions, which main facilities and services do you expect to find at the hotels belonging to the affordable category, such as [brands examples customized by country], you usually stay at?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Gym room/Fitness classes",
+      "2": "Sport facilities (golf, tennis...)",
+      "3": "Swimming pool",
+      "4": "Spa (hammam, sauna, massages...)",
+      "5": "On-site restaurant",
+      "6": "Bar/rooftop",
+      "7": "Breakfast included",
+      "8": "Room service",
+      "9": "View/terrace in my room",
+      "10": "Children's services (kids club, baby-sitting)",
+      "11": "Play area for children",
+      "12": "Child-free hotels",
+      "13": "Pet-free hotels",
+      "14": "External activity booking services",
+      "15": "Restaurant recommendation/reservation",
+      "16": "Pets allowed (with affordable cost)",
+      "17": "Technological equipment (e.g. tablet, portable monitor...)",
+      "18": "Multiple web connectivity in rooms",
+      "19": "Spaces to socialise",
+      "20": "Appropriate background music",
+      "21": "Themed design",
+      "22": "Proximity to transportation (airport, taxi, public transportation, etc.)",
+      "23": "Secured parking",
+      "24": "Courtesy products/accessories",
+      "25": "Working spaces",
+      "26": "Meeting rooms",
+      "27": "Other, please specify:"
+    }
+  },
+  {
+    "question_code": "D4",
+    "question_text": "What are the most important room comfort features you consider when choosing a hotel belonging to the affordable category, such as [brands examples customized by country], on each following occasion?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Double bed (King-size - Queen size)",
+      "2": "Bed size",
+      "3": "Comfortable bed and quality bedding",
+      "4": "Cleanliness of the room and bathroom",
+      "5": "Air conditioning / heating",
+      "6": "Soundproofing (quiet room)",
+      "7": "Furniture for storage (drawers, closet, wardrobe, luggage rack...)",
+      "8": "Desk or workspace",
+      "9": "Bathroom amenities availability",
+      "10": "Hairdryer",
+      "11": "Free high-speed Wi-Fi",
+      "12": "Safe / locker for valuables",
+      "13": "Many power outlets (incl. USB), especially nearby the bed",
+      "14": "Coffee maker with capsules / kettle with tea supplies",
+      "15": "Welcome amenities (such as bottled water or snacks)",
+      "16": "Other, please specify:"
+    }
+  },
+  {
+    "question_code": "D6",
+    "question_text": "What type of experiences do you mainly look for in a hotel belonging to the affordable category, such as [brands examples customized by country], on each following occasion?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Standard comfort (bedding, silence, cleanliness)",
+      "2": "Essential, with no frills",
+      "3": "Discover local culture",
+      "4": "Warm and friendly atmosphere",
+      "5": "Rest, relaxation and Wellness (spa...)",
+      "6": "Natural/Green atmosphere",
+      "7": "Luxury and refinement",
+      "8": "On-site activities (sports, entertainment, excursions, etc.)",
+      "9": "Gastronomy or regional specialties",
+      "10": "Inspiring design / décor",
+      "11": "Photogenic/Instagrammable locations",
+      "12": "Meetings/socializing/night life",
+      "13": "Escape and disconnection",
+      "14": "Family-friendly experiences (kids club, family activities...)",
+      "15": "Other, please specify:"
+    }
+  },
+  {
+    "question_code": "D7",
+    "question_text": "What do you want to experience during a hotel stay in a hotel belonging to the affordable category, such as [brands examples customized by country], on each following occasion?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Serenity/calm",
+      "2": "Joy/good humor",
+      "3": "Surprise/wonder",
+      "4": "Relaxation/release",
+      "5": "Being pampered/privileged/unique",
+      "6": "Feeling successful/self-confident",
+      "7": "Freedom",
+      "8": "Autonomy/Independence",
+      "9": "Social Connection with Others and fun",
+      "10": "Inspiration/creativity",
+      "11": "Security/confidence",
+      "12": "Nostalgia",
+      "13": "Family Comfort",
+      "14": "Feeling at ease/at home",
+      "15": "Excitement/adventure",
+      "16": "Romance & intimacy",
+      "17": "Other, please specify:"
+    }
+  },
+  {
+    "question_code": "D8",
+    "question_text": "What style or aesthetics do you find most appealing when choosing a hotel belonging to the affordable category, such as [brands examples customized by country]?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Modern and minimalist Clean lines, functional spaces and simple design focused on practicality.",
+      "2": "Colourful and creative Vibrant interiors with playful themes and unique, artistic decor.",
+      "3": "Contemporary and cozy Comfortable, modern spaces with a warm and inviting feel.",
+      "4": "Trendy and urban Stylish design with an energetic, city-inspired vibe.",
+      "5": "Nature-inspired and calming Design elements inspired by natural materials, light colors, and relaxing atmospheres.",
+      "6": "Classic and elegant Timeless décor with refined details and a more traditional ambiance.",
+      "7": "Luxury and sophistication High-end finishes, upscale materials, and attention to detail.",
+      "8": "High-tech & futuristic Cutting-edge with a futuristic design, offering guests a smart and stylish stay through advanced technology.",
+      "9": "Eco-friendly Recycled materials used and environmentally conscious choices to offer guests a sustainable and comfortable stay.",
+      "10": "Local Architecture and décor inspired by the regional / local heritage.",
+      "98": "I don't have any preference"
+    }
+  },
+  {
+    "question_code": "B1",
+    "question_text": "Among hotels belonging to the affordable category you stayed at in the last 12 months, please select all brands that fit your criteria for choosing hotels.",
+    "type": "multi",
+    "possible_answers": {}
+  },
+  {
+    "question_code": "B2",
+    "question_text": "What were the main reasons for choosing to stay at a [BRAND] hotel in the past 12 months?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Price",
+      "2": "Hotels approved by my company",
+      "3": "Localization",
+      "4": "Accessibility",
+      "5": "View",
+      "6": "Cleanliness",
+      "7": "Comfortable bedding",
+      "8": "Quiet/soundproofing",
+      "9": "Welcoming staff / atmosphere",
+      "10": "Staff presence",
+      "11": "High number of floors for security purposes",
+      "12": "Security staff",
+      "13": "High-speed Wi-Fi",
+      "14": "Qualitative breakfast",
+      "15": "Breakfast included",
+      "16": "Flexible cancellation",
+      "17": "Good value for money",
+      "18": "Online reviews",
+      "19": "Design/decoration/aesthetics",
+      "20": "Environmental responsibility",
+      "21": "Loyalty programme",
+      "22": "No additional fees for single travelers",
+      "23": "Room service/delivery",
+      "24": "Spacious rooms",
+      "25": "Contactless service",
+      "26": "Family rooms / interconnecting rooms",
+      "27": "Self/easy check-in",
+      "28": "Self/late check-out",
+      "29": "Promotions, discounts",
+      "30": "Facilities and services (spa, gym, bar/restaurant, parking...)",
+      "31": "Reliable infrastructures and risk prevention (fire alarm, clear evacuation maps...)",
+      "32": "Hotel brand reputation",
+      "33": "Remote work facilities available (e.g., printing, desk space)",
+      "34": "Co-working spaces available within the hotel",
+      "35": "Services dedicated to Children (Children's play kits, dedicated play space inside the hotel",
+      "36": "Robots used for guest servicing",
+      "37": "Very large TV screen in room",
+      "38": "Option to stream content from your smartphone to the TV (e.g., Netflix, personal accounts)",
+      "39": "Others, please, specify:"
+    }
+  },
+  {
+    "question_code": "B3",
+    "question_text": "For which reason(s) did you not choose to stay at an ibis (ibis brands list to be customized per country: ibis, ibis budget, ibis Styles) hotel, on each following occasions in the last 12 months?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Price higher than my budget",
+      "2": "Breakfast not included",
+      "3": "No rooms available",
+      "4": "No living areas (living room, lounge, etc.)",
+      "5": "No kitchen/kitchenette",
+      "6": "Poor quality bedding",
+      "7": "Negative customer reviews",
+      "8": "Unavailability on desired dates",
+      "9": "Poor localization",
+      "10": "Difficulty of access",
+      "11": "Hidden fees",
+      "12": "Lack of trust in the hotel brand",
+      "13": "Dirtiness",
+      "14": "Lack of security",
+      "15": "Lack of staff presence",
+      "16": "No free cancellation",
+      "17": "Booking difficulty",
+      "18": "No self/fast check-in or check-out",
+      "19": "Uninviting photos",
+      "20": "Outdated/old-fashioned decoration",
+      "21": "Unpleasant service",
+      "22": "Unwelcoming atmosphere",
+      "23": "Missing amenities or services",
+      "24": "Disappointing past experiences",
+      "25": "Loyalty programme not applicable",
+      "26": "I didn't think about the ibis brand",
+      "27": "Other, please specify:"
+    }
+  },
+  {
+    "question_code": "S4_AUS_RECODE",
+    "question_text": "Australian State/Territory",
+    "type": "single",
+    "possible_answers": {
+      "1": "New South Wales",
+      "2": "Victoria",
+      "3": "Queensland",
+      "4": "South Australia",
+      "5": "Western Australia",
+      "6": "Northern Territory",
+      "7": "Tasmania",
+      "8": "Australian Capital Territory (ACT)"
+    },
+    "recode_from": [
+      "S4"
+    ]
+  },
+  {
+    "question_code": "S4_BR_RECODE",
+    "question_text": "Brazilian Region",
+    "type": "single",
+    "possible_answers": {
+      "1": "Norte",
+      "2": "Nordeste",
+      "3": "Sudeste",
+      "4": "Sul",
+      "5": "Centro-Oeste"
+    },
+    "recode_from": [
+      "S4"
+    ]
+  },
+  {
+    "question_code": "S4_FR_RECODE_DPT",
+    "question_text": "French Department",
+    "type": "single",
+    "possible_answers": {
+      "01": "Ain",
+      "02": "Aisne",
+      "03": "Allier",
+      "04": "Alpes de Haute Provence",
+      "05": "Hautes Alpes",
+      "06": "Alpes Maritimes",
+      "07": "Ardèche",
+      "08": "Ardennes",
+      "09": "Ariège",
+      "10": "Aube",
+      "11": "Aude",
+      "12": "Aveyron",
+      "13": "Bouches du Rhône",
+      "14": "Calvados",
+      "15": "Cantal",
+      "16": "Charente",
+      "17": "Charente Maritime",
+      "18": "Cher",
+      "19": "Corrèze",
+      "20": "Corse",
+      "21": "Côte d'Or",
+      "22": "Côtes d'Armor",
+      "23": "Creuse",
+      "24": "Dordogne",
+      "25": "Doubs",
+      "26": "Drôme",
+      "27": "Eure",
+      "28": "Eure-et Loir",
+      "29": "Finistère",
+      "30": "Gard",
+      "31": "Haute-Garonne",
+      "32": "Gers",
+      "33": "Gironde",
+      "34": "Hérault",
+      "35": "Ille-et-Vilaine",
+      "36": "Indre",
+      "37": "Indre-et-Loire",
+      "38": "Isère",
+      "39": "Jura",
+      "40": "Landes",
+      "41": "Loir-et-Cher",
+      "42": "Loire",
+      "43": "Haute-Loire",
+      "44": "Loire-Atlantique",
+      "45": "Loiret",
+      "46": "Lot",
+      "47": "Lot-et-Garonne",
+      "48": "Lozère",
+      "49": "Maine-et-Loire",
+      "50": "Manche",
+      "51": "Marne",
+      "52": "Haute Marne",
+      "53": "Mayenne",
+      "54": "Meurthe-et-Moselle",
+      "55": "Meuse",
+      "56": "Morbihan",
+      "57": "Moselle",
+      "58": "Nièvre",
+      "59": "Nord",
+      "60": "Oise",
+      "61": "Orne",
+      "62": "Pas-de-Calais",
+      "63": "Puy-de-Dôme",
+      "64": "Pyrénées Atlantiques",
+      "65": "Hautes Pyrénées",
+      "66": "Pyrénées Orientales",
+      "67": "Bas Rhin",
+      "68": "Haut Rhin",
+      "69": "Rhône",
+      "70": "Haute Saône",
+      "71": "Saône-et-Loire",
+      "72": "Sarthe",
+      "73": "Savoie",
+      "74": "Haute-Savoie",
+      "75": "Paris",
+      "76": "Seine Maritime",
+      "77": "Seine-et-Marne",
+      "78": "Yvelines",
+      "79": "Deux-Sèvres",
+      "80": "Somme",
+      "81": "Tarn",
+      "82": "Tarn-et-Garonne",
+      "83": "Var",
+      "84": "Vaucluse",
+      "85": "Vendée",
+      "86": "Vienne",
+      "87": "Haute-Vienne",
+      "88": "Vosges",
+      "89": "Yonne",
+      "90": "Territoire de Belfort",
+      "91": "Essonne",
+      "92": "Hauts de Seine",
+      "93": "Seine-St-Denis",
+      "94": "Val de Marne",
+      "95": "Val d'Oise",
+      "98": "2A Corse du Sud",
+      "99": "2B Haute Corse",
+      "00": "no zone"
+    },
+    "recode_from": [
+      "FR_ZIP_CODE"
+    ]
+  },
+  {
+    "question_code": "S4_FR_RECODE_UDA5",
+    "question_text": "French Urban Area",
+    "type": "single",
+    "possible_answers": {
+      "1": "Ile de France",
+      "2": "Nord-Ouest",
+      "3": "Nord Est",
+      "4": "Sud-Ouest",
+      "5": "Sud-Est"
+    },
+    "recode_from": [
+      "S4_FR_RECODE_DPT"
+    ]
+  },
+  {
+    "question_code": "S4_CN_RECODE_2",
+    "question_text": "Chinese City Tier",
+    "type": "single",
+    "possible_answers": {
+      "1": "TIER 1",
+      "2": "TIER 2",
+      "3": "TIER 3"
+    },
+    "recode_from": [
+      "S4"
+    ]
+  },
+  {
+    "question_code": "S4_DE_RECODE",
+    "question_text": "German Region",
+    "type": "single",
+    "possible_answers": {
+      "1": "North",
+      "2": "East",
+      "3": "West",
+      "4": "South"
+    },
+    "recode_from": [
+      "S4"
+    ]
+  },
+  {
+    "question_code": "S4_IN_RECODE",
+    "question_text": "Indian Region",
+    "type": "single",
+    "possible_answers": {
+      "1": "South",
+      "2": "East",
+      "3": "North",
+      "4": "West"
+    },
+    "recode_from": [
+      "S4"
+    ]
+  },
+  {
+    "question_code": "S4_PL_RECODE",
+    "question_text": "Polish Region",
+    "type": "single",
+    "possible_answers": {
+      "1": "Center",
+      "2": "South",
+      "3": "East",
+      "4": "North West",
+      "5": "South West",
+      "6": "North"
+    },
+    "recode_from": [
+      "S4"
+    ]
+  },
+  {
+    "question_code": "S4_UAE_RECODE",
+    "question_text": "UAE Region",
+    "type": "single",
+    "possible_answers": {
+      "1": "Abu Dhabi/Al Ain",
+      "2": "Dubai",
+      "3": "Sharjah",
+      "4": "Others"
+    },
+    "recode_from": [
+      "S4"
+    ]
+  },
+  {
+    "question_code": "S8",
+    "question_text": "What type of media have you used during the past 3 months?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Social networks (Instagram, TikTok, Facebook...)",
+      "2": "Daily/weekly newspaper (printed or digital)",
+      "3": "Weekly/bi-monthly/monthly magazines",
+      "4": "Travel/airline/airport magazines",
+      "5": "Blogs/forums on Internet",
+      "6": "Influencers/trendsetters recommendations",
+      "7": "Travel videos/vlogs on Internet",
+      "8": "Hotel rating/reviews on websites (Booking.com, TripAdvisor, ...)",
+      "9": "Hotel pictures on websites",
+      "10": "Others"
+    }
+  },
+  {
+    "question_code": "S10_RECODE",
+    "question_text": "Household Income Category",
+    "type": "single",
+    "possible_answers": {
+      "1": "Low",
+      "2": "Medium",
+      "3": "High"
+    },
+    "recode_from": [
+      "S10"
+    ]
+  }
+]

@@ -1,0 +1,697 @@
+[
+  {
+    "question_code": "S1",
+    "question_text": "Which of the following insurance products or services do you have? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Auto Insurance",
+      "2": "Homeowners insurance (primary residence)",
+      "3": "Homeowners insurance (secondary residence)",
+      "4": "Valuable possessions insurance",
+      "5": "Flood insurance",
+      "6": "Earthquake insurance",
+      "7": "Renters insurance",
+      "8": "Umbrella protection/Liability coverage",
+      "9": "Roadside assistance/Auto club membership",
+      "10": "Boat insurance",
+      "11": "Recreational vehicle insurance (e.g., motorcycle, RV, ATV, etc.) [A: Recreational vehicle insurance]",
+      "12": "Identity theft insurance",
+      "13": "Life insurance (through work)",
+      "14": "Life insurance (not through work)",
+      "15": "Health insurance (through work)",
+      "16": "Health insurance (not through work)",
+      "17": "Financial planning/Investment services",
+      "18": "Banking/Mortgage services",
+      "0": "None of these"
+    },
+    "subquestions": [
+      "S1_1",
+      "S1_2",
+      "S1_3",
+      "S1_4",
+      "S1_5",
+      "S1_6",
+      "S1_7",
+      "S1_8",
+      "S1_9",
+      "S1_10",
+      "S1_11",
+      "S1_12",
+      "S1_13",
+      "S1_14",
+      "S1_15",
+      "S1_16",
+      "S1_17",
+      "S1_18",
+      "S1_0"
+    ]
+  },
+  {
+    "question_code": "S2",
+    "question_text": "Have you filed a claim in the past 12 months for any of the following products? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Auto Insurance",
+      "2": "Homeowners insurance (primary residence)",
+      "3": "Homeowners insurance (secondary residence)",
+      "4": "Valuable possessions insurance",
+      "5": "Flood insurance",
+      "6": "Earthquake insurance",
+      "7": "Renters insurance",
+      "8": "Umbrella protection/Liability coverage",
+      "9": "Roadside assistance/Auto club membership",
+      "10": "Boat insurance",
+      "11": "Recreational vehicle insurance (e.g., motorcycle, RV, ATV, etc.) [A: Recreational vehicle insurance]",
+      "12": "Identity theft insurance",
+      "13": "Life insurance (through work)",
+      "14": "Life insurance (not through work)",
+      "15": "Health insurance (through work)",
+      "16": "Health insurance (not through work)",
+      "17": "Financial planning/Investment services",
+      "18": "Banking/Mortgage services",
+      "0": "None of these"
+    },
+    "subquestions": [
+      "S2_1",
+      "S2_2",
+      "S2_3",
+      "S2_4",
+      "S2_5",
+      "S2_6",
+      "S2_7",
+      "S2_8",
+      "S2_9",
+      "S2_10",
+      "S2_11",
+      "S2_12",
+      "S2_13",
+      "S2_14",
+      "S2_15",
+      "S2_16",
+      "S2_17",
+      "S2_18",
+      "S2_0"
+    ]
+  },
+  {
+    "question_code": "CI1",
+    "question_text": "Which of the following coverages did you have at the time of the claim? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Liability",
+      "2": "Collision",
+      "3": "Comprehensive",
+      "4": "Property protection",
+      "5": "Personal injury protection (Medical) [A: Personal injury protection]",
+      "6": "Rental vehicle",
+      "7": "Rideshare credit",
+      "8": "Roadside assistance",
+      "9": "Uninsured/Underinsured motorist",
+      "10": "Gap coverages",
+      "99": "Don't know"
+    },
+    "subquestions": [
+      "CI1_1",
+      "CI1_2",
+      "CI1_3",
+      "CI1_4",
+      "CI1_5",
+      "CI1_6",
+      "CI1_7",
+      "CI1_8",
+      "CI1_9",
+      "CI1_10",
+      "CI1_99"
+    ]
+  },
+  {
+    "question_code": "D7",
+    "question_text": "Which of the following features were on your vehicle that was involved in this claim? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Blind spot detection/warning",
+      "2": "Lane-keeping/centering system",
+      "3": "Back-up camera",
+      "4": "Adaptive cruise control",
+      "5": "Forward collision warning/emergency braking",
+      "0": "Don't have any of these features",
+      "99": "Don't know"
+    },
+    "subquestions": [
+      "D7_1",
+      "D7_2",
+      "D7_3",
+      "D7_4",
+      "D7_5",
+      "D7_0",
+      "D7_99"
+    ]
+  },
+  {
+    "question_code": "C15",
+    "question_text": "Where was the car damaged? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Front",
+      "2": "Rear",
+      "3": "Driver side",
+      "4": "Passenger side",
+      "97": "Other"
+    },
+    "subquestions": [
+      "C15_1",
+      "C15_2",
+      "C15_3",
+      "C15_4",
+      "C15_97"
+    ]
+  },
+  {
+    "question_code": "CR1",
+    "question_text": "Prior to reporting your claim, how would you describe how you were feeling? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Calm",
+      "2": "Overwhelmed",
+      "3": "Angry",
+      "4": "Anxious",
+      "5": "Nervous",
+      "6": "Optimistic",
+      "7": "Pessimistic",
+      "8": "Annoyed",
+      "9": "Impatient",
+      "97": "Other",
+      "99": "Don't know"
+    },
+    "subquestions": [
+      "CR1_1",
+      "CR1_2",
+      "CR1_3",
+      "CR1_4",
+      "CR1_5",
+      "CR1_6",
+      "CR1_7",
+      "CR1_8",
+      "CR1_9",
+      "CR1_97",
+      "CR1_99"
+    ]
+  },
+  {
+    "question_code": "D13c",
+    "question_text": "What could [PROG: PIPE A9] have done to make you feel more at ease? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Kept me informed on what to do next",
+      "2": "Explained my coverage options",
+      "3": "Showed concern for my situation",
+      "4": "Provided services/information quicker",
+      "5": "Simplified the process",
+      "6": "Arrange alternate transportation/rental",
+      "97": "Other",
+      "99": "Nothing/Could not make me feel more at ease"
+    },
+    "subquestions": [
+      "D13c_1",
+      "D13c_2",
+      "D13c_3",
+      "D13c_4",
+      "D13c_5",
+      "D13c_6",
+      "D13c_97",
+      "D13c_99"
+    ]
+  },
+  {
+    "question_code": "RC4",
+    "question_text": "How did [PROG: PIPE A9] help with getting a rental car set up? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[PROG: PIPE A9] directed me to a rental company website/app [A: Insurer directed me to a rental company website/app]",
+      "2": "[PROG: PIPE A9] provided rental company information to contact on my own [A: Insurer provided rental company information to contact on my own]",
+      "3": "[PROG: PIPE A9] provided confirmation number and contact information when I reported my claim [A: Insurer provided confirmation number and contact information when I reported my claim]",
+      "4": "I didn't use a rental car",
+      "97": "Other"
+    },
+    "subquestions": [
+      "RC4_1",
+      "RC4_2",
+      "RC4_3",
+      "RC4_4",
+      "RC4_97"
+    ]
+  },
+  {
+    "question_code": "K13",
+    "question_text": "Which of the following issues, if any, did you have with your rental car provided by [PROG: PIPE A9]? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Delay in picking up the rental car",
+      "2": "Had to return the rental car earlier than desired",
+      "3": "Charged for extra rental days",
+      "4": "Needed to request an extension because rental car duration was not long enough",
+      "14": "Process took too long",
+      "15": "Process too complicated",
+      "6": "Performance of rental car",
+      "7": "Smell of rental car",
+      "8": "Features/Amenities in rental car",
+      "9": "Comfort of rental car",
+      "10": "Damage to exterior of vehicle (i.e., dings, dents, scratches, etc.) [A: Damage to outside of vehicle]",
+      "11": "Damage to the interior of vehicle (i.e., holes in fabric, scratches on dashboard, etc.) [A: Damage to inside of vehicle]",
+      "12": "Exterior of car was dirty (e.g., had not been washed) [A: Exterior of car was dirty]",
+      "13": "Interior of car was dirty (i.e., trash in vehicle, sticky/messy cupholders, etc.) [A: Interior of car was dirty]",
+      "97": "Other",
+      "0": "Did not experience any issues with rental car coverage"
+    },
+    "subquestions": [
+      "K13_1",
+      "K13_2",
+      "K13_3",
+      "K13_4",
+      "K13_14",
+      "K13_15",
+      "K13_6",
+      "K13_7",
+      "K13_8",
+      "K13_9",
+      "K13_10",
+      "K13_11",
+      "K13_12",
+      "K13_13",
+      "K13_97",
+      "K13_0"
+    ]
+  },
+  {
+    "question_code": "RC6",
+    "question_text": "Did you use any of the following transportation during the claim process? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Have another vehicle",
+      "2": "Rideshare services",
+      "3": "Borrowed a family/friend vehicle",
+      "4": "Family/Friend drove me around",
+      "5": "Public transportation",
+      "6": "Rental car",
+      "97": "Other",
+      "0": "Did not use transportation during the claim"
+    },
+    "subquestions": [
+      "RC6_1",
+      "RC6_2",
+      "RC6_3",
+      "RC6_4",
+      "RC6_5",
+      "RC6_6",
+      "RC6_97",
+      "RC6_0"
+    ]
+  },
+  {
+    "question_code": "K8",
+    "question_text": "Why did you have out-of-pocket costs for your rental car? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Rental car was not covered by policy",
+      "2": "I exceeded my maximum limit for total rental costs",
+      "3": "My daily coverage was not enough money per day",
+      "4": "I chose to upgrade or pay more for a different car than what the insurer covered",
+      "5": "I purchased additional insurance from the rental car company",
+      "6": "I paid extra days the insurer did not cover",
+      "97": "Other"
+    },
+    "subquestions": [
+      "K8_1",
+      "K8_2",
+      "K8_3",
+      "K8_4",
+      "K8_5",
+      "K8_6",
+      "K8_97"
+    ]
+  },
+  {
+    "question_code": "RS1",
+    "question_text": "Which rideshare company did you use? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Lyft",
+      "2": "Uber",
+      "3": "Carma",
+      "4": "Relay Rides",
+      "5": "Sidecar",
+      "6": "Ridejoy",
+      "7": "Getaround",
+      "8": "JustSharelt",
+      "9": "Zimride",
+      "10": "Car2Go",
+      "97": "Other",
+      "99": "Did not use rideshare"
+    },
+    "subquestions": [
+      "RS1_1",
+      "RS1_2",
+      "RS1_3",
+      "RS1_4",
+      "RS1_5",
+      "RS1_6",
+      "RS1_7",
+      "RS1_8",
+      "RS1_9",
+      "RS1_10",
+      "RS1_97",
+      "RS1_99"
+    ]
+  },
+  {
+    "question_code": "C22A",
+    "question_text": "After reporting your claim, which of the following did you interact with at any point during the rest of your claim experience? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "The person I reported the claim to",
+      "2": "My local insurance agent or his/her staff",
+      "4": "The person who estimated the damages",
+      "5": "Another claims representative",
+      "6": "A representative from the repair facility",
+      "7": "[PROG: PIPE A9]'s website/mobile app [A: Insurer's website/mobile app]",
+      "99": "Don't know"
+    },
+    "subquestions": [
+      "C22A_1",
+      "C22A_2",
+      "C22A_4",
+      "C22A_5",
+      "C22A_6",
+      "C22A_7",
+      "C22A_99"
+    ]
+  },
+  {
+    "question_code": "CS2",
+    "question_text": "How did you receive digital status updates? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "I had to login/access the [PROG: PIPE A9] website/app to see progress [A: I had to login/access the insurer website/app to see progress]",
+      "2": "I received email notifications from [PROG: A9]/local agent [A: I received email notifications from insurer/local agent]",
+      "3": "I received text messages from [PROG: A9]/local agent [A: I received text messages from insurer/local agent]",
+      "4": "I received push notification from [PROG: A9]'s mobile app [A: I received push notification from insurer' mobile app]",
+      "5": "From the online chat feature on [PROG: A9]'s website [A: From the online chat feature on insurer's website]",
+      "0": "I did not receive digital status updates"
+    },
+    "subquestions": [
+      "CS2_1",
+      "CS2_2",
+      "CS2_3",
+      "CS2_4",
+      "CS2_5",
+      "CS2_0"
+    ]
+  },
+  {
+    "question_code": "M22_new",
+    "question_text": "Did you experience any unnecessary delays at any of the following points during your claim? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Initial claim report",
+      "2": "Estimation process (i.e., scheduling, approval, etc.) [A: Estimation process]",
+      "3": "Determining fault/investigating claim",
+      "4": "Rental car",
+      "5": "Repair",
+      "6": "Settlement (decisions or payment) [A: Settlement]",
+      "7": "Follow up from insurer",
+      "97": "Other",
+      "99": "Don't know",
+      "0": "Did not experience any unnecessary delays"
+    },
+    "subquestions": [
+      "M22_new_1",
+      "M22_new_2",
+      "M22_new_3",
+      "M22_new_4",
+      "M22_new_5",
+      "M22_new_6",
+      "M22_new_7",
+      "M22_new_97",
+      "M22_new_99",
+      "M22_new_0"
+    ]
+  },
+  {
+    "question_code": "J3",
+    "question_text": "Was the repair facility you selected for the repair work...? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "A shop you had in mind (e.g., used previously, dealer sold you vehicle, etc.) [A: Had shop in mind]",
+      "2": "Recommended by [PROG: PIPE A9] [A: Recommended by insurer]",
+      "3": "Chosen from a list provided by [PROG: PIPE A9] [A: Chosen from a list]",
+      "0": "None of the above"
+    },
+    "subquestions": [
+      "J3_1",
+      "J3_2",
+      "J3_3",
+      "J3_0"
+    ]
+  },
+  {
+    "question_code": "J16",
+    "question_text": "Did someone at the repair facility discuss the work needed to repair the vehicle (e.g., extent of damage, the repair process, etc.)? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Yes, discussed the work required",
+      "2": "Yes, discussed the time required to repair",
+      "0": "No",
+      "99": "Don't know"
+    },
+    "subquestions": [
+      "J16_1",
+      "J16_2",
+      "J16_0",
+      "J16_99"
+    ]
+  },
+  {
+    "question_code": "RP3",
+    "question_text": "Were you provided a revised estimate and/or timeframe for completing the additional damages? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "I was provided a revised estimate",
+      "2": "I was provided a revised timeframe",
+      "0": "I was not provided a revised estimate or timeframe"
+    },
+    "subquestions": [
+      "RP3_1",
+      "RP3_2",
+      "RP3_0"
+    ]
+  },
+  {
+    "question_code": "J35",
+    "question_text": "Which types of parts were used in the repair of your vehicle? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Original equipment, also known as OEM",
+      "2": "Certified aftermarket parts",
+      "3": "Refurbished/Recycled parts",
+      "97": "Other",
+      "99": "Don't know/Not sure"
+    },
+    "subquestions": [
+      "J35_1",
+      "J35_2",
+      "J35_3",
+      "J35_97",
+      "J35_99"
+    ]
+  },
+  {
+    "question_code": "C24_New",
+    "question_text": "How were you provided an explanation of the settlement? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Verbally from my agent (e.g., phone or in person) [A: Verbally from agent]",
+      "9": "Verbally from my claim representative (e.g., phone or in person) [A: Verbally from claim representative]",
+      "2": "Mail (e.g., letter) [A: Mail]",
+      "3": "Email",
+      "5": "Through [PROG: PIPE A9]'s mobile app [PROG: IF BRAND ENDS IN 's', DO NOT ADD 's' AFTER APOSTROPHE] [A: Through insurer's mobile app]",
+      "6": "Through a third-party mobile app",
+      "7": "Through [PROG: PIPE A9]'s website from my desktop/laptop [PROG: IF BRAND ENDS IN 's', DO NOT ADD 's' AFTER APOSTROPHE] [A: through website via desktop/laptop]",
+      "8": "Through [PROG: PIPE A9]'s website from my phone/tablet [PROG: IF BRAND ENDS IN 's', DO NOT ADD 's' AFTER APOSTROPHE] [A: through website via phone/tablet]",
+      "97": "Other",
+      "0": "I did not receive an explanation",
+      "99": "Don't know"
+    },
+    "subquestions": [
+      "C24_New_1",
+      "C24_New_9",
+      "C24_New_2",
+      "C24_New_3",
+      "C24_New_5",
+      "C24_New_6",
+      "C24_New_7",
+      "C24_New_8",
+      "C24_New_97",
+      "C24_New_0",
+      "C24_New_99"
+    ]
+  },
+  {
+    "question_code": "L21b",
+    "question_text": "Did you have any issues with the insurer's assessment of the following areas? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Vehicle condition (prior to accident) [A: Vehicle condition]",
+      "2": "OEM options/packages",
+      "3": "Aftermarket parts/accessories",
+      "4": "Comparable vehicles used to determine value",
+      "5": "Depreciation of vehicle",
+      "6": "Personal item costs",
+      "7": "Additional fees (e.g., tow fees, rental costs, labor, etc.) [A: Additional fees]",
+      "97": "Other",
+      "0": "None of the above"
+    },
+    "subquestions": [
+      "L21b_1",
+      "L21b_2",
+      "L21b_3",
+      "L21b_4",
+      "L21b_5",
+      "L21b_6",
+      "L21b_7",
+      "L21b_97",
+      "L21b_0"
+    ]
+  },
+  {
+    "question_code": "M15",
+    "question_text": "Did anyone contact you after you picked up your vehicle to make sure things were OK? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Yes, someone from repair facility",
+      "2": "Yes, someone from [PROG: PIPE A9] [Contacted after pick up - Insurer]",
+      "3": "Yes, my sales agent [A: Contacted after pick up – Agent]",
+      "0": "No"
+    },
+    "subquestions": [
+      "M15_1",
+      "M15_2",
+      "M15_3",
+      "M15_0"
+    ]
+  },
+  {
+    "question_code": "N16",
+    "question_text": "Did any of the following occur as a result of your most recent claims experience with [PROG: PIPE A9]? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Made changes to policy coverage",
+      "2": "Auto premium with [PROG: PIPE A9] increased [A: Auto premium with insurer increased]",
+      "3": "Shopped for an auto insurance policy from a different insurer",
+      "4": "Plan to shop for a new auto insurer",
+      "5": "Plan to switch auto insurers",
+      "6": "Switched auto insurers",
+      "0": "None of the above"
+    },
+    "subquestions": [
+      "N16_1",
+      "N16_2",
+      "N16_3",
+      "N16_4",
+      "N16_5",
+      "N16_6",
+      "N16_0"
+    ]
+  },
+  {
+    "question_code": "N17",
+    "question_text": "Do you participate in a telematics (Hover: telematics: Device installed in your vehicle or mobile phone app that monitors driving behavior to adjust premiums based upon miles, speed, braking, etc.) program with [PROG: PIPE A9]? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Yes, and I receive a monthly risk score",
+      "2": "Yes, and I received an automated collision report/description",
+      "0": "No, I do not participate in a telematics program"
+    },
+    "subquestions": [
+      "N17_1",
+      "N17_2",
+      "N17_0"
+    ]
+  },
+  {
+    "question_code": "D7A",
+    "question_text": "Have you or members of your family served in the military? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "A": "Myself",
+      "B": "Spouse",
+      "C": "Child",
+      "D": "Parent",
+      "E": "Grandparent",
+      "F": "Sibling",
+      "97": "Other",
+      "0": "None"
+    },
+    "subquestions": [
+      "D7A_A",
+      "D7A_B",
+      "D7A_C",
+      "D7A_D",
+      "D7A_E",
+      "D7A_F",
+      "D7A_97",
+      "D7A_0"
+    ]
+  },
+  {
+    "question_code": "D7B",
+    "question_text": "Do you currently utilize any of the following military benefits or services? Mark all that apply.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "VA Healthcare",
+      "2": "VA Compensation",
+      "3": "VA Pension",
+      "4": "VA Education",
+      "5": "VA Vocational Rehabilitation & Employment",
+      "6": "VA Home Mortgage",
+      "7": "VA Life Insurance",
+      "8": "USAA benefits and services",
+      "97": "Other",
+      "0": "None"
+    },
+    "subquestions": [
+      "D7B_1",
+      "D7B_2",
+      "D7B_3",
+      "D7B_4",
+      "D7B_5",
+      "D7B_6",
+      "D7B_7",
+      "D7B_8",
+      "D7B_97",
+      "D7B_0"
+    ]
+  },
+  {
+    "question_code": "PS1",
+    "question_text": "Please indicate your agreement with each of the following statements regarding your insurance attitudes.",
+    "type": "grid",
+    "possible_answers": {
+      "1": "Completely disagree",
+      "2": "Somewhat disagree",
+      "3": "Somewhat agree",
+      "4": "Completely agree"
+    },
+    "subquestions": [
+      "PS1_A",
+      "PS1_B",
+      "PS1_C",
+      "PS1_D",
+      "PS1_E",
+      "PS1_F",
+      "PS1_G",
+      "PS1_H",
+      "PS1_I",
+      "PS1_J"
+    ]
+  }
+]
