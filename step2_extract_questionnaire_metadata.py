@@ -81,6 +81,8 @@ Think: Is this a transformation/mapping/computation of another/others survey res
 - Numerical data converted to ranges/bands
 - Multiple variables combined into indices
 - Geographic data aggregated to regions
+- HIDDEN LOGIC: Look for implicit classification rules (quota, segmentation, targeting)
+- BUSINESS LOGIC: Survey ops often create hidden classifications for analysis
 
 CONTEXTUAL INTELLIGENCE  
 - Look for variable pairs: detailed + grouped versions
@@ -94,31 +96,74 @@ PROGRAMMING TEXT AS INTELLIGENCE
 - Recode instructions reveal variable transformations
 - Loop structures suggest multi-select with follow-ups
 - Programming comments and notes provide crucial insights
+- HIDDEN CLASSIFICATIONS: Look for quota logic, segmentation rules, targeting criteria
+- BUSINESS VARIABLES: Survey ops create classifications like buyer/non-buyer, qualified/unqualified
 
 INTELLIGENCE-BASED SEARCH STRATEGY
 1. READ BETWEEN THE LINES: What's implied but not explicitly stated?
 2. SURVEY LOGIC: Would a human researcher ask this directly or compute it?
-3. TECHNICAL CLUES: Variable names that reveal their computational nature
-4. OPERATIONAL HINTS: References to data quality, timing, screening logic
-5. CONTEXTUAL REASONING: Use surrounding content to infer variable purpose
-6. THINK HOLISTICALLY: Consider the entire survey workflow and data needs
+3. HIDDEN CLASSIFICATIONS: Look for quota logic, buyer vs non-buyer, qualified vs unqualified
+4. SPEND-BASED SEGMENTATION: Find logic that classifies based on purchase amounts
+5. IMPLICIT BUSINESS RECODES: Classification rules even without "recode" mentions
+6. TARGETING VARIABLES: Logic that separates respondents for different questionnaire paths
+7. THINK HOLISTICALLY: Consider ALL survey workflow and classification needs
 
-OUTPUT SCHEMA (JSON array only)
-[
-  {
-    "question_code": "U3",
-    "question_text": "Which hotel brands do you know?",
-    "type": "multi",
-    "possible_answers": {"1": "Ibis", "2": "Accor", "3": "Marriott"}
-  },
-  {
-    "question_code": "AGE_RECODE",
-    "question_text": "Age groups",
-    "type": "single",
-    "possible_answers": {"1": "18-34", "2": "35-54", "3": "55+"},
-    "recode_from": ["AGE"]
-  }
-]
+OUTPUT SCHEMA:
+{
+  "variables": [
+    {
+      "question_code": "Q1",
+      "question_text": "Question text",
+      "type": "multi",
+      "possible_answers": {"1": "Option 1", "2": "Option 2"}
+    },
+    {
+      "question_code": "SOME_RECODE", 
+      "type": "single",
+      "possible_answers": {"1": "Group 1", "2": "Group 2"},
+      "recode_from": ["SOURCE_VAR"],
+      "recode_hint": "Description of transformation"
+    }
+  ],
+  "potential_recodes": [
+    {
+      "hint": "Description of likely recode pattern",
+      "likely_sources": ["source variable types"],
+      "search_terms": ["keywords to help find in step1"]
+    }
+  ]
+}
+
+For recodes: ALWAYS include recode_from + recode_hint (descriptive text to help find actual variables)
+
+ADD INFERENCE SECTION: At the end, add "potential_recodes" with hints for ALL likely recodes:
+{
+  "potential_recodes": [
+    {
+      "hint": "Basic buyer vs non-buyer quota classification based on spending behavior",
+      "likely_sources": ["spend questions", "purchase behavior"],
+      "search_terms": ["quota", "buyer", "classification"]
+    }
+  ]
+}
+
+COMPREHENSIVE RECODE STRATEGY:
+1. EXPLICIT RECODES: Found directly in questionnaire with clear variable names
+2. INFERRED RECODES: Logical recodes that SHOULD exist based on survey structure
+- Spending questions → MULTIPLE classification levels (simple binary + complex tiers)
+   - Demographics → grouping recodes for analysis
+   - Ratings → satisfaction/performance indices
+3. CLASSIFICATION EXHAUSTIVE: For every classification concept, look for ALL possible versions
+   - Simple binary classifications (two categories)
+   - Complex tier classifications (multiple levels)  
+   - Both may exist for same concept at different granularity levels
+
+MANDATORY RECODE DETECTION:
+- Look for ALL classification logic in questionnaire (explicit + implicit)
+- Find quota rules: who qualifies for what survey path/segment
+- Detect buyer classifications: spending thresholds, behavior patterns
+- Identify targeting variables: demographic/psychographic groupings
+- INFER missing recodes: Add logical recodes with descriptive hints for step3 to find
 
 RESPONSE CLEANING RULES
 - Remove ALL programming prefixes: "IF..:", "SHOW IF:", "ASK ONLY:", "DISPLAY IF:"
@@ -126,12 +171,14 @@ RESPONSE CLEANING RULES
 - Example: "IF AGE<25: Student discounts" → "Student discounts"
 
 CRITICAL SUCCESS FACTORS
-- REASON about survey logic: what's asked vs what's computed
-- Multi-select = respondent can choose multiple options
-- Recodes = survey responses transformed/grouped
-- System variables ≠ recodes
-- Find variable pairs and transformations
+- Extract explicit multi-select and recode patterns found in questionnaire
+- INFER additional likely recodes based on survey structure and logic
+- Add comprehensive "potential_recodes" section with hints for step3
+- Provide search guidance for recodes not explicitly found but logically likely
 - Clean programming prefixes from response text
+
+OUTPUT FORMAT - ADD POTENTIAL RECODES SECTION:
+After the main array, add comprehensive inference section for step3 guidance
     """
     
     print(f"[2/3] Analyzing with Gemini Flash (using maximum reasoning)")
