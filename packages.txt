@@ -5,3 +5,8 @@ libbz2-dev
 liblzma-dev
 pkg-config
 cmake
+autotools-dev
+autoconf
+automake
+libtool
+gettext
