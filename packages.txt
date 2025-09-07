@@ -1,4 +1,1 @@
-# System packages for Streamlit Cloud
-# Required for pyreadstat SPSS file reading
 build-essential
-libreadstat-dev
