@@ -24,13 +24,9 @@ def find_multiselect_questions(pdf_path):
         response_mime_type="application/json"
     )
     
-    try:
-        generation_config.thinking_tokens = 4000  # Max thinking tokens for large PDFs
-    except:
-        pass
     
     model = genai.GenerativeModel(
-        model_name="gemini-2.0-flash-thinking-exp-1219",
+        model_name="gemini-2.5-flash",
         generation_config=generation_config,
         system_instruction="You are an expert survey methodology detective with deep knowledge of questionnaire design. Focus ONLY on finding multi-select questions."
     )
@@ -45,6 +41,14 @@ MULTI-SELECT DETECTION PATTERNS:
 - Grid layouts: Multiple columns with same response scale  
 - Lists of items/brands/features where multiple can be selected
 - Programming clues: Conditional logic, loops, arrays indicate multi-structure
+- VARIABLE CODE PATTERNS: Question codes that suggest groupings (Q1_1, Q1_2, Q1_3 series)
+- QUESTION TEXT ANALYSIS: Content that obviously represents grouped concepts
+
+GROUPING STRATEGY:
+PREFER SUBGROUPS over big general groups:
+- Better: Separate brand categories, occasion types, demographic segments
+- Worse: One massive group combining everything
+- Identify natural subgroupings from questionnaire structure and content
 
 INTELLIGENCE-BASED SEARCH STRATEGY:
 1. Scan ENTIRE questionnaire for multi-select patterns
@@ -65,9 +69,11 @@ OUTPUT SCHEMA (JSON array only):
 
 CRITICAL SUCCESS FACTORS:
 - Find ALL multi-select patterns (miss nothing!)
-- Use programming text as primary intelligence source
+- BREAK DOWN into specific subgroups when possible
+- Use programming text as primary intelligence source  
+- Use variable code patterns and question text to identify obvious groupings
 - Clean programming prefixes from possible_answers
-- Return comprehensive results
+- Return comprehensive results with meaningful subgroups
 """
 
     thinking_prompt = f"""
@@ -107,13 +113,9 @@ def find_recode_variables(pdf_path):
         response_mime_type="application/json"
     )
     
-    try:
-        generation_config.thinking_tokens = 4000  # Max thinking tokens for large PDFs
-    except:
-        pass
     
     model = genai.GenerativeModel(
-        model_name="gemini-2.0-flash-thinking-exp-1219",
+        model_name="gemini-2.5-flash",
         generation_config=generation_config,
         system_instruction="You are an expert survey methodology detective specializing in recode detection. Focus ONLY on finding variable transformations and computed variables."
     )
@@ -130,6 +132,16 @@ RECODE DETECTION PATTERNS:
 - Geographic data aggregated to regions
 - HIDDEN LOGIC: Implicit classification rules (quota, segmentation, targeting)
 - BUSINESS LOGIC: Survey ops create classifications like buyer/non-buyer
+- VARIABLE CODE PATTERNS: Question codes that suggest recoding relationships
+- QUESTION TEXT ANALYSIS: Content that obviously describes transformations
+
+RECODE GROUPING STRATEGY:
+PREFER SPECIFIC RECODES over general transformations:
+- Better: Separate age bands, income tiers, geographic regions
+- Worse: One general demographic recode
+- Better: Specific brand categories, spend levels, behavior segments
+- Worse: One massive customer classification
+- Identify natural recode subpatterns from questionnaire logic
 
 COMPREHENSIVE RECODE STRATEGY:
 1. EXPLICIT RECODES: Found directly in questionnaire with clear variable names
@@ -165,6 +177,8 @@ OUTPUT SCHEMA (JSON array only):
 CRITICAL SUCCESS FACTORS:
 - Find ALL classification logic: quota rules, buyer segmentation, targeting logic
 - DETECT IMPLICIT RECODES: business classifications not explicitly marked as "recode"
+- BREAK DOWN into specific recode types when possible (separate age bands, income tiers, etc.)
+- Use variable code patterns and question text to identify obvious recode relationships
 - Look for spend/behavior patterns that create respondent categories
 
 HINT RULES:

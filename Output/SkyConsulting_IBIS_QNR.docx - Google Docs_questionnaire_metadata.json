@@ -4,24 +4,21 @@
     "question_text": "Among the following list, at which hotel brand(s) belonging to the affordable category did you stay over the past 12 months?",
     "type": "multi",
     "possible_answers": {
-      "1": "Ibis",
-      "2": "Accor",
-      "3": "Competition",
+      "customized_list": "[Customized list by country as per BES Economy segment]",
       "98": "Other",
       "99": "None of the above"
     },
-    "grouping_hint": "Explicit text 'Several answers possible' and programming note '[Customized list by country as per BES Economy segment]'"
+    "grouping_hint": "Explicit text 'Several answers possible' indicates multi-select."
   },
   {
     "question_code": "U6",
     "question_text": "Among the following stays you mentioned, please select the most recent 3 ones?",
     "type": "multi",
     "possible_answers": {
-      "1": "Stay 1 (dynamic based on U4, U3, U5 answers)",
-      "2": "Stay 2 (dynamic based on U4, U3, U5 answers)",
-      "3": "Stay 3 (dynamic based on U4, U3, U5 answers)"
+      "1": "DISPLAY: Stay n°[U4 ITEM] at [U3 ITEM] hotel for [U5 ITEM]",
+      "2": "..."
     },
-    "grouping_hint": "Explicit text '3 answers maximum' and programming note 'DISPLAY ALL U4 - U3 – U5 ANSWERS COMBINATION SELECTED:' indicating dynamic options based on previous answers."
+    "grouping_hint": "Explicit text '3 answers maximum' indicates multi-select. Options are dynamically displayed based on previous answers."
   },
   {
     "question_code": "U7",
@@ -38,7 +35,7 @@
       "8": "Other",
       "9": "None of these EXCLUSIVE"
     },
-    "grouping_hint": "Explicit text 'Several answers possible' and 'LOOP FOR EACH U6_RECODE ITEM'"
+    "grouping_hint": "Explicit text 'Several answers possible' indicates multi-select. Question is looped for each U6_RECODE item."
   },
   {
     "question_code": "U9",
@@ -54,7 +51,7 @@
       "7": "Pet(s)",
       "8": "Other"
     },
-    "grouping_hint": "Explicit text 'Several answers possible' and 'LOOP FOR EACH U6_RECODE ITEM'"
+    "grouping_hint": "Explicit text 'Several answers possible' indicates multi-select. Question is looped for each U6_RECODE item."
   },
   {
     "question_code": "U15",
@@ -68,7 +65,7 @@
       "5": "Hotel loyalty programme/application",
       "6": "Others"
     },
-    "grouping_hint": "Explicit text 'Several answers possible' and 'LOOP FOR EACH U6_RECODE ITEM'"
+    "grouping_hint": "Explicit text 'Several answers possible' indicates multi-select. Question is looped for each U6_RECODE item."
   },
   {
     "question_code": "D1",
@@ -76,7 +73,7 @@
     "type": "multi",
     "possible_answers": {
       "1": "Price",
-      "2": "Hotels approved by my company",
+      "2": "IF U5_RECODE=Professional: Hotels approved by my company",
       "3": "Localization",
       "4": "Accessibility",
       "5": "View",
@@ -107,15 +104,15 @@
       "30": "Facilities and services (spa, gym, bar/restaurant, parking...)",
       "31": "Reliable infrastructures and risk prevention (fire alarm, clear evacuation maps...)",
       "32": "Hotel brand reputation",
-      "33": "Remote work facilities available (e.g., printing, desk space)",
-      "34": "Co-working spaces available within the hotel",
+      "33": "IF U5_RECODE=Professional: Remote work facilities available (e.g., printing, desk space)",
+      "34": "IF U5_RECODE=Professional: Co-working spaces available within the hotel",
       "35": "Services dedicated to Children (Children's play kits, dedicated play space inside the hotel",
       "36": "Robots used for guest servicing",
       "37": "Very large TV screen in room",
       "38": "Option to stream content from your smartphone to the TV (e.g., Netflix, personal accounts)",
-      "39": "Others, please, specify: FIXED"
+      "39": "Others, please, specify: ___ FIXED"
     },
-    "grouping_hint": "Explicit text 'Several answers possible' and 'LOOP FOR EACH U6_RECODE ITEM'. Programming prefixes 'IF U5_RECODE=Professional:' have been removed from options 2, 33, 34."
+    "grouping_hint": "Explicit text 'Several answers possible' indicates multi-select. Question is looped for each U6_RECODE item."
   },
   {
     "question_code": "D2",
@@ -130,7 +127,7 @@
       "6": "Near other places of interests (e.g. cultural sites, tourist attractions, beach...)",
       "7": "Other"
     },
-    "grouping_hint": "Explicit text 'Several answers possible' and 'LOOP FOR EACH U6_RECODE ITEM'"
+    "grouping_hint": "Explicit text 'Several answers possible' indicates multi-select. Question is looped for each U6_RECODE item."
   },
   {
     "question_code": "D3",
@@ -163,9 +160,9 @@
       "24": "Courtesy products/accessories",
       "25": "Working spaces",
       "26": "Meeting rooms",
-      "27": "Other, please specify: FIXED"
+      "27": "Other, please specify: ___ FIXED"
     },
-    "grouping_hint": "Explicit text 'Please select 5 answers maximum' and 'LOOP FOR EACH U6_RECODE ITEM'"
+    "grouping_hint": "Explicit text 'Please select 5 answers maximum' indicates multi-select. Question is looped for each U6_RECODE item."
   },
   {
     "question_code": "D4",
@@ -187,9 +184,9 @@
       "13": "Many power outlets (incl. USB), especially nearby the bed",
       "14": "Coffee maker with capsules / kettle with tea supplies",
       "15": "Welcome amenities (such as bottled water or snacks)",
-      "16": "Other, please specify: FIXED"
+      "16": "Other, please specify: ___ FIXED"
     },
-    "grouping_hint": "Explicit text 'Please select 5 answers maximum' and 'LOOP FOR EACH U6_RECODE ITEM'"
+    "grouping_hint": "Explicit text 'Please select 5 answers maximum' indicates multi-select. Question is looped for each U6_RECODE item."
   },
   {
     "question_code": "D6",
@@ -210,9 +207,9 @@
       "12": "Meetings/socializing/night life",
       "13": "Escape and disconnection",
       "14": "Family-friendly experiences (kids club, family activities...)",
-      "15": "Other, please specify:"
+      "15": "Other, please specify: ___"
     },
-    "grouping_hint": "Explicit text 'Please select 3 answers maximum' and 'LOOP FOR EACH U6_RECODE ITEM'"
+    "grouping_hint": "Explicit text 'Please select 3 answers maximum' indicates multi-select. Question is looped for each U6_RECODE item."
   },
   {
     "question_code": "D7",
@@ -235,41 +232,37 @@
       "14": "Feeling at ease/at home",
       "15": "Excitement/adventure",
       "16": "Romance & intimacy",
-      "17": "Other, please specify:"
+      "17": "Other, please specify: ___"
     },
-    "grouping_hint": "Explicit text 'Several answers possible' and 'LOOP FOR EACH U6_RECODE ITEM'. Option 16 was duplicated in the source, combined into a single option."
+    "grouping_hint": "Explicit text 'Several answers possible' indicates multi-select. Question is looped for each U6_RECODE item."
   },
   {
     "question_code": "D8",
     "question_text": "What style or aesthetics do you find most appealing when choosing a hotel belonging to the affordable category, such as [brands examples customized by country]?",
     "type": "multi",
     "possible_answers": {
-      "1": "Modern and minimalist Clean lines, functional spaces and simple design focused on practicality.",
-      "2": "Colourful and creative Vibrant interiors with playful themes and unique, artistic decor.",
-      "3": "Contemporary and cozy Comfortable, modern spaces with a warm and inviting feel.",
-      "4": "Trendy and urban Stylish design with an energetic, city-inspired vibe.",
-      "5": "Nature-inspired and calming Design elements inspired by natural materials, light colors, and relaxing atmospheres.",
-      "6": "Classic and elegant Timeless décor with refined details and a more traditional ambiance.",
-      "7": "Luxury and sophistication High-end finishes, upscale materials, and attention to detail.",
-      "8": "High-tech & futuristic Cutting-edge with a futuristic design, offering guests a smart and stylish stay through advanced technology.",
-      "9": "Eco-friendly Recycled materials used and environmentally conscious choices to offer guests a sustainable and comfortable stay.",
-      "10": "Local Architecture and décor inspired by the regional / local heritage.",
+      "1": "Modern and minimalist",
+      "2": "Colourful and creative",
+      "3": "Contemporary and cozy",
+      "4": "Trendy and urban",
+      "5": "Nature-inspired and calming",
+      "6": "Classic and elegant",
+      "7": "Luxury and sophistication",
+      "8": "High-tech & futuristic",
+      "9": "Eco-friendly",
+      "10": "Local",
       "98": "I don't have any preference"
     },
-    "grouping_hint": "Explicit text 'Please select 3 main answers maximum'"
+    "grouping_hint": "Explicit text 'Please select 3 main answers maximum' indicates multi-select."
   },
   {
     "question_code": "B1",
     "question_text": "Among hotels belonging to the affordable category you stayed at in the last 12 months, please select all brands that fit your criteria for choosing hotels.",
     "type": "multi",
     "possible_answers": {
-      "1": "Ibis",
-      "2": "Accor",
-      "3": "Competition",
-      "98": "Other",
-      "99": "None of the above"
+      "dynamic_options": "DISPLAY ITEMS SELECTED IN D1 IN LINES AND ITEMS SELECTED IN U3 IN COLUMNS"
     },
-    "grouping_hint": "Explicit text 'Several answers possible' and programming note 'DISPLAY ITEMS SELECTED IN D1 IN LINES AND ITEMS SELECTED IN U3 IN COLUMNS' indicating a matrix where brands (from U3) are selected based on criteria (from D1)."
+    "grouping_hint": "Explicit text 'Several answers possible' indicates multi-select. Options are dynamically displayed based on previous answers."
   },
   {
     "question_code": "B2",
@@ -277,7 +270,7 @@
     "type": "multi",
     "possible_answers": {
       "1": "Price",
-      "2": "Hotels approved by my company",
+      "2": "IF U5_RECODE=Professional: Hotels approved by my company",
       "3": "Localization",
       "4": "Accessibility",
       "5": "View",
@@ -308,15 +301,15 @@
       "30": "Facilities and services (spa, gym, bar/restaurant, parking...)",
       "31": "Reliable infrastructures and risk prevention (fire alarm, clear evacuation maps...)",
       "32": "Hotel brand reputation",
-      "33": "Remote work facilities available (e.g., printing, desk space)",
-      "34": "Co-working spaces available within the hotel",
+      "33": "IF U5_RECODE=Professional: Remote work facilities available (e.g., printing, desk space)",
+      "34": "IF U5_RECODE=Professional: Co-working spaces available within the hotel",
       "35": "Services dedicated to Children (Children's play kits, dedicated play space inside the hotel",
       "36": "Robots used for guest servicing",
       "37": "Very large TV screen in room",
       "38": "Option to stream content from your smartphone to the TV (e.g., Netflix, personal accounts)",
-      "39": "Others, please, specify: FIXED"
+      "39": "Others, please, specify: ___ FIXED"
     },
-    "grouping_hint": "Explicit text 'Please select 5 main answers maximum' and 'LOOP FOR EACH U3 BRAND SELECTED'. Programming prefixes 'IF U5_RECODE=Professional:' have been removed from options 2, 33, 34."
+    "grouping_hint": "Explicit text 'Please select 5 main answers maximum' indicates multi-select. Question is looped for each U3 brand selected."
   },
   {
     "question_code": "B3",
@@ -349,9 +342,9 @@
       "24": "Disappointing past experiences",
       "25": "Loyalty programme not applicable",
       "26": "I didn't think about the ibis brand",
-      "27": "Other, please specify:"
+      "27": "Other, please specify: ___"
     },
-    "grouping_hint": "Explicit text 'Please select 5 main answers maximum' and 'LOOP FOR EACH U6_RECODE ITEM'"
+    "grouping_hint": "Explicit text 'Please select 5 main answers maximum' indicates multi-select. Question is looped for each U6_RECODE item."
   },
   {
     "question_code": "S8",
@@ -369,7 +362,87 @@
       "9": "Hotel pictures on websites",
       "10": "Others FIXED"
     },
-    "grouping_hint": "Explicit text 'Several answers possible'"
+    "grouping_hint": "Explicit text 'Several answers possible' indicates multi-select."
+  },
+  {
+    "question_code": "COUNTRY",
+    "question_text": "Country of Residence",
+    "type": "single",
+    "possible_answers": {
+      "1": "France",
+      "2": "Australia",
+      "3": "Brazil",
+      "4": "China",
+      "5": "Germany",
+      "6": "India",
+      "7": "Poland",
+      "8": "UK",
+      "9": "UAE"
+    },
+    "recode_from": [],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'France: 1 000 interviews, Australia: 700 interviews, etc.' | CONTEXT: Country is a primary segmentation variable for sample size and question customization throughout the survey."
+  },
+  {
+    "question_code": "TARGET_ECO_SEGMENT_CLIENT",
+    "question_text": "Eco Segment Hotel Client",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'ECO SEGMENT hotel clients (= Travellers seeking affordable, reliable accommodation with friendly service)' | CONTEXT: Defines a key target segment for the survey based on travel preferences."
+  },
+  {
+    "question_code": "TARGET_IBIS_CLIENT",
+    "question_text": "Ibis Client",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'whether they are IBIS clients or not' | CONTEXT: Defines a key target segment for the survey based on past brand usage."
+  },
+  {
+    "question_code": "DECISION_MAKER",
+    "question_text": "Decision-maker for hotels/accommodations",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes, alone",
+      "2": "Yes, together with others",
+      "3": "No, never"
+    },
+    "recode_from": [
+      "S2"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'Decision-maker for hotels/accommodations when travelling.' and 'S2. Do you usually make the decisions about hotels / accommodations for overnight stays for your household?' | CONTEXT: A key screener and target variable, directly from S2."
+  },
+  {
+    "question_code": "ELIGIBLE_AGE",
+    "question_text": "Respondent is 18 years or older",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [
+      "S1"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'IF S1<18 SCREEN-OUT' | CONTEXT: Filters respondents based on age eligibility for the survey."
+  },
+  {
+    "question_code": "ELIGIBLE_DECISION_MAKER",
+    "question_text": "Respondent makes hotel decisions",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [
+      "S2"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'IF S2=3 SCREEN-OUT' | CONTEXT: Filters respondents who do not make hotel decisions for their household."
   },
   {
     "question_code": "S1_RECODE",
@@ -383,7 +456,85 @@
     "recode_from": [
       "S1"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S1_RECODE 1. 18-34 2. 35-54 3. 55+' | CONTEXT: Raw age input (S1) is grouped into these age bands. Respondents under 18 are screened out (IF S1<18 SCREEN-OUT)."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S1_RECODE 1. 18-34 2. 35-54 3. 55+' | CONTEXT: Explicit recode of numerical age (S1) into age bands."
+  },
+  {
+    "question_code": "HOTEL_STAY_LAST_12M",
+    "question_text": "Stayed at a hotel in the last 12 months",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [
+      "U1"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'U1. Did you stay at a hotel during the last 12 months?' and 'IF U1=2 SCREEN-OUT' | CONTEXT: Filters respondents who have not stayed in a hotel in the last 12 months."
+  },
+  {
+    "question_code": "STAYED_AFFORDABLE_CATEGORY",
+    "question_text": "Stayed at an affordable category hotel in the last 12 months",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [
+      "U2a"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'U2a. Over the past 12 months, did you stay at any hotel belonging to the affordable category...' and 'IF U2a=2 SCREEN-OUT' | CONTEXT: Filters respondents who have not stayed in an affordable category hotel, which is a key focus of the survey."
+  },
+  {
+    "question_code": "STAYED_COMFORT_MIDSCALE_CATEGORY",
+    "question_text": "Stayed at a comfort/mid-scale category hotel in the last 12 months",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [
+      "U2b"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'U2b. Over the past 12 months, did you stay at any hotel belonging to the comfort / mid-scale category...'"
+  },
+  {
+    "question_code": "STAYED_PREMIUM_UPSCALE_CATEGORY",
+    "question_text": "Stayed at a premium/up-scale category hotel in the last 12 months",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [
+      "U2c"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'U2c. Over the past 12 months, did you stay at any hotel belonging to the premium / up-scale category...'"
+  },
+  {
+    "question_code": "STAYED_LUXURY_CATEGORY",
+    "question_text": "Stayed at a luxury category hotel in the last 12 months",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [
+      "U2d"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'U2d. Over the past 12 months, did you stay at any hotel belonging to the luxury category...'"
+  },
+  {
+    "question_code": "ELIGIBLE_BRAND_STAY",
+    "question_text": "Stayed at a listed affordable hotel brand",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [
+      "U3"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'IF U3=99 SCREEN-OUT' | CONTEXT: Filters respondents who did not stay at any listed affordable brand from U3."
   },
   {
     "question_code": "U3_RECODE",
@@ -397,11 +548,24 @@
     "recode_from": [
       "U3"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'U3_RECODE: Answers from U3 1. Ibis 2. Accor 3. Competition' | CONTEXT: Brands selected in U3 (Among the following list, at which hotel brand(s) belonging to the affordable category did you stay over the past 12 months?) are grouped into Ibis, other Accor brands, and other competitive brands. This variable is used for conditional logic in B3 and B5."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'U3_RECODE: Answers from U3 1. Ibis 2. Accor 3. Competition' | CONTEXT: Explicit recode of selected hotel brands into broader categories."
+  },
+  {
+    "question_code": "ELIGIBLE_STAY_OCCASION",
+    "question_text": "Main occasion for stay is not 'None of the above'",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "2": "No"
+    },
+    "recode_from": [
+      "U5"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'IF U5=13 FOR ALL STAYS SCREEN-OUT' | CONTEXT: Filters respondents whose main occasion for all stays was 'None of the above'."
   },
   {
     "question_code": "U5_RECODE",
-    "question_text": "Stay occasion type",
+    "question_text": "Main occasion for stay: Personal or Professional",
     "type": "single",
     "possible_answers": {
       "1": "Personal",
@@ -410,27 +574,40 @@
     "recode_from": [
       "U5"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'U5_RECODE : 1. IF U5=1 to 8 or 11: Personal 2. IF U5=9 to 11: Professional' | CONTEXT: Detailed stay occasions (U5) are grouped into broader 'Personal' or 'Professional' categories. Note that 'Workation / bleisure trip' (U5=11) is included in both definitions, implying a potential for dual classification or a primary assignment rule not specified. This variable is used for conditional display logic in D1 and B2."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'U5_RECODE : 1. IF U5=1 to 8 or 11: Personal 2. IF U5=9 to 11: Professional' | CONTEXT: Explicit recode of detailed stay occasions (U5) into broader 'Personal' or 'Professional' categories."
   },
   {
     "question_code": "U6_RECODE",
-    "question_text": "Most recent stay occasions (Top 3)",
-    "type": "multi",
+    "question_text": "Selected most recent stay occasions",
+    "type": "single",
     "possible_answers": {
       "1": "Occasion 1",
       "2": "Occasion 2",
       "3": "Occasion 3"
     },
     "recode_from": [
-      "U4",
-      "U3",
       "U5"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'U6_RECODE: 1. [Occasion 1] 2. [Occasion 2] 3. [Occasion 3]' | CONTEXT: This recode creates a set of up to three variables, each representing one of the most recent stay occasions based on U4 (number of stays), U3 (brand), and U5 (occasion type). These derived variables are then used to loop through subsequent questions (U7-U15, D1-D7, B3)."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'U6. Among the following stays you mentioned, please select the most recent 3 ones?' and 'U6_RECODE: 1. [Occasion 1] 2. [Occasion 2] 3. [Occasion 3]' | CONTEXT: This variable identifies which of the up to 3 selected U5 occasions is being referred to in subsequent looped questions (U7-U15, D1-D8, B2-B3)."
+  },
+  {
+    "question_code": "GENDER",
+    "question_text": "Gender",
+    "type": "single",
+    "possible_answers": {
+      "1": "Male",
+      "2": "Female",
+      "3": "Other",
+      "4": "Prefer not to say"
+    },
+    "recode_from": [
+      "S3"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S3. Are you...?' | CONTEXT: Standard demographic classification."
   },
   {
     "question_code": "S4_AUS_RECODE",
-    "question_text": "Australian States/Territories",
+    "question_text": "Australian Regions",
     "type": "single",
     "possible_answers": {
       "1": "New South Wales",
@@ -445,7 +622,7 @@
     "recode_from": [
       "S4"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_AUS_RECODE' | CONTEXT: Detailed Australian locations from S4 are mapped to their respective states/territories."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_AUS_RECODE 1. New South Wales ...' | CONTEXT: Explicit recode of detailed Australian locations (S4) into broader regions."
   },
   {
     "question_code": "S4_BR_RECODE",
@@ -461,21 +638,120 @@
     "recode_from": [
       "S4"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_BR_RECODE' | CONTEXT: Detailed Brazilian states from S4 are grouped into 5 major geographic regions."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_BR_RECODE 1. Norte ...' | CONTEXT: Explicit recode of detailed Brazilian states (S4) into broader regions."
   },
   {
     "question_code": "S4_FR_RECODE_DPT",
     "question_text": "French Departments",
     "type": "single",
-    "possible_answers": {},
+    "possible_answers": {
+      "01": "Ain",
+      "02": "Aisne",
+      "03": "Allier",
+      "04": "Alpes de Haute Provence",
+      "05": "Hautes Alpes",
+      "06": "Alpes Maritimes",
+      "07": "Ardèche",
+      "08": "Ardennes",
+      "09": "Ariège",
+      "10": "Aube",
+      "11": "Aude",
+      "12": "Aveyron",
+      "13": "Bouches du Rhône",
+      "14": "Calvados",
+      "15": "Cantal",
+      "16": "Charente",
+      "17": "Charente Maritime",
+      "18": "Cher",
+      "19": "Corrèze",
+      "20": "Corse",
+      "21": "Côte d'Or",
+      "22": "Côtes d'Armor",
+      "23": "Creuse",
+      "24": "Dordogne",
+      "25": "Doubs",
+      "26": "Drôme",
+      "27": "Eure",
+      "28": "Eure-et Loir",
+      "29": "Finistère",
+      "30": "Gard",
+      "31": "Haute-Garonne",
+      "32": "Gers",
+      "33": "Gironde",
+      "34": "Hérault",
+      "35": "Ille-et-Vilaine",
+      "36": "Indre",
+      "37": "Indre-et-Loire",
+      "38": "Isère",
+      "39": "Jura",
+      "40": "Landes",
+      "41": "Loir-et-Cher",
+      "42": "Loire",
+      "43": "Haute-Loire",
+      "44": "Loire-Atlantique",
+      "45": "Loiret",
+      "46": "Lot",
+      "47": "Lot-et-Garonne",
+      "48": "Lozère",
+      "49": "Maine-et-Loire",
+      "50": "Manche",
+      "51": "Marne",
+      "52": "Haute Marne",
+      "53": "Mayenne",
+      "54": "Meurthe-et-Moselle",
+      "55": "Meuse",
+      "56": "Morbihan",
+      "57": "Moselle",
+      "58": "Nièvre",
+      "59": "Nord",
+      "60": "Oise",
+      "61": "Orne",
+      "62": "Pas-de-Calais",
+      "63": "Puy-de-Dôme",
+      "64": "Pyrénées Atlantiques",
+      "65": "Hautes Pyrénées",
+      "66": "Pyrénées Orientales",
+      "67": "Bas Rhin",
+      "68": "Haut Rhin",
+      "69": "Rhône",
+      "70": "Haute Saône",
+      "71": "Saône-et-Loire",
+      "72": "Sarthe",
+      "73": "Savoie",
+      "74": "Haute-Savoie",
+      "75": "Paris",
+      "76": "Seine Maritime",
+      "77": "Seine-et-Marne",
+      "78": "Yvelines",
+      "79": "Deux-Sèvres",
+      "80": "Somme",
+      "81": "Tarn",
+      "82": "Tarn-et-Garonne",
+      "83": "Var",
+      "84": "Vaucluse",
+      "85": "Vendée",
+      "86": "Vienne",
+      "87": "Haute-Vienne",
+      "88": "Vosges",
+      "89": "Yonne",
+      "90": "Territoire de Belfort",
+      "91": "Essonne",
+      "92": "Hauts de Seine",
+      "93": "Seine-St-Denis",
+      "94": "Val de Marne",
+      "95": "Val d'Oise",
+      "98": "2A Corse du Sud",
+      "99": "2B Haute Corse",
+      "00": "no zone"
+    },
     "recode_from": [
       "FR_ZIP_CODE"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_FR_RECODE_DPT (according to FR_ZIP_CODE: first two digits of FR_ZIP_CODE)' | CONTEXT: The first two digits of the respondent's French ZIP code (FR_ZIP_CODE) are used to classify them into specific French departments. The list of possible answers is extensive and not fully provided in the document."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_FR_RECODE_DPT (according to FR_ZIP_CODE: first two digits of FR_ZIP_CODE)' | CONTEXT: Explicit recode of French postal codes into departments."
   },
   {
     "question_code": "S4_FR_RECODE_UDA5",
-    "question_text": "French Geographic Regions (UDA5)",
+    "question_text": "French Aggregated Regions",
     "type": "single",
     "possible_answers": {
       "1": "Ile de France",
@@ -487,11 +763,11 @@
     "recode_from": [
       "S4_FR_RECODE_DPT"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_FR_RECODE_UDA5 (according to S4_FR_RECODE_DPT)' | CONTEXT: French departments (S4_FR_RECODE_DPT) are further grouped into 5 broader geographic regions (UDA5 classification)."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_FR_RECODE_UDA5 (according to S4_FR_RECODE_DPT) 1. Ile de France ('75','77','78','91','92','93','94','95') ...' | CONTEXT: Explicit recode of French departments into broader aggregated regions."
   },
   {
     "question_code": "S4_CN_RECODE_2",
-    "question_text": "Chinese City Tiers",
+    "question_text": "Chinese Tiers",
     "type": "single",
     "possible_answers": {
       "1": "TIER 1",
@@ -501,7 +777,7 @@
     "recode_from": [
       "S4"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_CN_RECODE_2' | CONTEXT: Detailed Chinese cities/provinces from S4 are classified into three business-defined tiers (TIER 1, TIER 2, TIER 3)."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_CN_RECODE_2 1. TIER 1 2. TIER 2 3. TIER 3' | CONTEXT: Explicit recode of detailed Chinese locations (S4) into urban tiers."
   },
   {
     "question_code": "S4_DE_RECODE",
@@ -516,7 +792,7 @@
     "recode_from": [
       "S4"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_DE_RECODE' | CONTEXT: Detailed German states from S4 are grouped into 4 broader geographic regions."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_DE_RECODE 1. North 2. East 3. West 4. South' | CONTEXT: Explicit recode of detailed German states (S4) into broader regions."
   },
   {
     "question_code": "S4_IN_RECODE",
@@ -531,7 +807,7 @@
     "recode_from": [
       "S4"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_IN_RECODE' | CONTEXT: Detailed Indian states/territories from S4 are grouped into 4 broader geographic regions."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_IN_RECODE 1. South 2. East 3. North 4. West' | CONTEXT: Explicit recode of detailed Indian states (S4) into broader regions."
   },
   {
     "question_code": "S4_PL_RECODE",
@@ -548,7 +824,7 @@
     "recode_from": [
       "S4"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_PL_RECODE' | CONTEXT: Detailed Polish provinces from S4 are grouped into 6 broader geographic regions."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_PL_RECODE 1. Center ...' | CONTEXT: Explicit recode of detailed Polish voivodeships (S4) into broader regions."
   },
   {
     "question_code": "S4_UAE_RECODE",
@@ -563,7 +839,39 @@
     "recode_from": [
       "S4"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_UAE_RECODE' | CONTEXT: Detailed UAE emirates from S4 are grouped into key emirates and an 'Others' category."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S4_UAE_RECODE 1. Abu Dhabi/Al Ain ...' | CONTEXT: Explicit recode of detailed UAE emirates (S4) into broader regions."
+  },
+  {
+    "question_code": "MARITAL_STATUS",
+    "question_text": "Marital Status",
+    "type": "single",
+    "possible_answers": {
+      "1": "Single",
+      "2": "Married / living as a couple",
+      "3": "Divorced / separated / widowed"
+    },
+    "recode_from": [
+      "S5"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S5. What is your current marital status?' | CONTEXT: Standard demographic classification."
+  },
+  {
+    "question_code": "EMPLOYMENT_STATUS",
+    "question_text": "Employment Status",
+    "type": "single",
+    "possible_answers": {
+      "1": "Employed full-time",
+      "2": "Employed part-time",
+      "3": "Self-employed",
+      "4": "Unemployed / looking for a job",
+      "5": "Student",
+      "6": "Retired",
+      "7": "Other"
+    },
+    "recode_from": [
+      "S9"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S9. What is your current employment status?' | CONTEXT: Standard demographic classification."
   },
   {
     "question_code": "S10_RECODE",
@@ -577,134 +885,21 @@
     "recode_from": [
       "S10"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'S10_RECODE (by country as per BES): 1. Low 2. Medium 3. High' | CONTEXT: Country-specific yearly household income bands (S10) are standardized into three broad tiers: Low, Medium, and High, likely for cross-country comparison."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'S10_RECODE (by country as per BES): 1. Low 2. Medium 3. High' | CONTEXT: Explicit recode of country-specific income bands (S10) into broader 'Low', 'Medium', 'High' tiers."
   },
   {
-    "question_code": "ELIGIBILITY_AGE",
-    "question_text": "Respondent Age Eligibility",
+    "question_code": "LOYALTY_PROGRAM_STATUS",
+    "question_text": "Ibis Loyalty Program Status",
     "type": "single",
     "possible_answers": {
-      "1": "Eligible (18+)",
-      "0": "Screened Out (<18)"
+      "1": "Yes, member",
+      "2": "Yes, but not member",
+      "3": "No, but interested",
+      "4": "No, and not interested"
     },
     "recode_from": [
-      "S1"
+      "B5"
     ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'IF S1<18 SCREEN-OUT' | CONTEXT: Implicit classification based on age screener. Respondents are classified as eligible if 18 or older, otherwise screened out."
-  },
-  {
-    "question_code": "DECISION_MAKER",
-    "question_text": "Household Hotel Decision Maker Status",
-    "type": "single",
-    "possible_answers": {
-      "1": "Decision Maker",
-      "0": "Not Decision Maker (Screened Out)"
-    },
-    "recode_from": [
-      "S2"
-    ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'IF S2=3 SCREEN-OUT' | CONTEXT: Implicit classification based on decision-making screener. Respondents who usually make decisions (alone or with others) are classified as Decision Makers, otherwise screened out. This aligns with the 'TARGET' definition."
-  },
-  {
-    "question_code": "HOTEL_STAYER_LAST_12_MONTHS",
-    "question_text": "Stayed at a hotel in the last 12 months",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "0": "No (Screened Out)"
-    },
-    "recode_from": [
-      "U1"
-    ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'IF U1=2 SCREEN-OUT' | CONTEXT: Implicit classification based on hotel stay screener. Respondents who stayed at a hotel in the last 12 months are classified as 'Yes', otherwise screened out."
-  },
-  {
-    "question_code": "AFFORDABLE_HOTEL_STAYER_LAST_12_MONTHS",
-    "question_text": "Stayed at an affordable hotel in the last 12 months",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "0": "No (Screened Out)"
-    },
-    "recode_from": [
-      "U2a"
-    ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'IF U2a=2 SCREEN-OUT' | CONTEXT: Implicit classification based on affordable hotel stay screener. Only respondents who stayed at an affordable category hotel in the last 12 months continue the survey. This is a key targeting criterion ('ECO SEGMENT hotel clients')."
-  },
-  {
-    "question_code": "STAYED_AT_LISTED_AFFORDABLE_BRAND",
-    "question_text": "Stayed at a listed affordable hotel brand",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "0": "No (Screened Out)"
-    },
-    "recode_from": [
-      "U3"
-    ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'IF U3=99 SCREEN-OUT' | CONTEXT: Implicit classification based on brand stay screener. Respondents who did not stay at any of the listed affordable brands are screened out."
-  },
-  {
-    "question_code": "VALID_STAY_OCCASION",
-    "question_text": "Had a valid stay occasion",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "0": "No (Screened Out)"
-    },
-    "recode_from": [
-      "U5"
-    ],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'IF U5=13 FOR ALL STAYS SCREEN-OUT' | CONTEXT: Implicit classification based on stay occasion screener. Respondents who selected 'None of the above' for all stays in U5 are screened out."
-  },
-  {
-    "question_code": "COUNTRY",
-    "question_text": "Respondent's Country",
-    "type": "single",
-    "possible_answers": {},
-    "recode_from": [],
-    "recode_hint": "CONTEXT: While not explicitly a question, the survey is conducted in multiple countries (France, Australia, Brazil, China, Germany, India, Poland, UK, UAE) with country-specific questions (e.g., S4, U13, S10). This implies a 'COUNTRY' variable is used for segmentation and data customization, likely derived from the survey panel or initial screening."
-  },
-  {
-    "question_code": "REGION_GLOBAL",
-    "question_text": "Global Geographic Region",
-    "type": "single",
-    "possible_answers": {},
-    "recode_from": [
-      "COUNTRY"
-    ],
-    "recode_hint": "CONTEXT: Given the international nature of the survey (multiple countries listed in 'SAMPLE SIZE'), it is highly probable that countries are grouped into broader global regions (e.g., Europe, APAC, Americas, MEA) for analysis, even if not explicitly stated as a recode."
-  },
-  {
-    "question_code": "U13_SPEND_PER_NIGHT_RECODE",
-    "question_text": "Spend per night tiers",
-    "type": "single",
-    "possible_answers": {
-      "1": "Low",
-      "2": "Medium",
-      "3": "High"
-    },
-    "recode_from": [
-      "U13"
-    ],
-    "recode_hint": "CONTEXT: Question U13 asks for spend per night in country-specific currency bands. Following the explicit pattern of S10_RECODE for income, it is highly probable that these detailed spend bands would be recoded into standardized 'Low', 'Medium', 'High' tiers for cross-country comparison and analysis."
-  },
-  {
-    "question_code": "S4_UK_RECODE",
-    "question_text": "UK Regions",
-    "type": "single",
-    "possible_answers": {},
-    "recode_from": [
-      "S4"
-    ],
-    "recode_hint": "CONTEXT: Following the explicit recode patterns for other countries (Australia, Brazil, France, China, Germany, India, Poland, UAE) in S4, it is highly probable that the detailed UK regions would also be grouped into broader categories for analysis, even if not explicitly named in the provided document."
-  },
-  {
-    "question_code": "QUOTA_SEGMENT",
-    "question_text": "Quota Segment",
-    "type": "single",
-    "possible_answers": {},
-    "recode_from": [],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'QUOTAS: TBC according to the Ibis Brand Equity survey' | CONTEXT: The survey explicitly states that quotas will be applied. This implies a classification of respondents into various quota segments, which would be derived from demographic or behavioral variables, even though the specific rules are not provided."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'B5. Did you know that ibis offers a loyalty program called 'ALL – Accor Live Limitless loyalty programme'?' | CONTEXT: Classifies respondents based on their awareness and membership of the loyalty program."
   }
 ]
