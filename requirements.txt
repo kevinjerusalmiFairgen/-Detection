@@ -1,6 +1,6 @@
 pandas>=1.5.0
 numpy>=1.23.0
-pyreadstat==1.2.7
+pyreadstat==1.2.7 --no-binary=pyreadstat
 openpyxl>=3.0.0
 google-generativeai>=0.3.0
 streamlit>=1.28.0
