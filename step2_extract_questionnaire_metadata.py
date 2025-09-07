@@ -146,13 +146,19 @@ MANDATORY RECODE DETECTION:
 OUTPUT SCHEMA (JSON array only):
 [
   {
+    "question_code": "Q1",
+    "question_text": "Which brands do you know?",
+    "type": "multi", 
+    "possible_answers": {"1": "Brand A", "2": "Brand B", "3": "Brand C"},
+    "grouping_hint": "Short reason why this is a multi-select group"
+  },
+  {
     "question_code": "AGE_RECODE",
     "question_text": "Age groups", 
     "type": "single",
     "possible_answers": {"1": "18-34", "2": "35-54", "3": "55+"},
     "recode_from": ["AGE"],
-    "recode_hint": "QUESTIONNAIRE TEXT: 'exact text explaining logic' | CONTEXT: reformulated explanation with context and business rules",
-    "grouping_hint": "Short reason why this is identified as a recode transformation"
+    "recode_hint": "QUESTIONNAIRE TEXT: 'exact text' | CONTEXT: explanation"
   }
 ]
 
@@ -160,7 +166,10 @@ CRITICAL SUCCESS FACTORS:
 - Find ALL classification logic: quota rules, buyer segmentation, targeting logic
 - DETECT IMPLICIT RECODES: business classifications not explicitly marked as "recode"
 - Look for spend/behavior patterns that create respondent categories
-- For ALL recode_hint: Include exact questionnaire text + clear reformulation
+
+HINT RULES:
+- Multi-select questions: Add "grouping_hint" only 
+- Recode variables: Add "recode_hint" only (no grouping_hint for recodes)
 """
 
     thinking_prompt = f"""
