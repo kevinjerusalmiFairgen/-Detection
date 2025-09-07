@@ -1,0 +1,1115 @@
+[
+  {
+    "question_code": "S1",
+    "question_text": "Do you or does any member of your household work in any of these occupations?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "An advertising or public relations (PR) agency",
+      "2": "A market research firm",
+      "3": "Journalism, reporting or freelance writing",
+      "4": "Healthcare (e.g. doctor, nurse, nutritionist, dietitian etc.)",
+      "5": "Pharmaceutical industry (includes sale, manufacture or distribution of medicines)",
+      "6": "Marketing",
+      "7": "Construction",
+      "8": "Teaching or education",
+      "9": "Retail",
+      "10": "IT or telecommunications",
+      "99": "None of the above"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "S6",
+    "question_text": "What is your race or ethnicity?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "White",
+      "2": "Hispanic, Latino or Spanish",
+      "3": "Black or African American",
+      "4": "Asian",
+      "5": "American Indian or Alaska Native",
+      "6": "Middle Eastern or North African",
+      "7": "Native Hawaiian or other Pacific Islander",
+      "98": "Some other race or ethnicity",
+      "99": "Prefer not to answer"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "S8",
+    "question_text": "Who else lives in your home with you at the moment?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Spouse/partner",
+      "2": "Parents (yours or partner's)",
+      "3": "Other adult relatives",
+      "4": "Adult friends/roommates",
+      "5": "Children aged 0-1 years old",
+      "6": "Children aged 2-3 years old",
+      "7": "Children aged 4-5 years old",
+      "8": "Children aged 6-9 years old",
+      "9": "Children aged 10-12 years old",
+      "10": "Children aged 13-18 years old",
+      "11": "Children aged 19+ years old",
+      "99": "Others"
+    },
+    "grouping_hint": "Instruction 'Please write in a number for all that apply' indicates multiple categories can be selected and quantified."
+  },
+  {
+    "question_code": "S10a",
+    "question_text": "Which of the following conditions has your household experienced during the last 12 months?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Seasonal allergies (such as ragweed, tree pollen, etc.)",
+      "2": "Pet allergies",
+      "3": "Year-round allergies such as dust, mold, etc",
+      "4": "Food allergies or intolerances",
+      "5": "Cough, cold or flu",
+      "6": "Headache or body pain",
+      "7": "Acid reflux/Heartburn (or acid rebound, acid regurgitation, silent reflux, GERD)",
+      "8": "Asthma",
+      "9": "COPD",
+      "99": "None of these"
+    },
+    "grouping_hint": "Explicit 'MULTICODE. GRID' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "S11a",
+    "question_text": "Which of the following symptoms have you personally experienced because of the following ailments over the last 12 months? If you experienced symptoms because of another ailment, do not select it unless it was caused by the following.",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Runny nose",
+      "2": "Sneezing",
+      "3": "Itchy, watery eyes",
+      "4": "Itchy nose",
+      "5": "Itchy throat",
+      "6": "Itchy ears",
+      "7": "Itchy palate / tongue",
+      "8": "Sinus/nasal congestion",
+      "9": "Sinus pain",
+      "10": "Disturbed sleep",
+      "11": "Hives or other skin symptoms (such as itchiness, irritation, or rash)",
+      "12": "Sickness, vomiting or other digestive symptoms",
+      "13": "Headache",
+      "14": "Postnasal drip (when the mucus runs down the back of your nose to your throat)",
+      "15": "Coughing",
+      "16": "Earache / pressure in the ear(s)",
+      "17": "Nosebleed",
+      "18": "Canker sores",
+      "19": "Fever",
+      "20": "Body ache",
+      "21": "Chest congestion",
+      "22": "Difficulty breathing",
+      "23": "Earache / infection",
+      "24": "Tiredness / fatigue",
+      "25": "Inflammation",
+      "98": "Other symptoms (please write in)"
+    },
+    "grouping_hint": "Explicit 'MULTICODE. GRID' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "S11b",
+    "question_text": "Which of the following symptoms have you personally experienced that you felt could be caused by seasonal, year-round, or pet allergy?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Runny nose",
+      "2": "Sneezing",
+      "3": "Itchy, watery eyes",
+      "4": "Itchy nose",
+      "5": "Itchy throat",
+      "6": "Itchy ears",
+      "7": "Itchy palate / tongue",
+      "8": "Sinus/nasal congestion",
+      "9": "Sinus pain",
+      "10": "Disturbed sleep",
+      "11": "Hives or other skin symptoms (such as itchiness, irritation, or rash)",
+      "12": "Sickness, vomiting or other digestive symptoms",
+      "13": "Headache",
+      "14": "Postnasal drip (when the mucus runs down the back of your nose to your throat)",
+      "15": "Coughing",
+      "16": "Earache / pressure in the ear(s)",
+      "17": "Nosebleed",
+      "18": "Canker sores",
+      "19": "Fever",
+      "20": "Body ache",
+      "21": "Chest congestion",
+      "22": "Difficulty breathing",
+      "23": "Earache / infection",
+      "24": "Tiredness / fatigue",
+      "25": "Inflammation",
+      "98": "Other symptoms"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "S13",
+    "question_text": "Which, if any, of the following treatments have you used during the last 12 months to treat your allergies?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Over-the-counter allergy medication",
+      "2": "Over-the-counter allergy medication with an added decongestant",
+      "3": "Over-the-counter medicated allergy nasal spray",
+      "4": "Over-the-counter allergy liquid medication",
+      "5": "Over-the-counter allergy and headache medication",
+      "6": "Over-the-counter allergy and cold medication",
+      "7": "Over-the-counter cough/cold medication",
+      "8": "Over-the-counter sinus medication",
+      "9": "Over-the-counter pain relief (Tylenol, Advil, etc)",
+      "10": "Allergy injections from a doctor",
+      "11": "Natural/homeopathic allergy tablets",
+      "12": "Nasal irrigation systems (Neti pot, sinus washes)",
+      "13": "Saline nasal spray",
+      "14": "Natural foods",
+      "15": "Air purification system/air filtration",
+      "16": "Medicated allergy eye drops",
+      "17": "Hypoallergenic home products",
+      "18": "Acupuncture",
+      "19": "Used a home-made remedy",
+      "20": "Used a natural/herbal store-bought allergy remedy",
+      "21": "Used vitamins/supplements (e.g., vitamin C, essential oils)",
+      "22": "Made a lifestyle change (e.g., more sleep, changed the types of foods that I eat, slowing down)",
+      "97": "Prescription drugs from your doctor to treat your allergies",
+      "99": "None of the above"
+    },
+    "grouping_hint": "Explicit 'MULTI CODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "S14",
+    "question_text": "Which of the following home-made, natural treatments or supplements have you used in the past 12 months for your allergy symptoms?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "99": "None of these"
+    },
+    "grouping_hint": "Explicit 'MULTI CODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "S15",
+    "question_text": "Lastly for this section, which, if any, of the following types of products have you bought for your child/children during the last 12 months to treat their allergies?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Over-the-counter allergy medication",
+      "2": "Over-the-counter allergy medication with an added decongestant",
+      "3": "Over-the-counter medicated allergy nasal spray",
+      "4": "Over-the-counter allergy liquid medication",
+      "5": "Over-the-counter allergy and headache medication",
+      "6": "Over-the-counter allergy and cold medication",
+      "7": "Over-the-counter cough/cold medication",
+      "8": "Over-the-counter sinus medication",
+      "9": "Over-the-counter pain relief (Tylenol, Advil, etc)",
+      "10": "Allergy injections from a doctor",
+      "11": "Natural/homeopathic allergy tablets",
+      "12": "Nasal irrigation systems (Neti pot, sinus washes)",
+      "13": "Saline nasal spray",
+      "14": "Natural foods",
+      "15": "Air purification system/air filtration",
+      "16": "Medicated allergy eye drops",
+      "17": "Hypoallergenic home products",
+      "18": "Acupuncture",
+      "19": "Used a home-made remedy",
+      "20": "Used a natural/herbal store-bought allergy remedy",
+      "21": "Used vitamins/supplements (e.g., vitamin C, essential oils)",
+      "22": "Made a lifestyle change (e.g., more sleep, changed the types of foods that they eat, slowing down)",
+      "97": "Prescription drugs from a doctor to treat their allergies",
+      "99": "None of the above"
+    },
+    "grouping_hint": "Explicit 'MULTI CODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "A4b",
+    "question_text": "Thinking about when you are experience allergy symptoms, which symptoms trigger you to first treat them with an over-the-counter (non-prescription) medication?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[SHOW ALL SELECTED AT S11]",
+      "98": "Some other trigger"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "A4c",
+    "question_text": "Which of the following, if any, describe why you don't use over-the-counter allergy medicine more often?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "98": "Some other reason",
+      "99": "None of the above"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "A5a",
+    "question_text": "Which of the following do you feel cause or contribute to your allergy symptoms?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "98": "Some other trigger"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "A6b",
+    "question_text": "Which of the following activities, if any, do your allergies disrupt or negatively impact?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "A6c",
+    "question_text": "Which of the following steps, if any, have you taken to minimize or reduce your allergy symptoms",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "A7b",
+    "question_text": "Which of the following, if any, describe how your approach to allergies has changed since COVID-19?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction, despite 'Please select one answer' which is likely a typo."
+  },
+  {
+    "question_code": "A8b",
+    "question_text": "Which of the following describes why your allergy symptoms have improved in the last 12 months?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "A8c",
+    "question_text": "Which of the following describes why your allergy symptoms have gotten worse in the last 12 months?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "B3a",
+    "question_text": "When you have questions about how to treat your allergies, what sources of information do you use to learn about treatments and prevention?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "B3b",
+    "question_text": "You mentioned you use social media to learn about treatments and/or prevention of allergies? Which of the following specific sites do you use?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "98": "Other social media site(s)",
+      "99": "None of the above"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "B5a",
+    "question_text": "Have you ever received information about allergies from any of the following types of health care professional?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "B5b",
+    "question_text": "What types of information related to allergies have you sought from a healthcare professional?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "B5c",
+    "question_text": "Which of the following types of allergy, if any, has a doctor or healthcare professional diagnosed you with?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Grass pollen",
+      "2": "Indoor",
+      "3": "Outdoor",
+      "4": "Tree pollen",
+      "5": "Weed pollen",
+      "6": "Insect (such as bee or wasp stings)",
+      "7": "Allergies to specific materials (such as latex or polyester)",
+      "8": "Drug / medication",
+      "9": "Dog",
+      "10": "Cat",
+      "11": "Dust",
+      "12": "Mold",
+      "13": "Hereditary allergies",
+      "14": "Weather-related",
+      "99": "None of these",
+      "98": "Not sure"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "B6a",
+    "question_text": "Have you ever used any of the following to keep track of information related to your upper respiratory allergies?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "B6b",
+    "question_text": "What type of information related to your allergies did you keep track of?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "B8a",
+    "question_text": "Which of the following are reasons you do not proactively keep allergy products 'in stock'?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "98": "Some other reason (PLEASE WRITE IN)"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "B8b",
+    "question_text": "Which of the following are reasons you proactively keep allergy products ‘in stock'?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "98": "Some other reason (PLEASE WRITE IN)"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "B9",
+    "question_text": "Which specific allergy symptoms do you typically treat with the following natural treatments or supplements?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Runny nose",
+      "2": "Sneezing",
+      "3": "Itchy, watery eyes",
+      "4": "Itchy nose",
+      "5": "Itchy throat",
+      "6": "Itchy ears",
+      "7": "Itchy palate / tongue",
+      "8": "Sinus/nasal congestion",
+      "9": "Sinus pain",
+      "10": "Disturbed sleep",
+      "11": "Hives or other skin symptoms (such as itchiness, irritation, or rash)",
+      "12": "Sickness, vomiting or other digestive symptoms",
+      "13": "Headache",
+      "14": "Postnasal drip (when the mucus runs down the back of your nose to your throat)",
+      "15": "Coughing",
+      "16": "Earache / pressure in the ear(s)",
+      "17": "Nosebleed",
+      "18": "Canker sores",
+      "19": "Fever",
+      "20": "Body ache",
+      "21": "Chest congestion",
+      "22": "Difficulty breathing",
+      "23": "Earache / infection",
+      "24": "Tiredness / fatigue",
+      "25": "Inflammation",
+      "98": "Some other symptom"
+    },
+    "grouping_hint": "Multi-select grid where respondents select symptoms (from S11) for each natural treatment/supplement (from S14)."
+  },
+  {
+    "question_code": "C1a",
+    "question_text": "Which of the following brands of allergy relief are you aware of?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "99": "None of these"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "C1b",
+    "question_text": "Which of the following allergy relief brands have you bought in the past 12 months?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "99": "None of these"
+    },
+    "grouping_hint": "Explicit 'MULTI CODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "C1c",
+    "question_text": "Which of the following allergy relief brands have you used in the past 12 months?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "SHOW BRANDS CODED AT C1b",
+      "99": "None of these"
+    },
+    "grouping_hint": "Explicit 'MULTI CODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "C1d",
+    "question_text": "Which of the following allergy relief brands have you used in the past 12 months to treat your specific allergy symptoms?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "ALL ALLERGY SYMPTOMS EXPERIENCED AT S11",
+      "98": "Some other symptom"
+    },
+    "grouping_hint": "Multi-select grid where respondents select symptoms (from S11) for each brand (from C1c)."
+  },
+  {
+    "question_code": "C1e",
+    "question_text": "Which of the following allergy relief brands do you typically use in the seasons you experience allergy symptoms?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "SHOW SEASONS QUALIFIED FOR AT S12"
+    },
+    "grouping_hint": "Multi-select grid where respondents select seasons (from S12) for each brand (from C1c)."
+  },
+  {
+    "question_code": "C1f",
+    "question_text": "Which of the following allergy relief brands would you consider buying in the future?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "SHOW BRANDS CODED AT C1a",
+      "99": "None of these"
+    },
+    "grouping_hint": "Explicit 'MULTI CODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "C2a",
+    "question_text": "Over-the-counter allergy relief comes in several different formats. Which forms, if any, do you prefer?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Solid tablets / pills",
+      "2": "Liquid gels",
+      "3": "Dissolve tablets",
+      "4": "Chewable tablets",
+      "5": "Syrups / liquids",
+      "6": "Nasal sprays",
+      "7": "Eye drops",
+      "99": "No preference"
+    },
+    "grouping_hint": "Explicit 'MULTI CODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "C2b",
+    "question_text": "Which of the following best describe why you prefer each of these formats of over-the-counter allergy medication?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Multi-select grid where respondents select reasons for each format (from C2a)."
+  },
+  {
+    "question_code": "C3",
+    "question_text": "Over-the-counter allergy relief tablets / pills come in several different pack sizes. Which pack sizes, if any, do you prefer?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "3",
+      "2": "5",
+      "3": "14",
+      "4": "24",
+      "5": "30",
+      "6": "50",
+      "7": "60",
+      "8": "70",
+      "9": "90",
+      "10": "120",
+      "11": "150",
+      "12": "200",
+      "13": "300",
+      "99": "No preference"
+    },
+    "grouping_hint": "Explicit 'MULTI CODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "C4",
+    "question_text": "Why did you use a natural remedy/product instead of an over-the-counter product?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "99": "None of these"
+    },
+    "grouping_hint": "Explicit 'MULTI CODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "C4b",
+    "question_text": "Why did you treat with a store brand / generic over-the-counter product instead of branded products (e.g., Claritin, Zyrtec)?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "99": "None of these"
+    },
+    "grouping_hint": "Explicit 'MULTI CODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "C9",
+    "question_text": "And which of these attributes do you associate with each of the following brands?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[SHOW SAME LIST USED AT C6 IN SAME ORDER]",
+      "99": "None of these"
+    },
+    "grouping_hint": "Multi-select grid where respondents select attributes (from C6) for each brand."
+  },
+  {
+    "question_code": "D1b",
+    "question_text": "Which symptoms did you experience on this occasion?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "SHOW ALL SELECTED AT S11",
+      "99": "I did not experience any symptoms – I was just buying allergy medication to top-up"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "D4",
+    "question_text": "Which of the following describe how you felt on this occasion?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction, despite 'Please select one answer' which is likely a typo."
+  },
+  {
+    "question_code": "D5a",
+    "question_text": "When you experienced allergies on this occasion, which treatments did you use?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[SHOW ALL SELECTED AT S13]",
+      "98": "Another treatment",
+      "99": "I didn't use any treatments"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction, despite 'Please select one answer' which is likely a typo."
+  },
+  {
+    "question_code": "D5b",
+    "question_text": "Which specific symptoms were you looking to treat with each of the following?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[SHOW ALL SELECTED AT D1b IN SAME ORDER]",
+      "98": "No specific symptoms"
+    },
+    "grouping_hint": "Multi-select grid where respondents select symptoms (from D1b) for each treatment (from D5a)."
+  },
+  {
+    "question_code": "D5c",
+    "question_text": "When during the day did you use each of these treatments for your allergies?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "As soon as I woke up",
+      "2": "During the morning",
+      "3": "During the afternoon",
+      "4": "During the evening",
+      "5": "During the night"
+    },
+    "grouping_hint": "Multi-select grid where respondents select times of day for each treatment (from D5a)."
+  },
+  {
+    "question_code": "D6a",
+    "question_text": "Which characteristics were most important when deciding on which allergy relief treatment to purchase on this occasion?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[USE SAME LIST AS C6.]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction, despite 'Please select one answer' which is likely a typo."
+  },
+  {
+    "question_code": "D6b",
+    "question_text": "And what would your ideal treatment have made you feel in terms of allergy relief on this occasion?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[USE SAME LIST AS D4.]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction, despite 'Please select one answer' which is likely a typo."
+  },
+  {
+    "question_code": "D8a",
+    "question_text": "Why did you choose to shop [...] on this occasion?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "D10",
+    "question_text": "Why would you not buy this/these products online?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "[REFER TO EXCEL]",
+      "98": "Another reason (SPECIFY)",
+      "99": "Don't know"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "E1",
+    "question_text": "Which of the following conditions have you been officially diagnosed with by a doctor or other health professional?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Diabetes",
+      "2": "Digestive issues (such as indigestion, heartburn, etc)",
+      "3": "Gastrointestinal conditions (digestive diseases)",
+      "4": "Heart Attack (at risk or have had)",
+      "5": "Heart Disease",
+      "6": "High Blood Pressure (Hypertension)",
+      "7": "Other respiratory issues",
+      "9": "None of the above",
+      "10": "I prefer not to say"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "E6",
+    "question_text": "What is your current employment status?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Working full time (21 hours or more per week)",
+      "2": "Working part time (20 hours or less per week)",
+      "3": "Homemaker",
+      "4": "Retired",
+      "5": "Student (full-time)",
+      "6": "Student (part-time)",
+      "7": "Unemployed"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply' text."
+  },
+  {
+    "question_code": "E8",
+    "question_text": "Do you have health insurance?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Yes - through my employer",
+      "2": "Yes - through my spouse's employer",
+      "3": "Yes - through a private policy",
+      "4": "Yes - through Medicare/Medicaid",
+      "5": "Yes - through the Affordable Care Act / Obamacare",
+      "6": "Yes - some other way",
+      "99": "No"
+    },
+    "grouping_hint": "Explicit 'MULTICODE' instruction and 'Please select all that apply answer' text."
+  },
+  {
+    "question_code": "S1",
+    "question_text": "Do you or does any member of your household work in any of these occupations?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "An advertising or public relations (PR) agency",
+      "2": "A market research firm",
+      "3": "Journalism, reporting or freelance writing",
+      "4": "Healthcare (e.g. doctor, nurse, nutritionist, dietitian etc.)",
+      "5": "Pharmaceutical industry (includes sale, manufacture or distribution of medicines)",
+      "6": "Marketing",
+      "7": "Construction",
+      "8": "Teaching or education",
+      "9": "Retail",
+      "10": "IT or telecommunications",
+      "99": "None of the above"
+    },
+    "grouping_hint": "Respondents select all applicable occupations for themselves or household members. Some options (1-6) lead to screening out."
+  },
+  {
+    "question_code": "GENDER_QUOTA_GROUP",
+    "question_text": "Gender for Quota Monitoring",
+    "type": "single",
+    "possible_answers": {
+      "1": "Male",
+      "2": "Female",
+      "3": "Another description of your gender orientation"
+    },
+    "recode_from": [
+      "S2"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'MONITOR QUOTAS' | CONTEXT: Gender (S2) is monitored for a 50/50 Female/Male quota. This variable directly reflects the S2 response but is identified as a key quota variable."
+  },
+  {
+    "question_code": "AGE_RECODE",
+    "question_text": "Age groups",
+    "type": "single",
+    "possible_answers": {
+      "1": "Below 18",
+      "2": "18-24",
+      "3": "25-34",
+      "4": "35-44",
+      "5": "45-54",
+      "6": "55-64",
+      "7": "65-74",
+      "8": "75+"
+    },
+    "recode_from": [
+      "S3"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'ALLOCATE AGE BANDS' | CONTEXT: Numerical age input (S3) is grouped into predefined age ranges for analysis and quota monitoring."
+  },
+  {
+    "question_code": "REGION_RECODE",
+    "question_text": "Region groups",
+    "type": "single",
+    "possible_answers": {
+      "1": "NORTHEAST",
+      "2": "MIDWEST",
+      "3": "SOUTH",
+      "4": "WEST"
+    },
+    "recode_from": [
+      "S4"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'CODE INTO NORTHEAST, MIDWEST, SOUTH, WEST. MONITOR REGION' | CONTEXT: ZIP code input (S4) is coded into 4 main geographic regions for analysis and quota monitoring."
+  },
+  {
+    "question_code": "INCOME_RECODE",
+    "question_text": "Household income groups",
+    "type": "single",
+    "possible_answers": {
+      "1": "Under $25,000",
+      "2": "$25,000 - $49,999",
+      "3": "$50,000 - $74,999",
+      "4": "$75,000 - $99,999",
+      "5": "$100,000 - $149,999",
+      "6": "$150,000 or higher",
+      "99": "Prefer not to say"
+    },
+    "recode_from": [
+      "S5"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'MONITOR HHI' | CONTEXT: Respondent's approximate annual household income (S5) is grouped into predefined tiers for analysis and quota monitoring."
+  },
+  {
+    "question_code": "RACE_AFRICAN_AMERICAN_QUOTA",
+    "question_text": "African American Quota Status",
+    "type": "single",
+    "possible_answers": {
+      "1": "African American",
+      "0": "Not African American"
+    },
+    "recode_from": [
+      "S6"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'MONITOR HISPANIC/AA QUOTAS' | CONTEXT: Derived from S6 to identify African American respondents for quota monitoring (Min 250, best efforts to achieve 350)."
+  },
+  {
+    "question_code": "RACE_HISPANIC_QUOTA",
+    "question_text": "Hispanic Quota Status",
+    "type": "single",
+    "possible_answers": {
+      "1": "Hispanic",
+      "0": "Not Hispanic"
+    },
+    "recode_from": [
+      "S6"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'MONITOR HISPANIC/AA QUOTAS' | CONTEXT: Derived from S6 to identify Hispanic respondents for quota monitoring (Min 350)."
+  },
+  {
+    "question_code": "MEDICATION_DECISION_MAKER_STATUS",
+    "question_text": "Household Medication Decision-Maker Status",
+    "type": "single",
+    "possible_answers": {
+      "1": "Solely Responsible",
+      "2": "Jointly Responsible",
+      "0": "Not Responsible"
+    },
+    "recode_from": [
+      "S9"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'CLOSE IF S9 = 3' | CONTEXT: Respondents are classified based on their responsibility for buying over-the-counter medications (S9). Those not responsible are screened out."
+  },
+  {
+    "question_code": "S10a",
+    "question_text": "Which of the following conditions has your household experienced during the last 12 months?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Seasonal allergies (such as ragweed, tree pollen, etc.)",
+      "2": "Pet allergies",
+      "3": "Year-round allergies (dust, mold, etc)",
+      "4": "Food allergies or intolerances",
+      "5": "Cough, cold or flu",
+      "6": "Headache or body pain",
+      "7": "Acid reflux/Heartburn (or acid rebound, acid regurgitation, silent reflux, GERD)",
+      "8": "Asthma",
+      "9": "COPD",
+      "99": "None of these"
+    },
+    "grouping_hint": "Respondents select all conditions experienced by their household in the last 12 months. Options 1-3 are critical for screening."
+  },
+  {
+    "question_code": "QUALIFIED_ALLERGY_SUFFERER_PERSONAL",
+    "question_text": "Qualified as Personal Allergy Sufferer",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "0": "No"
+    },
+    "recode_from": [
+      "S10a"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'CLOSE AT END OF SCREENER IF THEY PERSONALLY DID NOT SUFFER CODES 1-3 AT S10' | CONTEXT: Respondents are classified as qualified if they personally suffered from Seasonal, Pet, or Year-round/indoor allergies (S10a codes 1-3) in the last 12 months."
+  },
+  {
+    "question_code": "HOUSEHOLD_ALLERGY_SUFFERER_STATUS",
+    "question_text": "Household Member Suffered from Key Allergies",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "0": "No"
+    },
+    "recode_from": [
+      "S10a",
+      "S8"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'SHOW COLUMN SAYING \"Me Personally\" PLUS ALL OTHER OPTIONS CODED AT S8 ALONG TOP OF GRID' | CONTEXT: Derived from S10a to indicate if any household member (including self) experienced Seasonal, Pet, or Year-round/indoor allergies in the last 12 months."
+  },
+  {
+    "question_code": "SUSPECTED_ALLERGY_SUFFERER_STATUS",
+    "question_text": "Personally Suspected Allergy Symptoms",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "0": "No"
+    },
+    "recode_from": [
+      "S10b"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'ASK IF NOT CODING 1-3 AT S10a' | CONTEXT: Respondents who did not personally suffer from key allergies (S10a codes 1-3) are classified if they suspected their symptoms were allergy-related (S10b code 1)."
+  },
+  {
+    "question_code": "SYMPTOM_GROUP_ITCHY_ALLERGY",
+    "question_text": "Experienced Itchy Allergy Symptoms Group",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "0": "No"
+    },
+    "recode_from": [
+      "S11a",
+      "S11b"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'GROUP' label next to S11a/S11b options 3-7 | CONTEXT: Derived to indicate if a respondent experienced any of the grouped itchy symptoms (Itchy, watery eyes; Itchy nose; Itchy throat; Itchy ears; Itchy palate / tongue)."
+  },
+  {
+    "question_code": "SYMPTOM_GROUP_SINUS_ALLERGY",
+    "question_text": "Experienced Sinus Allergy Symptoms Group",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "0": "No"
+    },
+    "recode_from": [
+      "S11a",
+      "S11b"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'GROUP' label next to S11a/S11b options 8-9 | CONTEXT: Derived to indicate if a respondent experienced any of the grouped sinus symptoms (Sinus/nasal congestion; Sinus pain)."
+  },
+  {
+    "question_code": "ALLERGY_SEVERITY_OVERALL",
+    "question_text": "Overall Allergy Severity",
+    "type": "single",
+    "possible_answers": {
+      "1": "Light (0-30 days)",
+      "2": "Medium (31-153 days)",
+      "3": "Heavy (154+ days)"
+    },
+    "recode_from": [
+      "S12"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'ASSIGN SEVERITY' | CONTEXT: The total number of days suffered from allergies (sum of S12 seasonal inputs) is categorized into severity bands."
+  },
+  {
+    "question_code": "ALLERGY_SEASONALITY_OVERALL",
+    "question_text": "Overall Allergy Seasonality",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Winter (1+ days)",
+      "2": "Spring (1+ days)",
+      "3": "Summer (1+ days)",
+      "4": "Fall (1+ days)"
+    },
+    "recode_from": [
+      "S12"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'ASSIGN SEASONALITY. MULTI CODE.' | CONTEXT: Respondents are classified by the seasons in which they experienced 1+ days of allergy symptoms."
+  },
+  {
+    "question_code": "ALLERGY_HEAVY_OCCASION_OVERALL",
+    "question_text": "Overall Heavy Allergy Occasion Seasonality",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Winter (10+ days)",
+      "2": "Spring (10+ days)",
+      "3": "Summer (10+ days)",
+      "4": "Fall (10+ days)"
+    },
+    "recode_from": [
+      "S12"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'ASSIGN HOCCASION ON A LEAST FILL BASIS. SINGLE CODE.' | CONTEXT: Respondents are classified by the seasons in which they experienced 10+ days of allergy symptoms."
+  },
+  {
+    "question_code": "S13",
+    "question_text": "Which, if any, of the following treatments have you used during the last 12 months to treat your allergies?",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Over-the-counter allergy medication",
+      "2": "Over-the-counter allergy medication with an added decongestant",
+      "3": "Over-the-counter medicated allergy nasal spray",
+      "4": "Over-the-counter allergy liquid medication",
+      "5": "Over-the-counter allergy and headache medication",
+      "6": "Over-the-counter allergy and cold medication",
+      "7": "Over-the-counter cough/cold medication",
+      "8": "Over-the-counter sinus medication",
+      "9": "Over-the-counter pain relief (Tylenol, Advil, etc)",
+      "10": "Allergy injections from a doctor",
+      "11": "Natural/homeopathic allergy tablets",
+      "12": "Nasal irrigation systems (Neti pot, sinus washes)",
+      "13": "Saline nasal spray",
+      "14": "Natural foods",
+      "15": "Air purification system/air filtration",
+      "16": "Medicated allergy eye drops",
+      "17": "Hypoallergenic home products",
+      "18": "Acupuncture",
+      "19": "Used a home-made remedy",
+      "20": "Used a natural/herbal store-bought allergy remedy",
+      "21": "Used vitamins/supplements (e.g., vitamin C, essential oils)",
+      "22": "Made a lifestyle change (e.g., more sleep, changed the types of foods that I eat, slowing down)",
+      "97": "Prescription drugs from your doctor to treat your allergies",
+      "99": "None of the above"
+    },
+    "grouping_hint": "Respondents select all treatments used for their allergies in the last 12 months. Options 1-9 are critical for screening."
+  },
+  {
+    "question_code": "OTC_ALLERGY_PRODUCT_BUYER_STATUS",
+    "question_text": "OTC Allergy Product Buyer Status",
+    "type": "single",
+    "possible_answers": {
+      "1": "Bought OTC Allergy Product",
+      "0": "Did Not Buy OTC Allergy Product"
+    },
+    "recode_from": [
+      "S13"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'MUST CODE 1-9 TO CONTINUE' | CONTEXT: Respondents are classified as having bought an OTC allergy product if they selected any of the first 9 options in S13."
+  },
+  {
+    "question_code": "OTC_PRODUCT_CATEGORY_ALLERGY_SPECIFIC",
+    "question_text": "Used OTC Allergy Specific Product Category",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "0": "No"
+    },
+    "recode_from": [
+      "S13"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'GROUP. SHOW THIS GROUP FIRST.' | CONTEXT: Derived to indicate if a respondent used any of the grouped OTC products specifically for allergy symptoms (S13 options 1-8)."
+  },
+  {
+    "question_code": "OTC_PRODUCT_CATEGORY_GENERAL_PAIN_RELIEF",
+    "question_text": "Used OTC General Pain Relief Product Category",
+    "type": "single",
+    "possible_answers": {
+      "1": "Yes",
+      "0": "No"
+    },
+    "recode_from": [
+      "S13"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'GROUP. SHOW THIS GROUP SECOND.' | CONTEXT: Derived to indicate if a respondent used the grouped OTC general pain relief product (S13 option 9)."
+  },
+  {
+    "question_code": "CHILD_OTC_ALLERGY_PRODUCT_BUYER_STATUS",
+    "question_text": "Child OTC Allergy Product Buyer Status",
+    "type": "single",
+    "possible_answers": {
+      "1": "Bought OTC Allergy Product for Child",
+      "0": "Did Not Buy OTC Allergy Product for Child"
+    },
+    "recode_from": [
+      "S15"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'MUST USE OTC ALLERGY MEDICATION AT S13 TO QUALIFY' | CONTEXT: Respondents are classified as having bought an OTC allergy product for a child if they selected any of the first 9 options in S15 and met the S13 qualification."
+  },
+  {
+    "question_code": "PRIMARY_ALLERGY_SEASON_LAST_OCCASION",
+    "question_text": "Primary Allergy Season for Last Occasion Focus",
+    "type": "single",
+    "possible_answers": {
+      "1": "Winter",
+      "2": "Spring",
+      "3": "Summer",
+      "4": "Fall"
+    },
+    "recode_from": [
+      "S10"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'ALLOCATE ALL RESPONDENTS [SEASON] BASED ON RESPONSE TO S10.' | CONTEXT: A primary allergy season is assigned to each respondent based on their allergy incidence in S10, which then drives the context for the 'Last occasion / path to purchase' section (Section D)."
+  },
+  {
+    "question_code": "LAST_OCCASION_ALLERGY_SEVERITY_BAND",
+    "question_text": "Last Occasion Allergy Severity Band",
+    "type": "single",
+    "possible_answers": {
+      "1": "Light (0-30 days)",
+      "2": "Medium (31-153 days)",
+      "3": "Heavy (154+ days)"
+    },
+    "recode_from": [
+      "D1a"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'ASSIGN SEVERITY' (implied from S12 logic) | CONTEXT: The number of days suffered from allergies during the last occasion (sum of D1a monthly inputs) is categorized into severity bands using the same logic as S12."
+  },
+  {
+    "question_code": "RETAILER_TYPE_USED_LAST_OCCASION",
+    "question_text": "Type of Retailer Used for Last Purchase Occasion",
+    "type": "single",
+    "possible_answers": {
+      "1": "In-store",
+      "2": "Online"
+    },
+    "recode_from": [
+      "D7"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'In-store' / 'Online' columns in D7 | CONTEXT: Respondents are classified by whether their last purchase of allergy relief was made in-store or online based on their selection in D7."
+  },
+  {
+    "question_code": "HISPANIC_GENERATION_STATUS",
+    "question_text": "Hispanic Generation Status",
+    "type": "single",
+    "possible_answers": {
+      "1": "First Generation",
+      "2": "Second Generation",
+      "3": "Third Generation",
+      "5": "Fourth Generation or Higher",
+      "99": "Prefer not to answer"
+    },
+    "recode_from": [
+      "E9a"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'I was born outside of the US [FIRST GENERATION]', etc. | CONTEXT: Hispanic respondents (S6 code 2) are classified into generational categories based on their birth country and that of their parents/grandparents."
+  },
+  {
+    "question_code": "HISPANIC_LANGUAGE_PREFERENCE",
+    "question_text": "Hispanic Language Preference",
+    "type": "multi",
+    "possible_answers": {
+      "1": "Spanish only",
+      "2": "Spanish more than English",
+      "3": "Spanish and English equally",
+      "4": "English more than Spanish",
+      "5": "English only"
+    },
+    "recode_from": [
+      "E9b"
+    ],
+    "recode_hint": "QUESTIONNAIRE TEXT: 'SPANISH LANGUAGE PRIMARY IF CODES 1 OR 2 AT BOTH COLUMNS.' | CONTEXT: Hispanic respondents (S6 code 2) are classified by their language preference for speaking in and outside the household (E9b columns 1 and 2)."
+  }
+]
