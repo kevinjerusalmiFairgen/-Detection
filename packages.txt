@@ -3,4 +3,5 @@ libc6-dev
 zlib1g-dev
 libbz2-dev
 liblzma-dev
-libreadstat-dev
+pkg-config
+cmake
