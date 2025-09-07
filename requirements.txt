@@ -1,9 +1,6 @@
 pandas>=1.5.0
 numpy>=1.23.0
-Cython>=0.29.0
-setuptools>=40.0.0
-wheel>=0.30.0
-pyreadstat==1.2.0
+pyreadstat>=1.2.0
 openpyxl>=3.0.0
 google-generativeai>=0.3.0
 streamlit>=1.28.0

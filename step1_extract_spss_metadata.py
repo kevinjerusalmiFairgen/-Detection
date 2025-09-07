@@ -2,26 +2,7 @@
 import argparse
 import json
 from pathlib import Path
-import sys
-import os
-
-# Debug information
-print(f"Python executable: {sys.executable}")
-print(f"Python path: {sys.path}")
-print(f"Current working directory: {os.getcwd()}")
-
-try:
-    import pyreadstat
-    print("✅ pyreadstat imported successfully")
-except ImportError as e:
-    print(f"❌ Failed to import pyreadstat: {e}")
-    # Try to find pyreadstat in the environment
-    import subprocess
-    result = subprocess.run([sys.executable, "-m", "pip", "list"], capture_output=True, text=True)
-    print("Installed packages:")
-    print(result.stdout)
-    raise
-
+import pyreadstat
 import pandas as pd
 import numpy as np
 
