@@ -4,3 +4,5 @@ libffi-dev
 zlib1g-dev
 libbz2-dev
 liblzma-dev
+pkg-config
+cmake
