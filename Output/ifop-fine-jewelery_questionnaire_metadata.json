@@ -26,7 +26,7 @@
     "possible_answers": {}
   },
   {
-    "question_code": "A03_AGE_GROUP",
+    "question_code": "A03_GROUPED",
     "type": "single",
     "possible_answers": {
       "1": "18 to 34",
@@ -38,7 +38,7 @@
     "recode_from": [
       "A03"
     ],
-    "recode_hint": "Hidden variable for age breaks to track census rep completes and include in Decipher quotas."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'SET UP HIDDEN VARIABLE FOR BELOW AGE BREAKS TO TRACK CENSUS REP COMPLETES (INCLUDE IN DECIPHER QUOTAS) | 18 to 34: 11% | 35 to 44: 25% | 45 to 54: 26% | 55 to 64: 24% | 65 to 77: 14%' | CONTEXT: A hidden variable is created by grouping the numeric age response (A03) into predefined age bands for census balancing and quota tracking purposes. The age bands are: 18-34, 35-44, 45-54, 55-64, and 65-77."
   },
   {
     "question_code": "A05",
@@ -58,18 +58,6 @@
       "11": "$2,000,000 or more",
       "91": "I don't know / Prefer not to answer"
     }
-  },
-  {
-    "question_code": "A05_HHI_GROUP",
-    "type": "single",
-    "possible_answers": {
-      "1": "Less than $150,000",
-      "2": "$150,000 or more"
-    },
-    "recode_from": [
-      "A05"
-    ],
-    "recode_hint": "Classification of Household Income for quota targeting (HHI of $150,000 or more)."
   },
   {
     "question_code": "A07",
@@ -95,15 +83,6 @@
     "question_text": "Please enter your zip code.",
     "type": "numeric_open_end",
     "possible_answers": {}
-  },
-  {
-    "question_code": "A09_DMA",
-    "type": "single",
-    "possible_answers": {},
-    "recode_from": [
-      "A09"
-    ],
-    "recode_hint": "DMA (Designated Market Area) captured from zip code for targeting/analysis."
   },
   {
     "question_code": "A11",
@@ -175,7 +154,7 @@
     "recode_from": [
       "A11"
     ],
-    "recode_hint": "Variable created for Region, included in Decipher quotas, based on state selection."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'CREATE VARIABLE FOR REGION (INCLUDE IN DECIPHER QUOTAS) | NORTHEAST: 20% | MIDWEST: 20% | SOUTH: 34% | WEST: 26%' | CONTEXT: A variable is created by grouping the selected state (A11) into predefined geographic regions for quota tracking and census balancing. The regions are Northeast (ME, NH, VT, MA, RI, CT, NY, NJ, PA), Midwest (ND, SD, NE, KS, MN, IA, MO, WI, IL, MI, IN, OH), South (TX, OK, AR, LA, KY, TN, MS, AL, FL, GA, SC, NC, VA, WV, DC, MD, DE), and West (WA, OR, CA, AK, HI, MT, ID, WY, NV, UT, CO, AZ, NM)."
   },
   {
     "question_code": "A13",
@@ -216,7 +195,7 @@
     "recode_from": [
       "A15"
     ],
-    "recode_hint": "Ethnicity quota for census balance tracking, including 'Other Net' for codes r5-r99."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'SET UP ETHNICITY QUOTA FOR CENSUS BALANCE TRACKING (INCLUDE IN DECIPHER QUOTAS) | WHITE: 77% | BLACK: 8% | ASIAN: 6% | HISPANIC: 9% | OTHER NET: MAX 6%' | CONTEXT: A variable is created by grouping ethnicity/race responses (A15) for census balancing and quota tracking. The groups are White (A15=3), Black (A15=1), Asian (A15=2), Hispanic (A15=4), and 'Other Net' (which combines A15=5, A15=6, A15=7, A15=8)."
   },
   {
     "question_code": "A19",
@@ -305,20 +284,8 @@
     }
   },
   {
-    "question_code": "B01_GEN_POP_CLASSIFICATION",
-    "type": "single",
-    "possible_answers": {
-      "1": "Gen Pop",
-      "2": "Not Gen Pop"
-    },
-    "recode_from": [
-      "B01"
-    ],
-    "recode_hint": "Classification as 'Gen Pop' if 'Fine Jewelry (excluding engagement rings)' (B01_3) is NOT selected."
-  },
-  {
     "question_code": "B03",
-    "question_text": "Please indicate the most you have spent (for yourself or shared in the purchase decision for) on a single item of fine jewelry (excluding engagement rings) in the past 2 years. Fine Jewelry (excluding engagement rings) $",
+    "question_text": "Please indicate the most you have spent (for yourself or shared in the purchase decision for) on a single item of fine jewelry (excluding engagement rings) in the past 2 years.",
     "type": "numeric_open_end",
     "possible_answers": {}
   },
@@ -331,46 +298,18 @@
     }
   },
   {
-    "question_code": "B08_RINGS",
-    "question_text": "Of the [PIPE IN VALUE FROM B05] items of fine jewelry ($500 or more per piece) you own, how many are Rings?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "B08_BRACELETS",
-    "question_text": "Of the [PIPE IN VALUE FROM B05] items of fine jewelry ($500 or more per piece) you own, how many are Bracelets?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "B08_NECKLACES",
-    "question_text": "Of the [PIPE IN VALUE FROM B05] items of fine jewelry ($500 or more per piece) you own, how many are Necklaces?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "B08_PENDANTS",
-    "question_text": "Of the [PIPE IN VALUE FROM B05] items of fine jewelry ($500 or more per piece) you own, how many are Pendants (purchased separately to add to a necklace)?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "B08_EARRINGS",
-    "question_text": "Of the [PIPE IN VALUE FROM B05] items of fine jewelry ($500 or more per piece) you own, how many are Earrings?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "B08_BROOCHES_CLIPS",
-    "question_text": "Of the [PIPE IN VALUE FROM B05] items of fine jewelry ($500 or more per piece) you own, how many are Brooches/Pins and Clips?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "B08_OTHER",
-    "question_text": "Of the [PIPE IN VALUE FROM B05] items of fine jewelry ($500 or more per piece) you own, how many are Other?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
+    "question_code": "B08",
+    "question_text": "Of the [PIPE IN VALUE FROM B05] items of fine jewelry ($500 or more per piece) you own, how many are in each of the following categories?",
+    "type": "multi_numeric_open_end",
+    "possible_answers": {
+      "1": "Rings",
+      "2": "Bracelets",
+      "3": "Necklaces",
+      "4": "Pendants (purchased separately to add to a necklace)",
+      "5": "Earrings",
+      "6": "Brooches/Pins and Clips",
+      "98": "Other, specify:"
+    }
   },
   {
     "question_code": "B12",
@@ -379,23 +318,11 @@
     "possible_answers": {}
   },
   {
-    "question_code": "B12_BUYER_CLASSIFICATION",
+    "question_code": "RESPONDENT_SEGMENT",
     "type": "single",
     "possible_answers": {
-      "1": "Gen Pop",
-      "2": "Fine Jewelry Buyer"
-    },
-    "recode_from": [
-      "B12"
-    ],
-    "recode_hint": "Classification as 'Gen Pop' if B12 < $1,500, or 'Fine Jewelry Buyer' if B12 >= $1,500."
-  },
-  {
-    "question_code": "SEGMENT_TYPE_FINAL",
-    "type": "single",
-    "possible_answers": {
-      "1": "GEN POP (SHORT COMPLETE)",
-      "2": "FINE JEWELRY BUYER (LONG COMPLETE)"
+      "1": "Gen Pop (Short Complete)",
+      "2": "Fine Jewelry Buyer (Long Complete)"
     },
     "recode_from": [
       "B01",
@@ -403,10 +330,10 @@
       "B05",
       "B12"
     ],
-    "recode_hint": "Main quota classification combining B01 (Fine Jewelry selection), B03 (spend amount), B05 (ownership count), and B12 (most expensive item value)."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'MAIN QUOTAS DETERMINED AT END OF SECTION B: 1. GEN POP (SHORT COMPLETE) • B01≠3 • OR B12 < $1,500 2. FINE JEWELRY BUYER (LONG COMPLETE) • B01=3 • AND B03_3≥ $500 • AND B05 ≠ 2 • AND B12 ≥ $1,500' | CONTEXT: This variable classifies respondents into two main segments: 'Gen Pop (Short Complete)' for those who did not purchase fine jewelry (B01_3 not selected) OR own a most expensive piece valued under $1,500 (B12 < $1,500); and 'Fine Jewelry Buyer (Long Complete)' for those who purchased fine jewelry (B01_3 selected) AND spent $500 or more on a single item (B03_3 ≥ $500) AND own at least one piece of fine jewelry (B05 ≠ 2) AND own a most expensive piece valued at $1,500 or more (B12 ≥ $1,500)."
   },
   {
-    "question_code": "HFJTYPE",
+    "question_code": "HFJTYPE_JEWELRY_SPEND",
     "type": "single",
     "possible_answers": {
       "1": "Access: $500-$1,500",
@@ -417,7 +344,7 @@
     "recode_from": [
       "B03"
     ],
-    "recode_hint": "Hidden variable to classify Fine Jewelry Buyers by Jewelry Spend Type on B03, used for soft quotas."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'SET UP HIDDEN VARIABLE (HFJTYPE) TO CLASSIFY FINE JEWELRY BUYERS BY JEWELRY SPEND TYPE ON B03 (INCLUDE IN DECIPHER QUOTAS AS SOFT QUOTA TO MONITOR FOR LONG COMPLETES ONLY, NO MINIMUMS) | Access: $500-$1,500 | Premium: $1,501-$3,000 | Luxe: $3,001-$5,999 | Luxe Plus: $6,000+' | CONTEXT: A hidden variable (HFJTYPE) is created to classify Fine Jewelry Buyers based on their reported spending on a single item of fine jewelry (B03). This is used for quota monitoring. The categories are: Access ($500-$1,500), Premium ($1,501-$3,000), Luxe ($3,001-$5,999), and Luxe Plus ($6,000+)."
   },
   {
     "question_code": "C01",
@@ -426,231 +353,70 @@
     "possible_answers": {}
   },
   {
-    "question_code": "C05_RINGS",
-    "question_text": "Of the [PIPE IN VALUE FROM C01] fine jewelry items purchased in the past 2 years, how many were Rings?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "C05_BRACELETS",
-    "question_text": "Of the [PIPE IN VALUE FROM C01] fine jewelry items purchased in the past 2 years, how many were Bracelets?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "C05_NECKLACES",
-    "question_text": "Of the [PIPE IN VALUE FROM C01] fine jewelry items purchased in the past 2 years, how many were Necklaces?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "C05_PENDANTS",
-    "question_text": "Of the [PIPE IN VALUE FROM C01] fine jewelry items purchased in the past 2 years, how many were Pendants (purchased separately to add to a necklace)?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "C05_EARRINGS",
-    "question_text": "Of the [PIPE IN VALUE FROM C01] fine jewelry items purchased in the past 2 years, how many were Earrings?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "C05_BROOCHES_CLIPS",
-    "question_text": "Of the [PIPE IN VALUE FROM C01] fine jewelry items purchased in the past 2 years, how many were Brooches/Pins and Clips?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "C05_OTHER",
-    "question_text": "Of the [PIPE IN VALUE FROM C01] fine jewelry items purchased in the past 2 years, how many were Other?",
-    "type": "numeric_open_end",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "C08_RINGS",
-    "question_text": "How much do you typically spend on Rings?",
-    "type": "single",
+    "question_code": "C05",
+    "question_text": "Of the [PIPE IN VALUE FROM C01] fine jewelry (single piece with a price of $500 or more) items you have purchased for yourself or shared in the purchase decision in the past 2 years, please indicate how many pieces were purchased in each category.",
+    "type": "multi_numeric_open_end",
     "possible_answers": {
-      "1": "$500-$1,000",
-      "2": "$1,001-$3,000",
-      "3": "$3,001-$5,000",
-      "4": "$5,001-$7,500",
-      "5": "$7,501-$10,000",
-      "6": "$10,001-$15,000",
-      "7": "$15,001-$20,000",
-      "8": "$20,001 or more"
+      "1": "Rings",
+      "2": "Bracelets",
+      "3": "Necklaces",
+      "4": "Pendants (purchased separately to add to a necklace)",
+      "5": "Earrings",
+      "6": "Brooches/Pins and Clips",
+      "98": "Other, specify:"
     }
   },
   {
-    "question_code": "C08_BRACELETS",
-    "question_text": "How much do you typically spend on Bracelets?",
-    "type": "single",
+    "question_code": "C08",
+    "question_text": "Please indicate how much you typically spend on the following categories of fine jewelry, whether purchasing for yourself or sharing in the purchase decision.",
+    "type": "single_select_grid",
     "possible_answers": {
-      "1": "$500-$1,000",
-      "2": "$1,001-$3,000",
-      "3": "$3,001-$5,000",
-      "4": "$5,001-$7,500",
-      "5": "$7,501-$10,000",
-      "6": "$10,001-$15,000",
-      "7": "$15,001-$20,000",
-      "8": "$20,001 or more"
+      "rows": {
+        "1": "Rings",
+        "2": "Bracelets",
+        "3": "Necklaces",
+        "4": "Pendants (purchased separately to add to a necklace)",
+        "5": "Earrings",
+        "6": "Brooches/Pins and Clips",
+        "98": "Other, specify:"
+      },
+      "columns": {
+        "1": "$500-$1,000",
+        "2": "$1,001-$3,000",
+        "3": "$3,001-$5,000",
+        "4": "$5,001-$7,500",
+        "5": "$7,501-$10,000",
+        "6": "$10,001-$15,000",
+        "7": "$15,001-$20,000",
+        "8": "$20,001 or more"
+      }
     }
   },
   {
-    "question_code": "C08_NECKLACES",
-    "question_text": "How much do you typically spend on Necklaces?",
-    "type": "single",
+    "question_code": "C10",
+    "question_text": "How often do you purchase (for yourself or share in the purchase decision for) the following categories of fine jewelry items?",
+    "type": "single_select_grid",
     "possible_answers": {
-      "1": "$500-$1,000",
-      "2": "$1,001-$3,000",
-      "3": "$3,001-$5,000",
-      "4": "$5,001-$7,500",
-      "5": "$7,501-$10,000",
-      "6": "$10,001-$15,000",
-      "7": "$15,001-$20,000",
-      "8": "$20,001 or more"
-    }
-  },
-  {
-    "question_code": "C08_PENDANTS",
-    "question_text": "How much do you typically spend on Pendants (purchased separately to add to a necklace)?",
-    "type": "single",
-    "possible_answers": {
-      "1": "$500-$1,000",
-      "2": "$1,001-$3,000",
-      "3": "$3,001-$5,000",
-      "4": "$5,001-$7,500",
-      "5": "$7,501-$10,000",
-      "6": "$10,001-$15,000",
-      "7": "$15,001-$20,000",
-      "8": "$20,001 or more"
-    }
-  },
-  {
-    "question_code": "C08_EARRINGS",
-    "question_text": "How much do you typically spend on Earrings?",
-    "type": "single",
-    "possible_answers": {
-      "1": "$500-$1,000",
-      "2": "$1,001-$3,000",
-      "3": "$3,001-$5,000",
-      "4": "$5,001-$7,500",
-      "5": "$7,501-$10,000",
-      "6": "$10,001-$15,000",
-      "7": "$15,001-$20,000",
-      "8": "$20,001 or more"
-    }
-  },
-  {
-    "question_code": "C08_BROOCHES_CLIPS",
-    "question_text": "How much do you typically spend on Brooches/Pins and Clips?",
-    "type": "single",
-    "possible_answers": {
-      "1": "$500-$1,000",
-      "2": "$1,001-$3,000",
-      "3": "$3,001-$5,000",
-      "4": "$5,001-$7,500",
-      "5": "$7,501-$10,000",
-      "6": "$10,001-$15,000",
-      "7": "$15,001-$20,000",
-      "8": "$20,001 or more"
-    }
-  },
-  {
-    "question_code": "C10_RINGS",
-    "question_text": "How often do you purchase Rings?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Never",
-      "2": "Less often than every 10 years",
-      "3": "Once every 6-10 years",
-      "4": "Once every 4-5 years",
-      "5": "Once every 2-3 years",
-      "6": "Once a year",
-      "7": "Every 6 months",
-      "8": "Every 2-5 months",
-      "9": "Monthly"
-    }
-  },
-  {
-    "question_code": "C10_BRACELETS",
-    "question_text": "How often do you purchase Bracelets?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Never",
-      "2": "Less often than every 10 years",
-      "3": "Once every 6-10 years",
-      "4": "Once every 4-5 years",
-      "5": "Once every 2-3 years",
-      "6": "Once a year",
-      "7": "Every 6 months",
-      "8": "Every 2-5 months",
-      "9": "Monthly"
-    }
-  },
-  {
-    "question_code": "C10_NECKLACES",
-    "question_text": "How often do you purchase Necklaces?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Never",
-      "2": "Less often than every 10 years",
-      "3": "Once every 6-10 years",
-      "4": "Once every 4-5 years",
-      "5": "Once every 2-3 years",
-      "6": "Once a year",
-      "7": "Every 6 months",
-      "8": "Every 2-5 months",
-      "9": "Monthly"
-    }
-  },
-  {
-    "question_code": "C10_PENDANTS",
-    "question_text": "How often do you purchase Pendants (purchased separately to add to a necklace)?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Never",
-      "2": "Less often than every 10 years",
-      "3": "Once every 6-10 years",
-      "4": "Once every 4-5 years",
-      "5": "Once every 2-3 years",
-      "6": "Once a year",
-      "7": "Every 6 months",
-      "8": "Every 2-5 months",
-      "9": "Monthly"
-    }
-  },
-  {
-    "question_code": "C10_EARRINGS",
-    "question_text": "How often do you purchase Earrings?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Never",
-      "2": "Less often than every 10 years",
-      "3": "Once every 6-10 years",
-      "4": "Once every 4-5 years",
-      "5": "Once every 2-3 years",
-      "6": "Once a year",
-      "7": "Every 6 months",
-      "8": "Every 2-5 months",
-      "9": "Monthly"
-    }
-  },
-  {
-    "question_code": "C10_BROOCHES_CLIPS",
-    "question_text": "How often do you purchase Brooches/Pins and Clips?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Never",
-      "2": "Less often than every 10 years",
-      "3": "Once every 6-10 years",
-      "4": "Once every 4-5 years",
-      "5": "Once every 2-3 years",
-      "6": "Once a year",
-      "7": "Every 6 months",
-      "8": "Every 2-5 months",
-      "9": "Monthly"
+      "rows": {
+        "1": "Rings",
+        "2": "Bracelets",
+        "3": "Necklaces",
+        "4": "Pendants (purchased separately to add to a necklace)",
+        "5": "Earrings",
+        "6": "Brooches/Pins and Clips",
+        "98": "Other, specify:"
+      },
+      "columns": {
+        "1": "Never",
+        "2": "Less often than every 10 years",
+        "3": "Once every 6-10 years",
+        "4": "Once every 4-5 years",
+        "5": "Once every 2-3 years",
+        "6": "Once a year",
+        "7": "Every 6 months",
+        "8": "Every 2-5 months",
+        "9": "Monthly"
+      }
     }
   },
   {
@@ -696,58 +462,40 @@
     }
   },
   {
-    "question_code": "C20_GROUP_MONOBRAND",
-    "type": "single",
+    "question_code": "C20_CHANNEL_GROUPS",
+    "type": "multi",
     "possible_answers": {
-      "1": "Mono-brand Jewelry brand store/boutique or website"
+      "1": "Mono-brand Jewelry (store/website)",
+      "2": "Department Store (store/website)",
+      "3": "Multi-brand Jewelry (store/website)",
+      "4": "Consignment/Resale (physical/online)"
     },
     "recode_from": [
       "C20"
     ],
-    "recode_hint": "Grouped variable for Mono-brand Jewelry purchases (store/boutique and website)."
-  },
-  {
-    "question_code": "C20_GROUP_DEPARTMENT_STORE",
-    "type": "single",
-    "possible_answers": {
-      "1": "Department store or website"
-    },
-    "recode_from": [
-      "C20"
-    ],
-    "recode_hint": "Grouped variable for Department store purchases (store and website)."
-  },
-  {
-    "question_code": "C20_GROUP_MULTIBRAND",
-    "type": "single",
-    "possible_answers": {
-      "1": "Multi-brand Jewelry store or website"
-    },
-    "recode_from": [
-      "C20"
-    ],
-    "recode_hint": "Grouped variable for Multi-brand Jewelry purchases (store and website)."
-  },
-  {
-    "question_code": "C20_GROUP_CONSIGNMENT",
-    "type": "single",
-    "possible_answers": {
-      "1": "Consignment/Resale Physical Store or Online"
-    },
-    "recode_from": [
-      "C20"
-    ],
-    "recode_hint": "Grouped variable for Consignment/Resale purchases (physical store and online)."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'RANDOMIZE BUT KEEP ROWS AS A GROUP WHERE NOTED | GROUP 1-2 | GROUP 3-4 | GROUP 5-6 | GROUP 7-8' | CONTEXT: This variable groups the detailed purchase channels (C20) into broader categories for analysis. Group 1-2 combines 'Mono-brand Jewelry brand store/boutique' and 'Mono-brand Jewelry brand website'. Group 3-4 combines 'Department store' and 'Department store website'. Group 5-6 combines 'Multi-brand Jewelry store' and 'Multi-brand Jewelry website'. Group 7-8 combines 'Consignment/Resale Physical Store' and 'Consignment/Resale Online'."
   },
   {
     "question_code": "C23",
     "question_text": "Of the places you have purchased fine jewelry in the past, which is your primary or go-to channel?",
     "type": "single",
-    "possible_answers": {}
+    "possible_answers": {
+      "1": "Mono-brand Jewelry brand store/boutique",
+      "2": "Mono-brand Jewelry brand website",
+      "3": "Department store",
+      "4": "Department store website",
+      "5": "Multi-brand Jewelry store",
+      "6": "Multi-brand Jewelry website",
+      "7": "Consignment/Resale Physical Store (i.e., The RealReal)",
+      "8": "Consignment/Resale Online (i.e., Poshmark, TheRealReal online, 1st dibs)",
+      "9": "Trunk shows hosted by brands (in a store, hotel, etc.)",
+      "10": "Amazon Luxury Stores",
+      "98": "Other"
+    }
   },
   {
     "question_code": "C26",
-    "question_text": "Which of the following people and places do you turn to for fine jewelry inspiration?",
+    "question_text": "Which of the following people and places do you turn to for fine jewelry inspiration? Think about where you look to help cultivate your personal style for jewelry.",
     "type": "multi",
     "possible_answers": {
       "1": "Friends",
@@ -766,7 +514,7 @@
   },
   {
     "question_code": "C28",
-    "question_text": "Which of the following types of media and digital platforms do you turn to for fine jewelry inspiration?",
+    "question_text": "Which of the following types of media and digital platforms do you turn to for fine jewelry inspiration? Think about where you look to help cultivate your personal style for jewelry.",
     "type": "multi",
     "possible_answers": {
       "1": "Print Magazines",
@@ -799,65 +547,65 @@
     }
   },
   {
-    "question_code": "C28_GROUP_MAGAZINE_AD",
-    "type": "single",
+    "question_code": "C28_MEDIA_GROUPS",
+    "type": "multi",
     "possible_answers": {
-      "1": "Magazine Ad (Print, Online, Social Media, Digital-Only, Printed catalogues)"
+      "1": "Magazine Ad",
+      "2": "Brand",
+      "3": "E-Commerce",
+      "4": "Social Media",
+      "5": "Other Media"
     },
     "recode_from": [
       "C28"
     ],
-    "recode_hint": "Grouped variable for Magazine Ad inspiration sources."
-  },
-  {
-    "question_code": "C28_GROUP_BRAND",
-    "type": "single",
-    "possible_answers": {
-      "1": "Brand (Websites, Social Media Accounts)"
-    },
-    "recode_from": [
-      "C28"
-    ],
-    "recode_hint": "Grouped variable for Brand inspiration sources."
-  },
-  {
-    "question_code": "C28_GROUP_ECOMMERCE",
-    "type": "single",
-    "possible_answers": {
-      "1": "E-Commerce (Multi-brand/Department Store Websites/Social Media, Online only Fashion Sites, Amazon.com)"
-    },
-    "recode_from": [
-      "C28"
-    ],
-    "recode_hint": "Grouped variable for E-Commerce inspiration sources."
-  },
-  {
-    "question_code": "C28_GROUP_SOCIAL_MEDIA",
-    "type": "single",
-    "possible_answers": {
-      "1": "Social Media (Facebook, X, Instagram, Threads, TikTok, YouTube, Snapchat, Pinterest, Reddit, BeReal)"
-    },
-    "recode_from": [
-      "C28"
-    ],
-    "recode_hint": "Grouped variable for Social Media inspiration sources."
-  },
-  {
-    "question_code": "C28_GROUP_OTHER_MEDIA",
-    "type": "single",
-    "possible_answers": {
-      "1": "Other Media (Podcasts, Emails, Online Games/Metaverse Platforms, Online search engines)"
-    },
-    "recode_from": [
-      "C28"
-    ],
-    "recode_hint": "Grouped variable for Other Media inspiration sources."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'PROGRAM WITH GROUP BUT DO NOT LABEL (ex: KEEP 1-5 GROUPED)' | CONTEXT: This variable groups the detailed media and digital platforms (C28) into broader categories for analysis. The implied groups are: 'Magazine Ad' (options 1-5), 'Brand' (options 6-7), 'E-Commerce' (options 8-11), 'Social Media' (options 12-21), and 'Other Media' (options 22-26)."
   },
   {
     "question_code": "C30",
     "question_text": "Which of these do you rely on most as your #1 source of fine jewelry inspiration?",
     "type": "single",
-    "possible_answers": {}
+    "possible_answers": {
+      "1": "Friends",
+      "2": "Family",
+      "3": "People I see \"on the street\"",
+      "4": "Characters on TV/in movies or TV series",
+      "5": "Celebrities (actors, musicians, artists)",
+      "6": "Social Media Influencers (Tik Tokers, YouTubers, Instagrammers)",
+      "7": "Sales Associate/Personal Shopper/Stylist",
+      "8": "Mono-brand Jewelry Boutiques (e.g., displays, store windows, etc.)",
+      "9": "Multi-brand Jewelry Stores (e.g., displays, store windows, etc.)",
+      "10": "Department Stores (e.g., displays, store windows, etc.)",
+      "11": "In-store customer events hosted by a brand/retailer",
+      "12": "Online customer events hosted by a brand/retailer",
+      "13": "Print Magazines",
+      "14": "Online Magazines/Magazine Websites",
+      "15": "Magazine Social Media Accounts",
+      "16": "Digital-Only Fashion Media (e.g., WhoWhatWear, Refinery29)",
+      "17": "Printed catalogues from brands/retailers",
+      "18": "Brand Websites",
+      "19": "Brand Social Media Accounts",
+      "20": "Multi-brand or Department Store Websites",
+      "21": "Multi-brand or Department Store Social Media",
+      "22": "Online only Fashion Sites (e.g., Net-A-Porter, Farfetch)",
+      "23": "Amazon.com",
+      "24": "Facebook",
+      "25": "X (formerly Twitter)",
+      "26": "Instagram",
+      "27": "Threads by Instagram",
+      "28": "Tik Tok",
+      "29": "YouTube",
+      "30": "Snapchat",
+      "31": "Pinterest",
+      "32": "Reddit",
+      "33": "BeReal",
+      "34": "Podcasts",
+      "35": "Emails from Brands & Retailers",
+      "36": "Emails from fashion critics, influencers/bloggers, etc.",
+      "37": "Online Games/Metaverse Platforms (e.g., Fortnite, SandBox, Roblox, Sims, etc.)",
+      "38": "Online search engines (e.g., Google, Bing, Yahoo, etc.)",
+      "99": "None of these"
+    }
   },
   {
     "question_code": "C40",
@@ -974,91 +722,32 @@
     }
   },
   {
-    "question_code": "D09_STATEMENT_1",
-    "question_text": "I prefer branded jewelry / I prefer unbranded jewelry",
-    "type": "single",
+    "question_code": "D09",
+    "question_text": "Please indicate your level of agreement with the following statements when it comes to fine jewelry. Slide the bar to the side that best describes how you feel.",
+    "type": "single_select_grid",
     "possible_answers": {
-      "1": "I prefer branded jewelry",
-      "2": "",
-      "3": "",
-      "4": "I prefer unbranded jewelry"
-    }
-  },
-  {
-    "question_code": "D09_STATEMENT_2",
-    "question_text": "I would consider buying lab-grown diamonds / I would only buy natural diamonds",
-    "type": "single",
-    "possible_answers": {
-      "1": "I would consider buying lab-grown diamonds",
-      "2": "",
-      "3": "",
-      "4": "I would only buy natural diamonds"
-    }
-  },
-  {
-    "question_code": "D09_STATEMENT_3",
-    "question_text": "I want people to recognize the brand of jewelry I wear / It's not important that people recognize the brand of jewelry I wear",
-    "type": "single",
-    "possible_answers": {
-      "1": "I want people to recognize the brand of jewelry I wear",
-      "2": "",
-      "3": "",
-      "4": "It's not important that people recognize the brand of jewelry I wear"
-    }
-  },
-  {
-    "question_code": "D09_STATEMENT_4",
-    "question_text": "I like trying new jewelry brands that come out on the market / I prefer to stick to well-known and familiar jewelry brands",
-    "type": "single",
-    "possible_answers": {
-      "1": "I like trying new jewelry brands that come out on the market",
-      "2": "",
-      "3": "",
-      "4": "I prefer to stick to well-known and familiar jewelry brands"
-    }
-  },
-  {
-    "question_code": "D09_STATEMENT_5",
-    "question_text": "I conduct extensive research prior to purchasing jewelry / I don't spend a lot of time researching prior to purchasing jewelry",
-    "type": "single",
-    "possible_answers": {
-      "1": "I conduct extensive research prior to purchasing jewelry",
-      "2": "",
-      "3": "",
-      "4": "I don't spend a lot of time researching prior to purchasing jewelry"
-    }
-  },
-  {
-    "question_code": "D09_STATEMENT_6",
-    "question_text": "I like to mix and match jewelry pieces from different brands / I like to wear various jewelry pieces from one single brand",
-    "type": "single",
-    "possible_answers": {
-      "1": "I like to mix and match jewelry pieces from different brands",
-      "2": "",
-      "3": "",
-      "4": "I like to wear various jewelry pieces from one single brand"
-    }
-  },
-  {
-    "question_code": "D09_STATEMENT_7",
-    "question_text": "I prefer subtle, minimalist, delicate jewelry pieces / I prefer bold, eye-catching jewelry pieces",
-    "type": "single",
-    "possible_answers": {
-      "1": "I prefer subtle, minimalist, delicate jewelry pieces",
-      "2": "",
-      "3": "",
-      "4": "I prefer bold, eye-catching jewelry pieces"
-    }
-  },
-  {
-    "question_code": "D09_STATEMENT_8",
-    "question_text": "I prefer to invest in versatile fine jewelry pieces, suitable for every occasion / I prefer to invest in special fine jewelry pieces for a specific occasion",
-    "type": "single",
-    "possible_answers": {
-      "1": "I prefer to invest in versatile fine jewelry pieces, suitable for every occasion",
-      "2": "",
-      "3": "",
-      "4": "I prefer to invest in special fine jewelry pieces for a specific occasion"
+      "rows": {
+        "1": "I prefer branded jewelry",
+        "2": "I would consider buying lab-grown diamonds",
+        "3": "I want people to recognize the brand of jewelry I wear",
+        "4": "I like trying new jewelry brands that come out on the market",
+        "5": "I conduct extensive research prior to purchasing jewelry",
+        "6": "I like to mix and match jewelry pieces from different brands",
+        "7": "I prefer subtle, minimalist, delicate jewelry pieces",
+        "8": "I prefer to invest in versatile fine jewelry pieces, suitable for every occasion"
+      },
+      "columns": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
     }
   },
   {
@@ -1066,7 +755,7 @@
     "question_text": "When purchasing fine jewelry, how satisfied are you with the fine jewelry brand choices available to you?",
     "type": "single",
     "possible_answers": {
-      "1": "NOT AT ALL SATISFIED",
+      "1": "1- Not at all satisfied",
       "2": "2",
       "3": "3",
       "4": "4",
@@ -1075,7 +764,7 @@
       "7": "7",
       "8": "8",
       "9": "9",
-      "10": "EXTREMELY SATISFIED"
+      "10": "10- Extremely satisfied"
     }
   },
   {
@@ -1136,43 +825,52 @@
     }
   },
   {
-    "question_code": "D21_NET_HERITAGE",
-    "type": "single",
+    "question_code": "D21_BRAND_CATEGORY",
+    "type": "multi",
     "possible_answers": {
-      "1": "Heritage Brands"
+      "1": "HERITAGE",
+      "2": "FASHION",
+      "3": "CONTEMPORARY"
     },
     "recode_from": [
       "D21"
     ],
-    "recode_hint": "Net variable for brands classified as 'Heritage' from D21."
-  },
-  {
-    "question_code": "D21_NET_FASHION",
-    "type": "single",
-    "possible_answers": {
-      "1": "Fashion Brands"
-    },
-    "recode_from": [
-      "D21"
-    ],
-    "recode_hint": "Net variable for brands classified as 'Fashion' from D21."
-  },
-  {
-    "question_code": "D21_NET_CONTEMPORARY",
-    "type": "single",
-    "possible_answers": {
-      "1": "Contemporary Brands"
-    },
-    "recode_from": [
-      "D21"
-    ],
-    "recode_hint": "Net variable for brands classified as 'Contemporary' from D21."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'CREATE NETS WITH BRAND CATEGORY HERITAGE/FASHION/CONTEMPORARY' | CONTEXT: This variable creates nets (groupings) for the fine jewelry brands listed in D21 based on their category: Heritage, Fashion, or Contemporary. Each brand is pre-assigned a category as indicated in the questionnaire (e.g., BOUCHERON is Heritage, CHANEL is Fashion, DAVID YURMAN is Contemporary)."
   },
   {
     "question_code": "D23",
     "question_text": "Which of the following fine jewelry brands have you ever owned?",
     "type": "multi",
     "possible_answers": {
+      "1": "BOUCHERON",
+      "2": "BUCCELLATI",
+      "3": "BVLGARI",
+      "4": "CARTIER",
+      "5": "CHANEL",
+      "6": "CHAUMET",
+      "7": "CHOPARD",
+      "8": "DAMIANI",
+      "9": "DAVID YURMAN",
+      "10": "DE BEERS",
+      "11": "DIOR",
+      "12": "FRED",
+      "13": "GRAFF",
+      "14": "GUCCI",
+      "15": "H. STERN",
+      "16": "HARRY WINSTON",
+      "17": "HERMES",
+      "18": "LOUIS VUITTON",
+      "19": "MARCO BICEGO",
+      "20": "MESSIKA",
+      "21": "MIKIMOTO",
+      "22": "PASPALEY",
+      "23": "PIAGET",
+      "24": "POMELLATO",
+      "25": "REPOSSI",
+      "26": "ROBERTO COIN",
+      "27": "TIFFANY & CO",
+      "28": "VAN CLEEF & ARPELS",
+      "98": "Other, specify:",
       "99": "None of these"
     }
   },
@@ -1180,74 +878,62 @@
     "question_code": "D25",
     "question_text": "Of the fine jewelry brands you own, which is your favorite?",
     "type": "single",
-    "possible_answers": {}
-  },
-  {
-    "question_code": "D27_PEARLS",
-    "question_text": "How much do you feel you know about Pearls?",
-    "type": "single",
     "possible_answers": {
-      "1": "I KNOW NOTHING",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "I KNOW A LOT"
+      "1": "BOUCHERON",
+      "2": "BUCCELLATI",
+      "3": "BVLGARI",
+      "4": "CARTIER",
+      "5": "CHANEL",
+      "6": "CHAUMET",
+      "7": "CHOPARD",
+      "8": "DAMIANI",
+      "9": "DAVID YURMAN",
+      "10": "DE BEERS",
+      "11": "DIOR",
+      "12": "FRED",
+      "13": "GRAFF",
+      "14": "GUCCI",
+      "15": "H. STERN",
+      "16": "HARRY WINSTON",
+      "17": "HERMES",
+      "18": "LOUIS VUITTON",
+      "19": "MARCO BICEGO",
+      "20": "MESSIKA",
+      "21": "MIKIMOTO",
+      "22": "PASPALEY",
+      "23": "PIAGET",
+      "24": "POMELLATO",
+      "25": "REPOSSI",
+      "26": "ROBERTO COIN",
+      "27": "TIFFANY & CO",
+      "28": "VAN CLEEF & ARPELS",
+      "98": "Other, specify:",
+      "99": "None of these"
     }
   },
   {
-    "question_code": "D27_DIAMONDS",
-    "question_text": "How much do you feel you know about Diamonds?",
-    "type": "single",
+    "question_code": "D27",
+    "question_text": "How much do you feel you know about the following types of jewelry?",
+    "type": "single_select_grid",
     "possible_answers": {
-      "1": "I KNOW NOTHING",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "I KNOW A LOT"
-    }
-  },
-  {
-    "question_code": "D27_SAPPHIRES",
-    "question_text": "How much do you feel you know about Sapphires?",
-    "type": "single",
-    "possible_answers": {
-      "1": "I KNOW NOTHING",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "I KNOW A LOT"
-    }
-  },
-  {
-    "question_code": "D27_EMERALDS",
-    "question_text": "How much do you feel you know about Emeralds?",
-    "type": "single",
-    "possible_answers": {
-      "1": "I KNOW NOTHING",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "I KNOW A LOT"
+      "rows": {
+        "1": "Pearls",
+        "2": "Diamonds",
+        "3": "Sapphires",
+        "4": "Emeralds"
+      },
+      "columns": {
+        "1": "1- I know nothing",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10- I know a lot"
+      }
     }
   },
   {
@@ -1255,24 +941,24 @@
     "question_text": "How much are you interested in pearls / jewelry with pearls?",
     "type": "single",
     "possible_answers": {
-      "1": "NOT AT ALL INTERESTED",
+      "1": "1- Not at all interested",
       "2": "2",
       "3": "3",
       "4": "4",
-      "5": "VERY INTERESTED"
+      "5": "5- Very interested"
     }
   },
   {
-    "question_code": "D29_PEARL_CONSIDERATION",
+    "question_code": "D29_PEARL_INTEREST",
     "type": "single",
     "possible_answers": {
-      "1": "PEARL NON-CONSIDERERS",
-      "2": "PEARL CONSIDERERS"
+      "1": "Pearl Non-Considerers",
+      "2": "Pearl Considerers"
     },
     "recode_from": [
       "D29"
     ],
-    "recode_hint": "Classification based on interest in pearls/jewelry with pearls (D29)."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'IF D29 = (1) OR (2), CLASSIFY AS 'PEARL NON-CONSIDERERS' | IF D29 = (3) OR (4) OR (5), CLASSIFY AS 'PEARL CONSIDERERS'' | CONTEXT: This variable classifies respondents based on their interest level in pearls/jewelry with pearls (D29). Those selecting 1 or 2 on the scale are classified as 'Pearl Non-Considerers', while those selecting 3, 4, or 5 are classified as 'Pearl Considerers'."
   },
   {
     "question_code": "D30",
@@ -1306,161 +992,70 @@
     }
   },
   {
-    "question_code": "D31_PEARL_STRANDS",
-    "question_text": "Do you own Pearl strands (necklace or bracelet)?",
-    "type": "single",
+    "question_code": "D31",
+    "question_text": "Do you own any of the following styles of pearls / jewelry with pearls (costing $500 or more)?",
+    "type": "single_select_grid",
     "possible_answers": {
-      "1": "Yes",
-      "2": "No"
+      "rows": {
+        "1": "Pearl strands (necklace or bracelet)",
+        "2": "Pearl studs",
+        "3": "Jewelry items with pearls as a component",
+        "4": "Jewelry items with mother-of-pearl as a component"
+      },
+      "columns": {
+        "1": "Yes",
+        "2": "No"
+      }
     }
   },
   {
-    "question_code": "D31_PEARL_STUDS",
-    "question_text": "Do you own Pearl studs?",
+    "question_code": "D31_PEARL_JEWELRY_NET",
     "type": "single",
     "possible_answers": {
-      "1": "Yes",
-      "2": "No"
-    }
-  },
-  {
-    "question_code": "D31_JEWELRY_PEARL_COMPONENT",
-    "question_text": "Do you own Jewelry items with pearls as a component?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "2": "No"
-    }
-  },
-  {
-    "question_code": "D31_JEWELRY_MOTHER_OF_PEARL_COMPONENT",
-    "question_text": "Do you own Jewelry items with mother-of-pearl as a component?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "2": "No"
-    }
-  },
-  {
-    "question_code": "D31_NET_PEARLS",
-    "type": "single",
-    "possible_answers": {
-      "1": "Owns Pearl strands or Pearl studs"
+      "1": "Owns Pearls/Jewelry with Pearls",
+      "2": "Does not own Pearls/Jewelry with Pearls"
     },
     "recode_from": [
-      "D31_PEARL_STRANDS",
-      "D31_PEARL_STUDS"
+      "D31"
     ],
-    "recode_hint": "Net variable for ownership of 'Pearls' styles."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'CREATE NET FOR PEARLS, JEWELRY WITH PEARLS' | CONTEXT: This variable creates a net (grouping) to identify respondents who own any type of pearl or pearl-component jewelry from the list in D31. It combines responses from 'Pearl strands', 'Pearl studs', 'Jewelry items with pearls as a component', and 'Jewelry items with mother-of-pearl as a component'. If any of these are 'Yes', the respondent is classified as owning pearls/jewelry with pearls."
   },
   {
-    "question_code": "D31_NET_JEWELRY_WITH_PEARLS",
-    "type": "single",
+    "question_code": "D32",
+    "question_text": "Do you own any of the following categories of pearls / jewelry with pearls (costing $500 or more)?",
+    "type": "single_select_grid",
     "possible_answers": {
-      "1": "Owns Jewelry items with pearls as a component or mother-of-pearl as a component"
-    },
-    "recode_from": [
-      "D31_JEWELRY_PEARL_COMPONENT",
-      "D31_JEWELRY_MOTHER_OF_PEARL_COMPONENT"
-    ],
-    "recode_hint": "Net variable for ownership of 'Jewelry with Pearls' styles."
-  },
-  {
-    "question_code": "D32_RINGS",
-    "question_text": "Do you own Rings (excluding wedding rings) made of pearls / jewelry with pearls?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "2": "No"
+      "rows": {
+        "1": "Rings (excluding wedding rings)",
+        "2": "Bracelets",
+        "3": "Necklaces",
+        "4": "Pendants (purchased separately to add to a necklace)",
+        "5": "Earrings",
+        "6": "Brooches / Pins and Clips"
+      },
+      "columns": {
+        "1": "Yes",
+        "2": "No"
+      }
     }
   },
   {
-    "question_code": "D32_BRACELETS",
-    "question_text": "Do you own Bracelets made of pearls / jewelry with pearls?",
-    "type": "single",
+    "question_code": "D33",
+    "question_text": "Please indicate your level of agreement with the following statements when it comes to pearls / jewelry with pearls. Slide the bar to the side that best describes how you feel.",
+    "type": "single_select_grid",
     "possible_answers": {
-      "1": "Yes",
-      "2": "No"
-    }
-  },
-  {
-    "question_code": "D32_NECKLACES",
-    "question_text": "Do you own Necklaces made of pearls / jewelry with pearls?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "2": "No"
-    }
-  },
-  {
-    "question_code": "D32_PENDANTS",
-    "question_text": "Do you own Pendants (purchased separately to add to a necklace) made of pearls / jewelry with pearls?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "2": "No"
-    }
-  },
-  {
-    "question_code": "D32_EARRINGS",
-    "question_text": "Do you own Earrings made of pearls / jewelry with pearls?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "2": "No"
-    }
-  },
-  {
-    "question_code": "D32_BROOCHES_CLIPS",
-    "question_text": "Do you own Brooches / Pins and Clips made of pearls / jewelry with pearls?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Yes",
-      "2": "No"
-    }
-  },
-  {
-    "question_code": "D33_STATEMENT_1",
-    "question_text": "I prefer branded pearls / jewelry with pearls / I prefer unbranded pearls / jewelry with pearls",
-    "type": "single",
-    "possible_answers": {
-      "1": "I prefer branded pearls / jewelry with pearls",
-      "2": "",
-      "3": "",
-      "4": "I prefer unbranded pearls / jewelry with pearls"
-    }
-  },
-  {
-    "question_code": "D33_STATEMENT_2",
-    "question_text": "I want people to recognize the brand of pearls / jewelry with pearls I wear / It's not important that people recognize the brand of pearls / jewelry with pearls I wear",
-    "type": "single",
-    "possible_answers": {
-      "1": "I want people to recognize the brand of pearls / jewelry with pearls I wear",
-      "2": "",
-      "3": "",
-      "4": "It's not important that people recognize the brand of pearls / jewelry with pearls I wear"
-    }
-  },
-  {
-    "question_code": "D33_STATEMENT_3",
-    "question_text": "I like trying new pearl brands that come out on the market / I prefer to stick to well-known and familiar pearl brands",
-    "type": "single",
-    "possible_answers": {
-      "1": "I like trying new pearl brands that come out on the market",
-      "2": "",
-      "3": "",
-      "4": "I prefer to stick to well-known and familiar pearl brands"
-    }
-  },
-  {
-    "question_code": "D33_STATEMENT_4",
-    "question_text": "I prefer subtle, minimalist, delicate pearl pieces / I prefer bold, eye-catching pearl pieces",
-    "type": "single",
-    "possible_answers": {
-      "1": "I prefer subtle, minimalist, delicate pearl pieces",
-      "2": "",
-      "3": "",
-      "4": "I prefer bold, eye-catching pearl pieces"
+      "rows": {
+        "1": "I prefer branded pearls / jewelry with pearls",
+        "2": "I want people to recognize the brand of pearls / jewelry with pearls I wear",
+        "3": "I like trying new pearl brands that come out on the market",
+        "4": "I prefer subtle, minimalist, delicate pearl pieces"
+      },
+      "columns": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4"
+      }
     }
   },
   {
@@ -1468,6 +1063,34 @@
     "question_text": "Of the fine jewelry brands you are aware of, which do you think of for pearls / jewelry with pearls?",
     "type": "multi",
     "possible_answers": {
+      "1": "BOUCHERON",
+      "2": "BUCCELLATI",
+      "3": "BVLGARI",
+      "4": "CARTIER",
+      "5": "CHANEL",
+      "6": "CHAUMET",
+      "7": "CHOPARD",
+      "8": "DAMIANI",
+      "9": "DAVID YURMAN",
+      "10": "DE BEERS",
+      "11": "DIOR",
+      "12": "FRED",
+      "13": "GRAFF",
+      "14": "GUCCI",
+      "15": "H. STERN",
+      "16": "HARRY WINSTON",
+      "17": "HERMES",
+      "18": "LOUIS VUITTON",
+      "19": "MARCO BICEGO",
+      "20": "MESSIKA",
+      "21": "MIKIMOTO",
+      "22": "PASPALEY",
+      "23": "PIAGET",
+      "24": "POMELLATO",
+      "25": "REPOSSI",
+      "26": "ROBERTO COIN",
+      "27": "TIFFANY & CO",
+      "28": "VAN CLEEF & ARPELS",
       "99": "None of these"
     }
   },
@@ -1476,6 +1099,34 @@
     "question_text": "Of the fine jewelry brands you own, which do you own pearls / jewelry with pearls from?",
     "type": "multi",
     "possible_answers": {
+      "1": "BOUCHERON",
+      "2": "BUCCELLATI",
+      "3": "BVLGARI",
+      "4": "CARTIER",
+      "5": "CHANEL",
+      "6": "CHAUMET",
+      "7": "CHOPARD",
+      "8": "DAMIANI",
+      "9": "DAVID YURMAN",
+      "10": "DE BEERS",
+      "11": "DIOR",
+      "12": "FRED",
+      "13": "GRAFF",
+      "14": "GUCCI",
+      "15": "H. STERN",
+      "16": "HARRY WINSTON",
+      "17": "HERMES",
+      "18": "LOUIS VUITTON",
+      "19": "MARCO BICEGO",
+      "20": "MESSIKA",
+      "21": "MIKIMOTO",
+      "22": "PASPALEY",
+      "23": "PIAGET",
+      "24": "POMELLATO",
+      "25": "REPOSSI",
+      "26": "ROBERTO COIN",
+      "27": "TIFFANY & CO",
+      "28": "VAN CLEEF & ARPELS",
       "89": "Unbranded",
       "98": "Other, specify:",
       "99": "None of these"
@@ -1571,59 +1222,25 @@
     }
   },
   {
-    "question_code": "E03_FINE_DINING",
-    "question_text": "How often do you go to fine dining restaurants?",
-    "type": "single",
+    "question_code": "E03",
+    "question_text": "Here is a list of activities. For each one, please indicate how often you do them.",
+    "type": "single_select_grid",
     "possible_answers": {
-      "1": "Less often / Never",
-      "2": "Once a year",
-      "3": "Once every 6 months",
-      "4": "Once every 2-3 months",
-      "5": "Once a month",
-      "6": "Once every 2-3 weeks",
-      "7": "Once a week or more"
-    }
-  },
-  {
-    "question_code": "E03_PREMIUM_HOTELS",
-    "question_text": "How often do you go to super premium hotels / resorts?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Less often / Never",
-      "2": "Once a year",
-      "3": "Once every 6 months",
-      "4": "Once every 2-3 months",
-      "5": "Once a month",
-      "6": "Once every 2-3 weeks",
-      "7": "Once a week or more"
-    }
-  },
-  {
-    "question_code": "E03_LUXURY_CONCIERGE",
-    "question_text": "How often do you use a luxury concierge service (e.g., airport and car service, access to exclusive events, golf outings)?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Less often / Never",
-      "2": "Once a year",
-      "3": "Once every 6 months",
-      "4": "Once every 2-3 months",
-      "5": "Once a month",
-      "6": "Once every 2-3 weeks",
-      "7": "Once a week or more"
-    }
-  },
-  {
-    "question_code": "E03_LUXURY_SPAS",
-    "question_text": "How often do you go to luxury spas?",
-    "type": "single",
-    "possible_answers": {
-      "1": "Less often / Never",
-      "2": "Once a year",
-      "3": "Once every 6 months",
-      "4": "Once every 2-3 months",
-      "5": "Once a month",
-      "6": "Once every 2-3 weeks",
-      "7": "Once a week or more"
+      "rows": {
+        "1": "Going to fine dining restaurants",
+        "2": "Going to super premium hotels / resorts",
+        "3": "Using a luxury concierge service (e.g., airport and car service, access to exclusive events, golf outings)",
+        "4": "Going to luxury spas"
+      },
+      "columns": {
+        "1": "Less often / Never",
+        "2": "Once a year",
+        "3": "Once every 6 months",
+        "4": "Once every 2-3 months",
+        "5": "Once a month",
+        "6": "Once every 2-3 weeks",
+        "7": "Once a week or more"
+      }
     }
   },
   {
@@ -1673,102 +1290,27 @@
     }
   },
   {
-    "question_code": "E06_STATEMENT_1",
-    "question_text": "I am particularly interested in modern art and contemporary creation",
-    "type": "single",
+    "question_code": "E06",
+    "question_text": "Please read each statement below and state whether you agree or disagree.",
+    "type": "single_select_grid",
     "possible_answers": {
-      "1": "Strongly disagree",
-      "2": "Somewhat disagree",
-      "3": "Somewhat agree",
-      "4": "Strongly agree"
-    }
-  },
-  {
-    "question_code": "E06_STATEMENT_2",
-    "question_text": "People often ask my opinion (or check my social media pages) on luxury / designer apparel and accessories (e.g., fine jewelry, clothes, shoes, handbags, wallets)",
-    "type": "single",
-    "possible_answers": {
-      "1": "Strongly disagree",
-      "2": "Somewhat disagree",
-      "3": "Somewhat agree",
-      "4": "Strongly agree"
-    }
-  },
-  {
-    "question_code": "E06_STATEMENT_3",
-    "question_text": "I am always among the first to buy the latest fashion or beauty trends",
-    "type": "single",
-    "possible_answers": {
-      "1": "Strongly disagree",
-      "2": "Somewhat disagree",
-      "3": "Somewhat agree",
-      "4": "Strongly agree"
-    }
-  },
-  {
-    "question_code": "E06_STATEMENT_4",
-    "question_text": "I am willing to pay a premium for luxury brands that are environmentally conscious",
-    "type": "single",
-    "possible_answers": {
-      "1": "Strongly disagree",
-      "2": "Somewhat disagree",
-      "3": "Somewhat agree",
-      "4": "Strongly agree"
-    }
-  },
-  {
-    "question_code": "E06_STATEMENT_5",
-    "question_text": "I am willing to pay a premium for luxury products that are made from the finest materials and have unique designs",
-    "type": "single",
-    "possible_answers": {
-      "1": "Strongly disagree",
-      "2": "Somewhat disagree",
-      "3": "Somewhat agree",
-      "4": "Strongly agree"
-    }
-  },
-  {
-    "question_code": "E06_STATEMENT_6",
-    "question_text": "I regularly browse websites or read magazines specializing in luxury items (e.g., Haute Couture clothing, high-end watches, luggage, fine art, and collectibles)",
-    "type": "single",
-    "possible_answers": {
-      "1": "Strongly disagree",
-      "2": "Somewhat disagree",
-      "3": "Somewhat agree",
-      "4": "Strongly agree"
-    }
-  },
-  {
-    "question_code": "E06_STATEMENT_7",
-    "question_text": "I like having luxury products that only connoisseurs can appreciate",
-    "type": "single",
-    "possible_answers": {
-      "1": "Strongly disagree",
-      "2": "Somewhat disagree",
-      "3": "Somewhat agree",
-      "4": "Strongly agree"
-    }
-  },
-  {
-    "question_code": "E06_STATEMENT_8",
-    "question_text": "I am a mission-minded shopper; shopping is something I do only when absolutely necessary",
-    "type": "single",
-    "possible_answers": {
-      "1": "Strongly disagree",
-      "2": "Somewhat disagree",
-      "3": "Somewhat agree",
-      "4": "Strongly agree"
-    }
-  },
-  {
-    "question_code": "E06_STATEMENT_9",
-    "question_text": "Please select \"Strongly agree\"",
-    "type": "single",
-    "possible_answers": {
-      "1": "Strongly disagree",
-      "2": "Somewhat disagree",
-      "3": "Somewhat agree",
-      "4": "Strongly agree"
+      "rows": {
+        "1": "I am particularly interested in modern art and contemporary creation",
+        "2": "People often ask my opinion (or check my social media pages) on luxury / designer apparel and accessories (e.g., fine jewelry, clothes, shoes, handbags, wallets)",
+        "3": "I am always among the first to buy the latest fashion or beauty trends",
+        "4": "I am willing to pay a premium for luxury brands that are environmentally conscious",
+        "5": "I am willing to pay a premium for luxury products that are made from the finest materials and have unique designs",
+        "6": "I regularly browse websites or read magazines specializing in luxury items (e.g., Haute Couture clothing, high-end watches, luggage, fine art, and collectibles)",
+        "7": "I like having luxury products that only connoisseurs can appreciate",
+        "8": "I am a mission-minded shopper; shopping is something I do when absolutely necessary",
+        "9": "Please select \"Strongly agree\""
+      },
+      "columns": {
+        "1": "Strongly disagree",
+        "2": "Somewhat disagree",
+        "3": "Somewhat agree",
+        "4": "Strongly agree"
+      }
     }
   },
   {
@@ -1837,8 +1379,8 @@
   },
   {
     "question_code": "E09",
-    "question_text": "Which of the following categories do you prioritize with your income after necessities? (Rank up your top 3 categories)",
-    "type": "multi",
+    "question_text": "Which of the following categories do you prioritize with your income after necessities?",
+    "type": "ranking",
     "possible_answers": {
       "1": "Travel",
       "2": "Experiences (e.g., live sporting events, live music or shows, museum exhibitions)",
@@ -1992,112 +1534,77 @@
     }
   },
   {
-    "question_code": "F04_NET_HERITAGE",
-    "type": "single",
+    "question_code": "F04_BRAND_CATEGORY",
+    "type": "multi",
     "possible_answers": {
-      "1": "Heritage Brands"
+      "1": "HERITAGE",
+      "2": "FASHION",
+      "3": "CONTEMPORARY"
     },
     "recode_from": [
       "F04"
     ],
-    "recode_hint": "Net variable for brands classified as 'Heritage' from F04."
-  },
-  {
-    "question_code": "F04_NET_FASHION",
-    "type": "single",
-    "possible_answers": {
-      "1": "Fashion Brands"
-    },
-    "recode_from": [
-      "F04"
-    ],
-    "recode_hint": "Net variable for brands classified as 'Fashion' from F04."
-  },
-  {
-    "question_code": "F04_NET_CONTEMPORARY",
-    "type": "single",
-    "possible_answers": {
-      "1": "Contemporary Brands"
-    },
-    "recode_from": [
-      "F04"
-    ],
-    "recode_hint": "Net variable for brands classified as 'Contemporary' from F04."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'CREATE NETS WITH BRAND CATEGORY HERITAGE/FASHION/CONTEMPORARY' | CONTEXT: This variable creates nets (groupings) for the fine jewelry brands listed in F04 based on their category: Heritage, Fashion, or Contemporary. Each brand is pre-assigned a category as indicated in the questionnaire (e.g., BOUCHERON is Heritage, CHANEL is Fashion, DAVID YURMAN is Contemporary)."
   },
   {
     "question_code": "F05",
     "question_text": "Which of the following fine jewelry brands have you ever owned?",
     "type": "multi",
     "possible_answers": {
+      "1": "BOUCHERON",
+      "2": "BUCCELLATI",
+      "3": "BVLGARI",
+      "4": "CARTIER",
+      "5": "CHANEL",
+      "6": "CHAUMET",
+      "7": "CHOPARD",
+      "8": "DAMIANI",
+      "9": "DAVID YURMAN",
+      "10": "DE BEERS",
+      "11": "DIOR",
+      "12": "FRED",
+      "13": "GRAFF",
+      "14": "GUCCI",
+      "15": "H. STERN",
+      "16": "HARRY WINSTON",
+      "17": "HERMES",
+      "18": "LOUIS VUITTON",
+      "19": "MARCO BICEGO",
+      "20": "MESSIKA",
+      "21": "MIKIMOTO",
+      "22": "PASPALEY",
+      "23": "PIAGET",
+      "24": "POMELLATO",
+      "25": "REPOSSI",
+      "26": "ROBERTO COIN",
+      "27": "TIFFANY & CO",
+      "28": "VAN CLEEF & ARPELS",
       "99": "None of these"
     }
   },
   {
-    "question_code": "F06_PEARLS",
-    "question_text": "How much do you feel you know about Pearls?",
-    "type": "single",
+    "question_code": "F06",
+    "question_text": "How much do you feel you know about the following types of jewelry?",
+    "type": "single_select_grid",
     "possible_answers": {
-      "1": "I KNOW NOTHING",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "I KNOW A LOT"
-    }
-  },
-  {
-    "question_code": "F06_DIAMONDS",
-    "question_text": "How much do you feel you know about Diamonds?",
-    "type": "single",
-    "possible_answers": {
-      "1": "I KNOW NOTHING",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "I KNOW A LOT"
-    }
-  },
-  {
-    "question_code": "F06_SAPPHIRES",
-    "question_text": "How much do you feel you know about Sapphires?",
-    "type": "single",
-    "possible_answers": {
-      "1": "I KNOW NOTHING",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "I KNOW A LOT"
-    }
-  },
-  {
-    "question_code": "F06_EMERALDS",
-    "question_text": "How much do you feel you know about Emeralds?",
-    "type": "single",
-    "possible_answers": {
-      "1": "I KNOW NOTHING",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "I KNOW A LOT"
+      "rows": {
+        "1": "Pearls",
+        "2": "Diamonds",
+        "3": "Sapphires",
+        "4": "Emeralds"
+      },
+      "columns": {
+        "1": "1- I know nothing",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10- I know a lot"
+      }
     }
   },
   {
@@ -2105,24 +1612,24 @@
     "question_text": "How much are you interested in pearls / jewelry with pearls?",
     "type": "single",
     "possible_answers": {
-      "1": "NOT AT ALL INTERESTED",
+      "1": "1- Not at all interested",
       "2": "2",
       "3": "3",
       "4": "4",
-      "5": "VERY INTERESTED"
+      "5": "5- Very interested"
     }
   },
   {
-    "question_code": "F07_PEARL_CONSIDERATION",
+    "question_code": "F07_PEARL_INTEREST",
     "type": "single",
     "possible_answers": {
-      "1": "PEARL NON-CONSIDERERS",
-      "2": "PEARL CONSIDERERS"
+      "1": "Pearl Non-Considerers",
+      "2": "Pearl Considerers"
     },
     "recode_from": [
       "F07"
     ],
-    "recode_hint": "Classification based on interest in pearls/jewelry with pearls (F07)."
+    "recode_hint": "QUESTIONNAIRE TEXT: 'IF F07 = (1) OR (2), CLASSIFY AS 'PEARL NON-CONSIDERERS' | IF F07 = (3) OR (4) OR (5), CLASSIFY AS 'PEARL CONSIDERERS'' | CONTEXT: This variable classifies respondents based on their interest level in pearls/jewelry with pearls (F07). Those selecting 1 or 2 on the scale are classified as 'Pearl Non-Considerers', while those selecting 3, 4, or 5 are classified as 'Pearl Considerers'."
   },
   {
     "question_code": "P05",

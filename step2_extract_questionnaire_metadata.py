@@ -9,7 +9,7 @@ import sys
 import time
 from pathlib import Path
 import google.generativeai as genai
-from secrets import GEMINI_API_KEY
+from api_keys import GEMINI_API_KEY
 
 def analyze_pdf_with_gemini(pdf_path):
     """Send PDF to Gemini to identify multi-select questions and recodes"""
@@ -44,7 +44,7 @@ def analyze_pdf_with_gemini(pdf_path):
     
     # Add thinking tokens if supported
     try:
-        generation_config.thinking_tokens = 32000  # Max thinking tokens
+        generation_config.thinking_tokens = 4000  # Max thinking tokens for large PDFs
     except:
         pass  # Model will use default thinking capacity
     
@@ -119,10 +119,10 @@ OUTPUT SCHEMA:
     },
     {
       "question_code": "SOME_RECODE", 
-      "type": "single",
+      "type": "single", 
       "possible_answers": {"1": "Group 1", "2": "Group 2"},
       "recode_from": ["SOURCE_VAR"],
-      "recode_hint": "Description of transformation"
+      "recode_hint": "EXACT questionnaire text explaining the classification logic and rules"
     }
   ],
   "potential_recodes": [
@@ -134,7 +134,10 @@ OUTPUT SCHEMA:
   ]
 }
 
-For recodes: ALWAYS include recode_from + recode_hint (descriptive text to help find actual variables)
+For recodes: ALWAYS include recode_from + recode_hint with:
+1. EXACT questionnaire text (quoted verbatim)
+2. REFORMULATED explanation with full context for clarity
+3. SPECIFIC conditions, thresholds, and business rules
 
 ADD INFERENCE SECTION: At the end, add "potential_recodes" with hints for ALL likely recodes:
 {
@@ -150,13 +153,12 @@ ADD INFERENCE SECTION: At the end, add "potential_recodes" with hints for ALL li
 COMPREHENSIVE RECODE STRATEGY:
 1. EXPLICIT RECODES: Found directly in questionnaire with clear variable names
 2. INFERRED RECODES: Logical recodes that SHOULD exist based on survey structure
-- Spending questions → MULTIPLE classification levels (simple binary + complex tiers)
-   - Demographics → grouping recodes for analysis
-   - Ratings → satisfaction/performance indices
 3. CLASSIFICATION EXHAUSTIVE: For every classification concept, look for ALL possible versions
-   - Simple binary classifications (two categories)
-   - Complex tier classifications (multiple levels)  
-   - Both may exist for same concept at different granularity levels
+4. EXACT TEXT WITH CONTEXT: For recode_hint, include actual questionnaire text + reformulation
+   - Quote the exact questionnaire text that explains the recode logic
+   - Reformulate with full context if original text lacks clarity
+   - Include specific thresholds, conditions, and business rules
+   - Add surrounding context to make the logic crystal clear for step3
 
 MANDATORY RECODE DETECTION:
 - Look for ALL classification logic in questionnaire (explicit + implicit)
@@ -173,12 +175,12 @@ RESPONSE CLEANING RULES
 CRITICAL SUCCESS FACTORS
 - Extract explicit multi-select and recode patterns found in questionnaire
 - INFER additional likely recodes based on survey structure and logic
-- Add comprehensive "potential_recodes" section with hints for step3
-- Provide search guidance for recodes not explicitly found but logically likely
+- For ALL recode_hint: Include exact questionnaire text + clear reformulation
+- Provide comprehensive guidance with original text + contextual explanation
 - Clean programming prefixes from response text
 
-OUTPUT FORMAT - ADD POTENTIAL RECODES SECTION:
-After the main array, add comprehensive inference section for step3 guidance
+RECODE_HINT FORMAT:
+"QUESTIONNAIRE TEXT: 'exact text from PDF explaining logic' | CONTEXT: reformulated explanation with full context, specific thresholds, and business rules"
     """
     
     print(f"[2/3] Analyzing with Gemini Flash (using maximum reasoning)")
