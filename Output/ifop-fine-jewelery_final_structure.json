@@ -2,35 +2,7 @@
   "groups": [
     {
       "id": "group_0",
-      "name": "Before we begin, please read and agree to the following terms and conditions: I understand that the information collected by Ifop and its client(s) will be used for research purposes only. All information will be analyzed with responses from others and no personally identifying information will be reported. I also agree to carefully read and answer each question. I understand that if it is shown I sped through and/or did not carefully read the questions, I may lose my opportunity to complete the survey.",
-      "columns": [
-        "N10"
-      ]
-    },
-    {
-      "id": "group_1",
-      "name": "Which gender do you most identify with?",
-      "columns": [
-        "A01"
-      ]
-    },
-    {
-      "id": "group_2",
-      "name": "How old are you?",
-      "columns": [
-        "A03"
-      ]
-    },
-    {
-      "id": "group_3",
-      "name": "What was your total household income for 2023?",
-      "columns": [
-        "A05"
-      ]
-    },
-    {
-      "id": "group_4",
-      "name": "Do you, or does anyone in your household work in any of the following industries?",
+      "name": "A07",
       "columns": [
         "A07r1",
         "A07r2",
@@ -47,29 +19,8 @@
       ]
     },
     {
-      "id": "group_5",
-      "name": "Please enter your zip code.",
-      "columns": [
-        "A09"
-      ]
-    },
-    {
-      "id": "group_6",
-      "name": "What state do you live in?",
-      "columns": [
-        "A11"
-      ]
-    },
-    {
-      "id": "group_7",
-      "name": "Which of the following best describes the area in which you live?",
-      "columns": [
-        "A13"
-      ]
-    },
-    {
-      "id": "group_8",
-      "name": "How would you describe your ethnicity/race?",
+      "id": "group_1",
+      "name": "A15",
       "columns": [
         "A15r1",
         "A15r2",
@@ -83,36 +34,8 @@
       ]
     },
     {
-      "id": "group_9",
-      "name": "What best describes your current employment status?",
-      "columns": [
-        "A19"
-      ]
-    },
-    {
-      "id": "group_10",
-      "name": "What is your marital status?",
-      "columns": [
-        "A21"
-      ]
-    },
-    {
-      "id": "group_11",
-      "name": "How many people are living in your household, including yourself?",
-      "columns": [
-        "A23"
-      ]
-    },
-    {
-      "id": "group_12",
-      "name": "Are there any children under 18 living in your household?",
-      "columns": [
-        "A25"
-      ]
-    },
-    {
-      "id": "group_13",
-      "name": "What age is/are the child or children living in your household?",
+      "id": "group_2",
+      "name": "A27",
       "columns": [
         "A27r1",
         "A27r2",
@@ -124,8 +47,8 @@
       ]
     },
     {
-      "id": "group_14",
-      "name": "In the past 2 years, have you spent (or shared in the purchase decision for) $500 or more on a single item in any of the following categories?",
+      "id": "group_3",
+      "name": "B01",
       "columns": [
         "B01r1",
         "B01r2",
@@ -141,23 +64,8 @@
       ]
     },
     {
-      "id": "group_15",
-      "name": "Please indicate the most you have spent (for yourself or shared in the purchase decision for) on a single item of fine jewelry (excluding engagement rings) in the past 2 years.",
-      "columns": [
-        "B03r3"
-      ]
-    },
-    {
-      "id": "group_16",
-      "name": "How many pieces of fine jewelry (single pieces with a price of $500 or more, excluding wedding rings and watches) do you own?",
-      "columns": [
-        "B05",
-        "noanswerB05_n2"
-      ]
-    },
-    {
-      "id": "group_17",
-      "name": "Of the [PIPE IN VALUE FROM B05] items of fine jewelry ($500 or more per piece) you own, how many are in each of the following categories?",
+      "id": "group_4",
+      "name": "B08",
       "columns": [
         "B08r1",
         "B08r2",
@@ -170,22 +78,8 @@
       ]
     },
     {
-      "id": "group_18",
-      "name": "What is the approximate dollar value of the single most expensive piece of fine jewelry you own, excluding engagement or wedding rings and watches?",
-      "columns": [
-        "B12"
-      ]
-    },
-    {
-      "id": "group_19",
-      "name": "How many fine jewelry (single piece with a price of $500 or more) items have you purchased for yourself or shared in the purchase decision for in the past 2 years?",
-      "columns": [
-        "C01"
-      ]
-    },
-    {
-      "id": "group_20",
-      "name": "Of the [PIPE IN VALUE FROM C01] fine jewelry (single piece with a price of $500 or more) items you have purchased for yourself or shared in the purchase decision in the past 2 years, please indicate how many pieces were purchased in each category.",
+      "id": "group_5",
+      "name": "C05",
       "columns": [
         "C05r1",
         "C05r2",
@@ -198,36 +92,8 @@
       ]
     },
     {
-      "id": "group_21",
-      "name": "Please indicate how much you typically spend on the following categories of fine jewelry, whether purchasing for yourself or sharing in the purchase decision.",
-      "columns": [
-        "C08r1",
-        "C08r2",
-        "C08r3",
-        "C08r4",
-        "C08r5",
-        "C08r6",
-        "C08r98",
-        "C08r98oe"
-      ]
-    },
-    {
-      "id": "group_22",
-      "name": "How often do you purchase (for yourself or share in the purchase decision for) the following categories of fine jewelry items?",
-      "columns": [
-        "C10r1",
-        "C10r2",
-        "C10r3",
-        "C10r4",
-        "C10r5",
-        "C10r6",
-        "C10r98",
-        "C10r98oe"
-      ]
-    },
-    {
-      "id": "group_23",
-      "name": "For which of the following occasions have you purchased a piece of fine jewelry for yourself or shared in the purchase decision for?",
+      "id": "group_6",
+      "name": "C14",
       "columns": [
         "C14r1",
         "C14r2",
@@ -249,8 +115,8 @@
       ]
     },
     {
-      "id": "group_24",
-      "name": "From which of the following have you purchased fine jewelry in the past?",
+      "id": "group_7",
+      "name": "C20",
       "columns": [
         "C20r1",
         "C20r2",
@@ -266,15 +132,8 @@
       ]
     },
     {
-      "id": "group_25",
-      "name": "Of the places you have purchased fine jewelry in the past, which is your primary or go-to channel?",
-      "columns": [
-        "C23"
-      ]
-    },
-    {
-      "id": "group_26",
-      "name": "Which of the following people and places do you turn to for fine jewelry inspiration? Think about where you look to help cultivate your personal style for jewelry.",
+      "id": "group_8",
+      "name": "C26",
       "columns": [
         "C26r1",
         "C26r2",
@@ -294,8 +153,8 @@
       ]
     },
     {
-      "id": "group_27",
-      "name": "Which of the following types of media and digital platforms do you turn to for fine jewelry inspiration? Think about where you look to help cultivate your personal style for jewelry.",
+      "id": "group_9",
+      "name": "C28",
       "columns": [
         "C28r1",
         "C28r2",
@@ -327,22 +186,8 @@
       ]
     },
     {
-      "id": "group_28",
-      "name": "Which of these do you rely on most as your #1 source of fine jewelry inspiration?",
-      "columns": [
-        "C30"
-      ]
-    },
-    {
-      "id": "group_29",
-      "name": "Have you ever received fine jewelry (single item $500 or more) as a gift?",
-      "columns": [
-        "C40"
-      ]
-    },
-    {
-      "id": "group_30",
-      "name": "For which of the following occasions have you received fine jewelry (single item $500 or more) as a gift?",
+      "id": "group_10",
+      "name": "C44",
       "columns": [
         "C44r1",
         "C44r2",
@@ -364,15 +209,8 @@
       ]
     },
     {
-      "id": "group_31",
-      "name": "How involved are you in selecting the fine jewelry (single item $500 or more) that you receive as a gift?",
-      "columns": [
-        "C46"
-      ]
-    },
-    {
-      "id": "group_32",
-      "name": "On which occasions do you usually wear fine jewelry?",
+      "id": "group_11",
+      "name": "D01",
       "columns": [
         "D01r1",
         "D01r2",
@@ -386,8 +224,8 @@
       ]
     },
     {
-      "id": "group_33",
-      "name": "Below are some reasons one may purchase fine jewelry. Please choose the ones that are most relevant to you.",
+      "id": "group_12",
+      "name": "D03",
       "columns": [
         "D03r1",
         "D03r2",
@@ -414,8 +252,8 @@
       ]
     },
     {
-      "id": "group_34",
-      "name": "When choosing a fine jewelry brand, the most important factors I consider are...",
+      "id": "group_13",
+      "name": "D07",
       "columns": [
         "D07r1",
         "D07r2",
@@ -438,29 +276,8 @@
       ]
     },
     {
-      "id": "group_35",
-      "name": "Please indicate your level of agreement with the following statements when it comes to fine jewelry. Slide the bar to the side that best describes how you feel.",
-      "columns": [
-        "D09r1",
-        "D09r2",
-        "D09r3",
-        "D09r4",
-        "D09r5",
-        "D09r6",
-        "D09r7",
-        "D09r8"
-      ]
-    },
-    {
-      "id": "group_36",
-      "name": "When purchasing fine jewelry, how satisfied are you with the fine jewelry brand choices available to you?",
-      "columns": [
-        "D15"
-      ]
-    },
-    {
-      "id": "group_37",
-      "name": "Which of the following materials would you consider when buying a piece of fine jewelry?",
+      "id": "group_14",
+      "name": "D19",
       "columns": [
         "D19r1",
         "D19r2",
@@ -478,8 +295,8 @@
       ]
     },
     {
-      "id": "group_38",
-      "name": "Which of the following fine jewelry brands have you heard of?",
+      "id": "group_15",
+      "name": "D21",
       "columns": [
         "D21r1",
         "D21r2",
@@ -515,8 +332,8 @@
       ]
     },
     {
-      "id": "group_39",
-      "name": "Which of the following fine jewelry brands have you ever owned?",
+      "id": "group_16",
+      "name": "D23",
       "columns": [
         "D23r1",
         "D23r2",
@@ -551,32 +368,8 @@
       ]
     },
     {
-      "id": "group_40",
-      "name": "Of the fine jewelry brands you own, which is your favorite?",
-      "columns": [
-        "D25"
-      ]
-    },
-    {
-      "id": "group_41",
-      "name": "How much do you feel you know about the following types of jewelry?",
-      "columns": [
-        "D27r1",
-        "D27r2",
-        "D27r3",
-        "D27r4"
-      ]
-    },
-    {
-      "id": "group_42",
-      "name": "How much are you interested in pearls / jewelry with pearls?",
-      "columns": [
-        "D29"
-      ]
-    },
-    {
-      "id": "group_43",
-      "name": "What words come to mind when you think about pearls / jewelry with pearls?",
+      "id": "group_17",
+      "name": "D30",
       "columns": [
         "D30r1",
         "D30r2",
@@ -605,8 +398,8 @@
       ]
     },
     {
-      "id": "group_44",
-      "name": "Do you own any of the following styles of pearls / jewelry with pearls (costing $500 or more)?",
+      "id": "group_18",
+      "name": "D31",
       "columns": [
         "D31r1",
         "D31r2",
@@ -615,8 +408,8 @@
       ]
     },
     {
-      "id": "group_45",
-      "name": "Do you own any of the following categories of pearls / jewelry with pearls (costing $500 or more)?",
+      "id": "group_19",
+      "name": "D32",
       "columns": [
         "D32r1",
         "D32r2",
@@ -627,18 +420,8 @@
       ]
     },
     {
-      "id": "group_46",
-      "name": "Please indicate your level of agreement with the following statements when it comes to pearls / jewelry with pearls. Slide the bar to the side that best describes how you feel.",
-      "columns": [
-        "D33r1",
-        "D33r2",
-        "D33r3",
-        "D33r4"
-      ]
-    },
-    {
-      "id": "group_47",
-      "name": "Of the fine jewelry brands you are aware of, which do you think of for pearls / jewelry with pearls?",
+      "id": "group_20",
+      "name": "D34",
       "columns": [
         "D34r1",
         "D34r2",
@@ -673,8 +456,8 @@
       ]
     },
     {
-      "id": "group_48",
-      "name": "Of the fine jewelry brands you own, which do you own pearls / jewelry with pearls from?",
+      "id": "group_21",
+      "name": "D36",
       "columns": [
         "D36r1",
         "D36r2",
@@ -711,15 +494,8 @@
       ]
     },
     {
-      "id": "group_49",
-      "name": "How likely are you to purchase pearls / jewelry with pearls within the next 12 months?",
-      "columns": [
-        "D38"
-      ]
-    },
-    {
-      "id": "group_50",
-      "name": "Please select up to 10 words that best describe your personality.",
+      "id": "group_22",
+      "name": "E01",
       "columns": [
         "E01r1",
         "E01r2",
@@ -755,8 +531,8 @@
       ]
     },
     {
-      "id": "group_51",
-      "name": "Which of the following activities do you enjoy doing in your spare time? Please select only the activities you do regularly.",
+      "id": "group_23",
+      "name": "E02",
       "columns": [
         "E02r1",
         "E02r2",
@@ -793,18 +569,8 @@
       ]
     },
     {
-      "id": "group_52",
-      "name": "Here is a list of activities. For each one, please indicate how often you do them.",
-      "columns": [
-        "E03r1",
-        "E03r2",
-        "E03r3",
-        "E03r4"
-      ]
-    },
-    {
-      "id": "group_53",
-      "name": "Everyone has different goals in life. What are the most important things in your life?",
+      "id": "group_24",
+      "name": "E04",
       "columns": [
         "E04r1",
         "E04r2",
@@ -826,8 +592,8 @@
       ]
     },
     {
-      "id": "group_54",
-      "name": "Among the following types of people, which are your own role models or sources of inspiration?",
+      "id": "group_25",
+      "name": "E05",
       "columns": [
         "E05r1",
         "E05r2",
@@ -847,23 +613,8 @@
       ]
     },
     {
-      "id": "group_55",
-      "name": "Please read each statement below and state whether you agree or disagree.",
-      "columns": [
-        "E06r1",
-        "E06r2",
-        "E06r3",
-        "E06r4",
-        "E06r5",
-        "E06r6",
-        "E06r7",
-        "E06r8",
-        "E06r9"
-      ]
-    },
-    {
-      "id": "group_56",
-      "name": "How would you best describe your personal fashion style?",
+      "id": "group_26",
+      "name": "E07",
       "columns": [
         "E07r1",
         "E07r2",
@@ -899,8 +650,8 @@
       ]
     },
     {
-      "id": "group_57",
-      "name": "Which of the following social media platforms do you use regularly?",
+      "id": "group_27",
+      "name": "E08",
       "columns": [
         "E08r1",
         "E08r2",
@@ -924,8 +675,8 @@
       ]
     },
     {
-      "id": "group_58",
-      "name": "Which of the following categories do you prioritize with your income after necessities?",
+      "id": "group_28",
+      "name": "E09",
       "columns": [
         "E09r1",
         "E09r2",
@@ -941,8 +692,8 @@
       ]
     },
     {
-      "id": "group_59",
-      "name": "Which of the following activities do you enjoy doing in your spare time? Please select only the activities you do regularly.",
+      "id": "group_29",
+      "name": "F01",
       "columns": [
         "F01r1",
         "F01r2",
@@ -979,8 +730,8 @@
       ]
     },
     {
-      "id": "group_60",
-      "name": "Everyone has different goals in life. What are the most important things in your life?",
+      "id": "group_30",
+      "name": "F02",
       "columns": [
         "F02r1",
         "F02r2",
@@ -1002,8 +753,8 @@
       ]
     },
     {
-      "id": "group_61",
-      "name": "How would you best describe your personal fashion style?",
+      "id": "group_31",
+      "name": "F03",
       "columns": [
         "F03r1",
         "F03r2",
@@ -1039,8 +790,8 @@
       ]
     },
     {
-      "id": "group_62",
-      "name": "Which of the following fine jewelry brands have you heard of?",
+      "id": "group_32",
+      "name": "F04",
       "columns": [
         "F04r1",
         "F04r2",
@@ -1076,8 +827,8 @@
       ]
     },
     {
-      "id": "group_63",
-      "name": "Which of the following fine jewelry brands have you ever owned?",
+      "id": "group_33",
+      "name": "F05",
       "columns": [
         "F05r1",
         "F05r2",
@@ -1112,53 +863,8 @@
       ]
     },
     {
-      "id": "group_64",
-      "name": "How much do you feel you know about the following types of jewelry?",
-      "columns": [
-        "F06r1",
-        "F06r2",
-        "F06r3",
-        "F06r4"
-      ]
-    },
-    {
-      "id": "group_65",
-      "name": "How much are you interested in pearls / jewelry with pearls?",
-      "columns": [
-        "F07"
-      ]
-    },
-    {
-      "id": "group_66",
-      "name": "Based on what you have seen, how appealing do you consider this brand?",
-      "columns": [
-        "P05"
-      ]
-    },
-    {
-      "id": "group_67",
-      "name": "Compared with other jewelry brands you know, how unique would you say this brand is?",
-      "columns": [
-        "P08"
-      ]
-    },
-    {
-      "id": "group_68",
-      "name": "Please indicate how much you agree or disagree with the following statement: \"I feel like this brand is designed for someone like me.”",
-      "columns": [
-        "P10"
-      ]
-    },
-    {
-      "id": "group_69",
-      "name": "Based on what you have seen about the brand, how likely are you to seek out more information (e.g., seek out where it is sold, look it up online or on social media, etc.)?",
-      "columns": [
-        "P12"
-      ]
-    },
-    {
-      "id": "group_70",
-      "name": "Based on what you recall about the brand, which of the following adjectives would you use to describe it?",
+      "id": "group_34",
+      "name": "P15",
       "columns": [
         "P15r1",
         "P15r2",
@@ -1185,35 +891,52 @@
         "P15r23",
         "P15r24"
       ]
-    },
-    {
-      "id": "group_71",
-      "name": "In the field below, please feel free to provide any feedback about your experience taking this survey today. If you do not have any feedback, simply click on the \"Next\" button below.",
-      "columns": [
-        "X15"
-      ]
     }
   ],
   "recoding": [
     {
-      "id": "A03_GROUPED",
-      "name": "hAge",
+      "id": "recode_0",
+      "name": "RESPONDENT_TYPE",
+      "codes": [
+        "A01",
+        "A03",
+        "A05",
+        "B01r1",
+        "B01r2",
+        "B01r3",
+        "B01r4",
+        "B01r5",
+        "B01r6",
+        "B01r7",
+        "B01r8",
+        "B01r9",
+        "B01r10",
+        "B01r99",
+        "B03r3",
+        "B05",
+        "B12"
+      ],
+      "recode": "hQuota"
+    },
+    {
+      "id": "recode_1",
+      "name": "AGE_GROUP_RECODE",
       "codes": [
         "A03"
       ],
       "recode": "hAge"
     },
     {
-      "id": "A11_REGION",
-      "name": "A11_Region",
+      "id": "recode_2",
+      "name": "REGION_RECODE",
       "codes": [
         "A11"
       ],
       "recode": "A11_Region"
     },
     {
-      "id": "A15_ETHNICITY_QUOTA",
-      "name": "hEthnicity",
+      "id": "recode_3",
+      "name": "ETHNICITY_RECODE",
       "codes": [
         "A15r1",
         "A15r2",
@@ -1228,40 +951,37 @@
       "recode": "hEthnicity"
     },
     {
-      "id": "RESPONDENT_SEGMENT",
-      "name": "hQuota",
-      "codes": [
-        "B01r3",
-        "B03r3",
-        "B05",
-        "B12"
-      ],
-      "recode": "hQuota"
-    },
-    {
-      "id": "HFJTYPE_JEWELRY_SPEND",
-      "name": "HFJTYPE",
+      "id": "recode_4",
+      "name": "FINE_JEWELRY_SPEND_TYPE",
       "codes": [
         "B03r3"
       ],
       "recode": "HFJTYPE"
     },
     {
-      "id": "D21_BRAND_CATEGORY_HERITAGE",
-      "name": "hD21_Netsr1",
+      "id": "recode_5",
+      "name": "FINE_JEWELRY_BRAND_CATEGORY_D21_HERITAGE",
       "codes": [
         "D21r1",
         "D21r2",
         "D21r3",
         "D21r4",
+        "D21r5",
         "D21r6",
         "D21r7",
         "D21r8",
+        "D21r9",
         "D21r10",
+        "D21r11",
         "D21r12",
         "D21r13",
+        "D21r14",
         "D21r15",
         "D21r16",
+        "D21r17",
+        "D21r18",
+        "D21r19",
+        "D21r20",
         "D21r21",
         "D21r22",
         "D21r23",
@@ -1269,43 +989,222 @@
         "D21r25",
         "D21r26",
         "D21r27",
-        "D21r28"
+        "D21r28",
+        "D21r98",
+        "D21r98oe",
+        "D21r99"
       ],
       "recode": "hD21_Netsr1"
     },
     {
-      "id": "D21_BRAND_CATEGORY_FASHION",
-      "name": "hD21_Netsr2",
+      "id": "recode_6",
+      "name": "FINE_JEWELRY_BRAND_CATEGORY_D21_FASHION",
       "codes": [
+        "D21r1",
+        "D21r2",
+        "D21r3",
+        "D21r4",
         "D21r5",
+        "D21r6",
+        "D21r7",
+        "D21r8",
+        "D21r9",
+        "D21r10",
         "D21r11",
+        "D21r12",
+        "D21r13",
         "D21r14",
+        "D21r15",
+        "D21r16",
         "D21r17",
-        "D21r18"
+        "D21r18",
+        "D21r19",
+        "D21r20",
+        "D21r21",
+        "D21r22",
+        "D21r23",
+        "D21r24",
+        "D21r25",
+        "D21r26",
+        "D21r27",
+        "D21r28",
+        "D21r98",
+        "D21r98oe",
+        "D21r99"
       ],
       "recode": "hD21_Netsr2"
     },
     {
-      "id": "D21_BRAND_CATEGORY_CONTEMPORARY",
-      "name": "hD21_Netsr3",
+      "id": "recode_7",
+      "name": "FINE_JEWELRY_BRAND_CATEGORY_D21_CONTEMPORARY",
       "codes": [
+        "D21r1",
+        "D21r2",
+        "D21r3",
+        "D21r4",
+        "D21r5",
+        "D21r6",
+        "D21r7",
+        "D21r8",
         "D21r9",
+        "D21r10",
+        "D21r11",
+        "D21r12",
+        "D21r13",
+        "D21r14",
+        "D21r15",
+        "D21r16",
+        "D21r17",
+        "D21r18",
         "D21r19",
-        "D21r20"
+        "D21r20",
+        "D21r21",
+        "D21r22",
+        "D21r23",
+        "D21r24",
+        "D21r25",
+        "D21r26",
+        "D21r27",
+        "D21r28",
+        "D21r98",
+        "D21r98oe",
+        "D21r99"
       ],
       "recode": "hD21_Netsr3"
     },
     {
-      "id": "D29_PEARL_INTEREST",
-      "name": "hD29",
+      "id": "recode_8",
+      "name": "FINE_JEWELRY_BRAND_CATEGORY_F04_HERITAGE",
+      "codes": [
+        "F04r1",
+        "F04r2",
+        "F04r3",
+        "F04r4",
+        "F04r5",
+        "F04r6",
+        "F04r7",
+        "F04r8",
+        "F04r9",
+        "F04r10",
+        "F04r11",
+        "F04r12",
+        "F04r13",
+        "F04r14",
+        "F04r15",
+        "F04r16",
+        "F04r17",
+        "F04r18",
+        "F04r19",
+        "F04r20",
+        "F04r21",
+        "F04r22",
+        "F04r23",
+        "F04r24",
+        "F04r25",
+        "F04r26",
+        "F04r27",
+        "F04r28",
+        "F04r98",
+        "F04r98oe",
+        "F04r99"
+      ],
+      "recode": "hF04_Netsr1"
+    },
+    {
+      "id": "recode_9",
+      "name": "FINE_JEWELRY_BRAND_CATEGORY_F04_FASHION",
+      "codes": [
+        "F04r1",
+        "F04r2",
+        "F04r3",
+        "F04r4",
+        "F04r5",
+        "F04r6",
+        "F04r7",
+        "F04r8",
+        "F04r9",
+        "F04r10",
+        "F04r11",
+        "F04r12",
+        "F04r13",
+        "F04r14",
+        "F04r15",
+        "F04r16",
+        "F04r17",
+        "F04r18",
+        "F04r19",
+        "F04r20",
+        "F04r21",
+        "F04r22",
+        "F04r23",
+        "F04r24",
+        "F04r25",
+        "F04r26",
+        "F04r27",
+        "F04r28",
+        "F04r98",
+        "F04r98oe",
+        "F04r99"
+      ],
+      "recode": "hF04_Netsr2"
+    },
+    {
+      "id": "recode_10",
+      "name": "FINE_JEWELRY_BRAND_CATEGORY_F04_CONTEMPORARY",
+      "codes": [
+        "F04r1",
+        "F04r2",
+        "F04r3",
+        "F04r4",
+        "F04r5",
+        "F04r6",
+        "F04r7",
+        "F04r8",
+        "F04r9",
+        "F04r10",
+        "F04r11",
+        "F04r12",
+        "F04r13",
+        "F04r14",
+        "F04r15",
+        "F04r16",
+        "F04r17",
+        "F04r18",
+        "F04r19",
+        "F04r20",
+        "F04r21",
+        "F04r22",
+        "F04r23",
+        "F04r24",
+        "F04r25",
+        "F04r26",
+        "F04r27",
+        "F04r28",
+        "F04r98",
+        "F04r98oe",
+        "F04r99"
+      ],
+      "recode": "hF04_Netsr3"
+    },
+    {
+      "id": "recode_11",
+      "name": "PEARL_INTEREST_CLASSIFICATION_D29",
       "codes": [
         "D29"
       ],
       "recode": "hD29"
     },
     {
-      "id": "D31_PEARL_JEWELRY_NET",
-      "name": "hD31r1",
+      "id": "recode_12",
+      "name": "PEARL_INTEREST_CLASSIFICATION_F07",
+      "codes": [
+        "F07"
+      ],
+      "recode": "hF07"
+    },
+    {
+      "id": "recode_13",
+      "name": "PEARL_OWNERSHIP_NET_PEARLS",
       "codes": [
         "D31r1",
         "D31r2",
@@ -1315,61 +1214,15 @@
       "recode": "hD31r1"
     },
     {
-      "id": "F04_BRAND_CATEGORY_HERITAGE",
-      "name": "hF04_Netsr1",
+      "id": "recode_14",
+      "name": "PEARL_OWNERSHIP_NET_JEWELRY_WITH_PEARLS",
       "codes": [
-        "F04r1",
-        "F04r2",
-        "F04r3",
-        "F04r4",
-        "F04r6",
-        "F04r7",
-        "F04r8",
-        "F04r10",
-        "F04r12",
-        "F04r13",
-        "F04r15",
-        "F04r16",
-        "F04r21",
-        "F04r22",
-        "F04r23",
-        "F04r24",
-        "F04r25",
-        "F04r26",
-        "F04r27",
-        "F04r28"
+        "D31r1",
+        "D31r2",
+        "D31r3",
+        "D31r4"
       ],
-      "recode": "hF04_Netsr1"
-    },
-    {
-      "id": "F04_BRAND_CATEGORY_FASHION",
-      "name": "hF04_Netsr2",
-      "codes": [
-        "F04r5",
-        "F04r11",
-        "F04r14",
-        "F04r17",
-        "F04r18"
-      ],
-      "recode": "hF04_Netsr2"
-    },
-    {
-      "id": "F04_BRAND_CATEGORY_CONTEMPORARY",
-      "name": "hF04_Netsr3",
-      "codes": [
-        "F04r9",
-        "F04r19",
-        "F04r20"
-      ],
-      "recode": "hF04_Netsr3"
-    },
-    {
-      "id": "F07_PEARL_INTEREST",
-      "name": "hF07",
-      "codes": [
-        "F07"
-      ],
-      "recode": "hF07"
+      "recode": "hD31r2"
     }
   ]
 }

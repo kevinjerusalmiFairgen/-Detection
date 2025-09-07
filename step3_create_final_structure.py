@@ -37,40 +37,62 @@ def main():
     step1_codes = [item['question_code'] for item in step1_data]
     print(f"[1/3] ✓ Loaded {len(step1_data)} step1 variables and {len(step2_data)} step2 patterns ({time.time() - start_time:.1f}s)")
     
-    # Configure model
-    print(f"[2/3] Analyzing with Gemini")
+    # Configure model with thinking abilities
+    print(f"[2/3] Analyzing with deep thinking capabilities")
     genai.configure(api_key=GEMINI_API_KEY)
+    
+    # Configure for deep semantic analysis
+    generation_config = genai.types.GenerationConfig(
+        temperature=0.1,
+        response_mime_type="application/json"
+    )
+    
+    try:
+        generation_config.thinking_tokens = 8000  # Deep thinking for semantic matching
+    except:
+        pass
     
     model = genai.GenerativeModel(
         model_name="gemini-2.0-flash-thinking-exp-1219",
-        generation_config={
-            "temperature": 0.1,
-            "response_mime_type": "application/json",
-        },
-        system_instruction="Expert survey analyst. Match step2 patterns with step1 actual variables. Use only step1 variable codes in output."
+        generation_config=generation_config,
+        system_instruction="Expert survey analyst with deep thinking abilities. Use question_code + question_text + possible_answers from step1 to find semantic relationships with step2 patterns. Output ONLY step1 variable codes."
     )
     
     # Create simple prompt
+    # Show hidden variables examples to guide target finding
+    hidden_vars = [code for code in step1_codes if code.startswith('h')]
+    
     prompt = f"""
-Match step2 patterns with step1 variables.
+SEMANTIC MATCHING WITH DEEP THINKING:
 
-STEP1 VARIABLE CODES: 
-{json.dumps(step1_codes)}
+Use your thinking abilities to analyze step1 metadata and find relationships with step2 patterns.
 
-STEP2 PATTERNS:
+STEP1 COMPLETE METADATA (question_code + question_text + possible_answers):
+{json.dumps(step1_data)}
+
+STEP2 PATTERNS WITH HINTS:
 {json.dumps(step2_data)}
 
-OUTPUT FORMAT:
+THINKING PROCESS FOR EACH STEP2 PATTERN:
+1. READ step2 pattern description and grouping_hint
+2. ANALYZE step1 question_text for content similarity
+3. EXAMINE step1 possible_answers for pattern matches
+4. THINK about survey logic and relationships
+5. FIND step1 variables that represent the same concepts
+
+Use question_code + question_text + possible_answers to make intelligent semantic matches.
+
+OUTPUT (use ONLY step1 question_codes):
 {{
   "groups": [
-    {{"id": "group_0", "name": "description", "columns": ["step1_var1", "step1_var2"]}}
+    {{"id": "group_0", "name": "description", "columns": ["step1_question_code1", "step1_question_code2"]}}
   ],
   "recoding": [
-    {{"id": "recode_0", "name": "target_var", "codes": ["source_var"], "recode": "target_var"}}
+    {{"id": "recode_0", "name": "step1_target_code", "codes": ["step1_source_code"], "recode": "step1_target_code"}}
   ]
 }}
 
-CRITICAL: Use ONLY step1 variable codes in columns/codes/recode fields.
+CRITICAL: Use ONLY question_code values from step1 metadata above.
 """
 
     # Analyze
@@ -103,9 +125,12 @@ CRITICAL: Use ONLY step1 variable codes in columns/codes/recode fields.
             invalid_vars.append(f"Recode target: {target}")
     
     if invalid_vars:
-        print(f"🚨 Found {len(invalid_vars)} invalid variables")
+        print(f"🚨 VALIDATION FAILED! Found {len(invalid_vars)} variables NOT in step1 codes:")
+        for var in invalid_vars:
+            print(f"  - {var}")
+        print(f"\nThese variables are NOT step1 codes and violate the rule!")
     else:
-        print(f"✅ All variables valid")
+        print(f"✅ All variables valid - only step1 codes used")
     
     # Save
     print(f"[3/3] Saving results")
