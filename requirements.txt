@@ -1,6 +1,5 @@
 pandas
 numpy
-pyreadstat
 openpyxl
 google-generativeai
 streamlit

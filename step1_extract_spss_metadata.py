@@ -2,9 +2,17 @@
 import argparse
 import json
 from pathlib import Path
-import pyreadstat
 import pandas as pd
 import numpy as np
+
+# Try to import pyreadstat, provide fallback if not available
+try:
+    import pyreadstat
+    PYREADSTAT_AVAILABLE = True
+except ImportError:
+    PYREADSTAT_AVAILABLE = False
+    print("⚠️  pyreadstat not available - SPSS files will be skipped")
+    print("   Please convert .sav files to .csv or .xlsx format")
 
 
 def build_spss_questions(meta):
@@ -154,6 +162,11 @@ def main():
     
     # Extract questions based on file type
     if suffix == '.sav':
+        if not PYREADSTAT_AVAILABLE:
+            print("❌ Error: pyreadstat is required to read SPSS files")
+            print("   Please convert your .sav file to .csv or .xlsx format")
+            print("   You can use SPSS, R, or Python locally to convert the file")
+            raise SystemExit("pyreadstat not available for SPSS file processing")
         _, meta = pyreadstat.read_sav(args.input, metadataonly=True)
         questions = build_spss_questions(meta)
     elif suffix == '.csv':
