@@ -1,2 +1,13 @@
 build-essential
 python3-dev
+libffi-dev
+zlib1g-dev
+libbz2-dev
+liblzma-dev
+pkg-config
+cmake
+autotools-dev
+autoconf
+automake
+libtool
+gettext
