@@ -273,8 +273,9 @@ def main():
                     with open(step3_output) as f:
                         final_data = json.load(f)
                     
-                    groups_count = len(final_data.get('groups', []))
-                    recodes_count = len(final_data.get('recoding', []))
+                    # Support both old and new key formats
+                    groups_count = len(final_data.get('multiSelect', final_data.get('groups', [])))
+                    recodes_count = len(final_data.get('recodings', final_data.get('recoding', [])))
                     
                     st.markdown("### 📊 Results Summary")
                     
@@ -289,7 +290,8 @@ def main():
                     # Show sample groups
                     if groups_count > 0:
                         st.markdown("### 🔍 Sample Groups")
-                        sample_groups = final_data['groups'][:3]  # Show first 3
+                        groups_data = final_data.get('multiSelect', final_data.get('groups', []))
+                        sample_groups = groups_data[:3]  # Show first 3
                         
                         for i, group in enumerate(sample_groups):
                             with st.expander(f"Group {i+1}: {group.get('name', 'Unnamed')}"):
