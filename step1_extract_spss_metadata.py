@@ -2,17 +2,9 @@
 import argparse
 import json
 from pathlib import Path
+import pyreadstat
 import pandas as pd
 import numpy as np
-
-# Try to import pyreadstat, provide fallback if not available
-try:
-    import pyreadstat
-    PYREADSTAT_AVAILABLE = True
-except ImportError:
-    PYREADSTAT_AVAILABLE = False
-    print("⚠️  pyreadstat not available - SPSS files will be skipped")
-    print("   Please convert .sav files to .csv or .xlsx format")
 
 
 def build_spss_questions(meta):
