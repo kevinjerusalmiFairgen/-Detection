@@ -113,19 +113,23 @@ def find_recodes_only(step1_input, step2_data):
     recode_patterns = [p for p in step2_data if p.get('recode_from') or p.get('recode_hint')]
     
     prompt = f"""
-TASK: Find recode relationships using step2 recode guidance.
-
-STEP1: {json.dumps(step1_input)}
-STEP2 RECODE PATTERNS: {json.dumps(recode_patterns)}
-
-Use step2 to understand source→target relationships in step1.
-
+ TASK: Find recode relationships using step2 recode guidance.
+ 
+ STEP1: {json.dumps(step1_input)}
+ STEP2 RECODE PATTERNS: {json.dumps(recode_patterns)}
+ 
+ Use step2 to understand source→target relationships in step1.
+ Find which step1 variables are recoded INTO other step1 variables.
+ 
  OUTPUT (recodes only):
  [
-   {{"id": "12", "name": "12", "recode": "SUBGROUP description", "codes": ["source_code"]}}
+   {{"id": "12", "name": "12", "recode": "TARGET_COLUMN_FROM_STEP1", "codes": ["SOURCE_COLUMN_FROM_STEP1"]}}
  ]
-
-Use only step1 codes in codes/recode fields.
+ 
+ CRITICAL: 
+ - "recode" field MUST be a column name that exists in step1 data
+ - "codes" field MUST contain column names that exist in step1 data
+ - Use step2 patterns to identify which step1 variables are sources and which are targets
 """
 
     try:
@@ -210,12 +214,14 @@ def main():
                 invalid_vars.append(f"Group: {var}")
     
     for recode in final_structure.get('recodings', []):
+        # Check source codes exist in step1
         for var in recode.get('codes', []):
             if var not in step1_codes_set:
-                invalid_vars.append(f"Recode codes: {var}")
+                invalid_vars.append(f"Recode source '{var}' not in step1")
+        # Check target recode exists in step1
         target = recode.get('recode', '')
         if target and target not in step1_codes_set:
-            invalid_vars.append(f"Recode target: {target}")
+            invalid_vars.append(f"Recode target '{target}' not in step1")
     
     print(f"[3/4] Validation:")
     if invalid_vars:
