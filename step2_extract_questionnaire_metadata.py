@@ -7,9 +7,22 @@ Focus: Identify multi-select questions and recode mappings (split analysis)
 import json
 import sys
 import time
+import os
 from pathlib import Path
 import google.generativeai as genai
-from api_keys import GEMINI_API_KEY
+
+# Get API key from environment or Streamlit secrets
+try:
+    import streamlit as st
+    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+except:
+    # Fallback to environment variable or local api_keys file
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+    if not GEMINI_API_KEY:
+        try:
+            from api_keys import GEMINI_API_KEY
+        except ImportError:
+            raise ValueError("GEMINI_API_KEY not found. Please set it in Streamlit secrets or environment variables.")
 
 def find_multiselect_questions(pdf_path):
     """Specialized analysis for multi-select questions only"""

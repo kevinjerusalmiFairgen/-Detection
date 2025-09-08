@@ -6,11 +6,24 @@ Step 3: Create final structured output by matching step2 findings with step1 var
 import json
 import sys
 import time
+import os
 from pathlib import Path
 import google.generativeai as genai
-from api_keys import GEMINI_API_KEY
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+# Get API key from environment or Streamlit secrets
+try:
+    import streamlit as st
+    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+except:
+    # Fallback to environment variable or local api_keys file
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+    if not GEMINI_API_KEY:
+        try:
+            from api_keys import GEMINI_API_KEY
+        except ImportError:
+            raise ValueError("GEMINI_API_KEY not found. Please set it in Streamlit secrets or environment variables.")
 
 def find_groups_only(step1_input, step2_data):
     """Find groups only with debug"""
