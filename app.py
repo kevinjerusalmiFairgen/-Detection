@@ -10,6 +10,7 @@ import json
 import time
 import subprocess
 import os
+import sys
 from pathlib import Path
 import zipfile
 import io
@@ -209,7 +210,7 @@ def main():
             status_text.text("🔄 Step 1: Extracting data metadata...")
             progress_bar.progress(10)
             
-            step1_cmd = f'python step1_extract_spss_metadata.py --input "{data_path}" --output "{step1_output}"'
+            step1_cmd = f'"{sys.executable}" step1_extract_spss_metadata.py --input "{data_path}" --output "{step1_output}"'
             results['step1'] = run_pipeline_step(step1_cmd, "Step 1: Data Metadata")
             
             if not results['step1']['success']:
@@ -222,7 +223,7 @@ def main():
             # Step 2: Questionnaire analysis
             status_text.text("🔄 Step 2: Analyzing questionnaire PDF...")
             
-            step2_cmd = f'python step2_extract_questionnaire_metadata.py "{pdf_path}"'
+            step2_cmd = f'"{sys.executable}" step2_extract_questionnaire_metadata.py "{pdf_path}"'
             results['step2'] = run_pipeline_step(step2_cmd, "Step 2: Questionnaire Analysis")
             
             if not results['step2']['success']:
@@ -235,7 +236,7 @@ def main():
             # Step 3: Final structure creation
             status_text.text("🔄 Step 3: Creating final structure...")
             
-            step3_cmd = f'python step3_create_final_structure.py "{step1_output}" "{step2_output}"'
+            step3_cmd = f'"{sys.executable}" step3_create_final_structure.py "{step1_output}" "{step2_output}"'
             results['step3'] = run_pipeline_step(step3_cmd, "Step 3: Final Structure")
             
             if not results['step3']['success']:
