@@ -154,11 +154,6 @@ def main():
     
     # Extract questions based on file type
     if suffix == '.sav':
-        if not PYREADSTAT_AVAILABLE:
-            print("❌ Error: pyreadstat is required to read SPSS files")
-            print("   Please convert your .sav file to .csv or .xlsx format")
-            print("   You can use SPSS, R, or Python locally to convert the file")
-            raise SystemExit("pyreadstat not available for SPSS file processing")
         _, meta = pyreadstat.read_sav(args.input, metadataonly=True)
         questions = build_spss_questions(meta)
     elif suffix == '.csv':
