@@ -71,10 +71,10 @@ STEP2 CLUES (ALL questionnaire patterns): {json.dumps(step2_data)}
   * Identify question text similarities that indicate grouped options
   * Don't limit yourself to only step2 hints - be a thorough detective!
 
-OUTPUT (only meaningful multiselect groups):
-[
-  {{"id": "group_0", "name": "descriptive_group_name", "columns": ["var1", "var2", "var3"]}}
-]
+ OUTPUT (only meaningful multiselect groups):
+ [
+   {{"id": "0", "name": "0", "columns": ["var1", "var2", "var3"]}}
+ ]
 """
 
     try:
@@ -120,10 +120,10 @@ STEP2 RECODE PATTERNS: {json.dumps(recode_patterns)}
 
 Use step2 to understand source→target relationships in step1.
 
-OUTPUT (recodes only):
-[
-  {{"id": "recode_0", "name": "target_code", "codes": ["source_code"], "recode": "target_code"}}
-]
+ OUTPUT (recodes only):
+ [
+   {{"id": "12", "name": "12", "recode": "SUBGROUP description", "codes": ["source_code"]}}
+ ]
 
 Use only step1 codes in codes/recode fields.
 """
@@ -192,20 +192,24 @@ def main():
     recodes = find_recodes_only(step1_input, step2_data)
     print(f"[2/4] ✓ Recodes found: {len(recodes)} ({time.time() - recodes_start:.1f}s)")
     
-    # Combine in Python
-    result = {"groups": groups, "recoding": recodes}
+    # Create final structure in the required format
+    final_structure = {
+        "recodings": recodes,
+        "multiSelect": groups,
+        "typeOfNan": []
+    }
     print(f"[2/4] ✓ Combined in Python: {len(groups)} groups + {len(recodes)} recodes")
     
     # Validate
     step1_codes_set = set(step1_codes)
     invalid_vars = []
     
-    for group in result.get('groups', []):
+    for group in final_structure.get('multiSelect', []):
         for var in group.get('columns', []):
             if var not in step1_codes_set:
                 invalid_vars.append(f"Group: {var}")
     
-    for recode in result.get('recoding', []):
+    for recode in final_structure.get('recodings', []):
         for var in recode.get('codes', []):
             if var not in step1_codes_set:
                 invalid_vars.append(f"Recode codes: {var}")
@@ -228,13 +232,13 @@ def main():
     output_path = Path('Output') / f"{dataset_name}_final_structure.json"
     
     with open(output_path, 'w') as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
+        json.dump(final_structure, f, indent=2, ensure_ascii=False)
     
     print(f"\n{'='*60}")
     print(f"✓ Complete!")
     print(f"{'='*60}")
-    print(f"Groups: {len(result.get('groups', []))}")
-    print(f"Recodes: {len(result.get('recoding', []))}")
+    print(f"Groups: {len(final_structure.get('multiSelect', []))}")
+    print(f"Recodes: {len(final_structure.get('recodings', []))}")
     print(f"Total time: {time.time() - total_start:.1f}s")
     print(f"Output: {output_path}")
 
