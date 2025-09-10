@@ -9,14 +9,14 @@ import sys
 import time
 from pathlib import Path
 import google.generativeai as genai
-from api_keys import GEMINI_API_KEY
+from utils import get_api_key, progress_print
 
-def find_multiselect_questions(pdf_path):
+def find_multiselect_questions(uploaded_file):
     """Specialized analysis for multi-select questions only"""
     start_time = time.time()
-    print(f"[1/5] Finding multi-select questions")
     
-    genai.configure(api_key=GEMINI_API_KEY)
+    api_key = get_api_key()
+    genai.configure(api_key=api_key)
     
     generation_config = genai.types.GenerationConfig(
         temperature=0.1,
@@ -31,7 +31,7 @@ def find_multiselect_questions(pdf_path):
         system_instruction="You are an expert survey methodology detective with deep knowledge of questionnaire design. Focus ONLY on finding multi-select questions."
     )
     
-    file = genai.upload_file(pdf_path, mime_type="application/pdf")
+    # File already uploaded, passed as parameter
     
     prompt = """
 OBJECTIVE: Find ALL multi-select questions (questions where respondent can choose multiple options)
@@ -85,8 +85,8 @@ CRITICAL SUCCESS FACTORS:
     Analyze systematically for comprehensive multi-select detection.
     """
     
-    response = model.generate_content([thinking_prompt, file])
-    genai.delete_file(file)
+    response = model.generate_content([thinking_prompt, uploaded_file])
+    # Don't delete here - will delete after both functions complete
     
     try:
         result = json.loads(response.text)
@@ -94,18 +94,18 @@ CRITICAL SUCCESS FACTORS:
             result = result['variables']
         elif not isinstance(result, list):
             result = []
-        print(f"[1/5] ✓ Multi-select analysis complete: {len(result)} patterns ({time.time() - start_time:.1f}s)")
+        progress_print(f"Multi-select: {len(result)} patterns found ({time.time() - start_time:.1f}s)", "success")
         return result
     except:
-        print(f"[1/5] ✓ Multi-select analysis failed ({time.time() - start_time:.1f}s)")
+        progress_print(f"Multi-select analysis failed ({time.time() - start_time:.1f}s)", "error")
         return []
 
-def find_recode_variables(pdf_path):
+def find_recode_variables(uploaded_file):
     """Specialized analysis for recode variables only"""
     start_time = time.time()
-    print(f"[2/5] Finding recode variables")
     
-    genai.configure(api_key=GEMINI_API_KEY)
+    api_key = get_api_key()
+    genai.configure(api_key=api_key)
     
     generation_config = genai.types.GenerationConfig(
         temperature=0.1,
@@ -120,7 +120,7 @@ def find_recode_variables(pdf_path):
         system_instruction="You are an expert survey methodology detective specializing in recode detection. Focus ONLY on finding variable transformations and computed variables."
     )
     
-    file = genai.upload_file(pdf_path, mime_type="application/pdf")
+    # File already uploaded, passed as parameter
     
     prompt = """
 OBJECTIVE: Find ALL recode variables (survey responses transformed/grouped into new variables)
@@ -195,8 +195,8 @@ HINT RULES:
     Analyze systematically for comprehensive recode detection.
     """
     
-    response = model.generate_content([thinking_prompt, file])
-    genai.delete_file(file)
+    response = model.generate_content([thinking_prompt, uploaded_file])
+    # Don't delete here - will delete after both functions complete
     
     try:
         result = json.loads(response.text)
@@ -204,10 +204,10 @@ HINT RULES:
             result = result['variables']
         elif not isinstance(result, list):
             result = []
-        print(f"[2/5] ✓ Recode analysis complete: {len(result)} patterns ({time.time() - start_time:.1f}s)")
+        progress_print(f"Recodes: {len(result)} patterns found ({time.time() - start_time:.1f}s)", "success")
         return result
     except:
-        print(f"[2/5] ✓ Recode analysis failed ({time.time() - start_time:.1f}s)")
+        progress_print(f"Recode analysis failed ({time.time() - start_time:.1f}s)", "error")
         return []
 
 def main():
@@ -228,34 +228,38 @@ def main():
     total_start = time.time()
     
     try:
-        # Split analysis for better focus
-        print(f"[1/5] Split analysis: multi-select + recodes simultaneously")
+        # Upload PDF once before parallel execution
+        progress_print("Uploading PDF to Gemini API", "info")
+        upload_start = time.time()
+        api_key = get_api_key()
+        genai.configure(api_key=api_key)
+        uploaded_file = genai.upload_file(pdf_path, mime_type="application/pdf")
+        progress_print(f"PDF uploaded ({time.time() - upload_start:.1f}s)", "success")
         
-        # Launch both analyses in parallel
+        # Launch both analyses in parallel with the same uploaded file
+        progress_print("Analyzing questionnaire (parallel processing)", "info")
         import concurrent.futures
         
         with concurrent.futures.ThreadPoolExecutor() as executor:
-            # Submit both tasks simultaneously
-            multi_future = executor.submit(find_multiselect_questions, pdf_path)
-            recode_future = executor.submit(find_recode_variables, pdf_path)
+            # Submit both tasks with the same uploaded file
+            multi_future = executor.submit(find_multiselect_questions, uploaded_file)
+            recode_future = executor.submit(find_recode_variables, uploaded_file)
             
             # Wait for both to complete
             multiselect_patterns = multi_future.result()
             recode_patterns = recode_future.result()
         
-        # Combine results
-        print(f"[3/5] Combining results")
-        combine_start = time.time()
+        # Clean up uploaded file after both analyses complete
+        genai.delete_file(uploaded_file)
         
+        # Combine results
         all_patterns = []
         all_patterns.extend(multiselect_patterns)
         all_patterns.extend(recode_patterns)
         
-        print(f"[3/5] ✓ Combined: {len(multiselect_patterns)} multi + {len(recode_patterns)} recodes ({time.time() - combine_start:.1f}s)")
+        progress_print(f"Combined: {len(multiselect_patterns)} multi-select + {len(recode_patterns)} recodes", "success")
         
         # Save results
-        print(f"[4/5] Saving metadata")
-        save_start = time.time()
         
         output_path = Path('Output') / f"{pdf_path.stem}_questionnaire_metadata.json"
         output_path.parent.mkdir(exist_ok=True)
@@ -263,27 +267,8 @@ def main():
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(all_patterns, f, indent=2, ensure_ascii=False)
         
-        print(f"[4/5] ✓ Metadata saved ({time.time() - save_start:.1f}s)")
-        
-        # Summary
-        print(f"\n{'='*60}")
-        print(f"✓ Extraction Complete!")
-        print(f"{'='*60}")
-        
-        # Count by type
-        types_count = {}
-        for item in all_patterns:
-            item_type = item.get('type', 'unknown')
-            types_count[item_type] = types_count.get(item_type, 0) + 1
-        
-        print(f"Total patterns: {len(all_patterns)}")
-        for type_name, count in sorted(types_count.items()):
-            print(f"  - {type_name}: {count}")
-        
-        print(f"\nMulti-select analysis time: Check output above")
-        print(f"Recode analysis time: Check output above") 
-        print(f"Total execution time: {time.time() - total_start:.1f}s")
-        print(f"Output saved to: {output_path}")
+        progress_print(f"Results saved to: {output_path}", "success")
+        progress_print(f"Total execution time: {time.time() - total_start:.1f}s", "info")
         
     except Exception as e:
         print(f"\nError: {e}")

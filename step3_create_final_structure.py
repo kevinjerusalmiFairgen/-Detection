@@ -8,13 +8,12 @@ import sys
 import time
 from pathlib import Path
 import google.generativeai as genai
-from api_keys import GEMINI_API_KEY
-import threading
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from utils import get_api_key, progress_print
 
 def find_groups_only(step1_input, step2_data):
     """Find groups only with debug"""
-    genai.configure(api_key=GEMINI_API_KEY)
+    api_key = get_api_key()
+    genai.configure(api_key=api_key)
     
     generation_config = {
         "temperature": 0.1,
@@ -46,11 +45,12 @@ STEP1 METADATA: {json.dumps(step1_metadata)}
 STEP2 CLUES (ALL questionnaire patterns): {json.dumps(step2_data)}
 
 🕵️ DETECTIVE ANALYSIS REQUIRED:
-1. **QUESTION TEXT SIMILARITY**: Look for similar question stems, contexts, topics
-2. **LOGICAL GROUPING**: Variables measuring same concept (brands, features, occasions, etc.)
-3. **ANSWER PATTERNS**: Similar possible_answers structure suggests related variables  
-4. **CODE PATTERNS**: Related codes often share prefixes but NOT ALWAYS
-5. **CONTEXTUAL LOGIC**: Use business/survey logic - what makes sense to group?
+1. **OBVIOUS NAMING PATTERNS**: Q1_1, Q1_2, Q1_3 or Brand_A, Brand_B - same stem with different suffixes
+2. **QUESTION TEXT SIMILARITY**: Look for similar question stems, contexts, topics
+3. **LOGICAL GROUPING**: Variables measuring same concept (brands, features, occasions, etc.)
+4. **ANSWER PATTERNS**: Similar possible_answers structure suggests related variables  
+5. **CODE PATTERNS**: Related codes often share prefixes but NOT ALWAYS
+6. **CONTEXTUAL LOGIC**: Use business/survey logic - what makes sense to group? What is part of the same question?
 
 🎯 MULTISELECT DETECTION CLUES:
 - Multiple variables asking about same topic (brands, activities, preferences)
@@ -61,10 +61,10 @@ STEP2 CLUES (ALL questionnaire patterns): {json.dumps(step2_data)}
   * Code stem patterns (Q1_1, Q1_2, Q1_3 → Q1 group even if step2 missed it)
   * Identical/similar question text with different sub-options
   * Logical groupings that make business sense
+  * Questions that share a pattern in the code (QuestionExample1, QuestionExample2, etc.)
 
 ⚡ CRITICAL RULES:
 - Groups must have 2+ variables that LOGICALLY belong together
-- Don't group random variables just because codes are similar
 - Use metadata intelligence: question_text + possible_answers + context
 - Each group should represent choices/options for same underlying question
 - **DETECTIVE MANDATE**: Find ALL multiselect groups, including those step2 missed
@@ -72,10 +72,10 @@ STEP2 CLUES (ALL questionnaire patterns): {json.dumps(step2_data)}
   * Identify question text similarities that indicate grouped options
   * Don't limit yourself to only step2 hints - be a thorough detective!
 
-OUTPUT (only meaningful multiselect groups):
-[
-  {{"id": "group_0", "name": "descriptive_group_name", "columns": ["var1", "var2", "var3"]}}
-]
+ OUTPUT (only meaningful multiselect groups):
+ [
+   {{"id": "0", "name": "0", "columns": ["var1", "var2", "var3"]}}
+ ]
 """
 
     try:
@@ -95,7 +95,8 @@ OUTPUT (only meaningful multiselect groups):
 
 def find_recodes_only(step1_input, step2_data):
     """Find recodes only"""
-    genai.configure(api_key=GEMINI_API_KEY)
+    api_key = get_api_key()
+    genai.configure(api_key=api_key)
     
     generation_config = {
         "temperature": 0.1,
@@ -113,19 +114,23 @@ def find_recodes_only(step1_input, step2_data):
     recode_patterns = [p for p in step2_data if p.get('recode_from') or p.get('recode_hint')]
     
     prompt = f"""
-TASK: Find recode relationships using step2 recode guidance.
-
-STEP1: {json.dumps(step1_input)}
-STEP2 RECODE PATTERNS: {json.dumps(recode_patterns)}
-
-Use step2 to understand source→target relationships in step1.
-
-OUTPUT (recodes only):
-[
-  {{"id": "recode_0", "name": "target_code", "codes": ["source_code"], "recode": "target_code"}}
-]
-
-Use only step1 codes in codes/recode fields.
+ TASK: Find recode relationships using step2 recode guidance.
+ 
+ STEP1: {json.dumps(step1_input)}
+ STEP2 RECODE PATTERNS: {json.dumps(recode_patterns)}
+ 
+ Use step2 to understand source→target relationships in step1.
+ Find which step1 variables are recoded INTO other step1 variables.
+ 
+ OUTPUT (recodes only):
+ [
+   {{"id": "12", "name": "12", "recode": "TARGET_COLUMN_FROM_STEP1", "codes": ["SOURCE_COLUMN_FROM_STEP1"]}}
+ ]
+ 
+ CRITICAL: 
+ - "recode" field MUST be a column name that exists in step1 data
+ - "codes" field MUST contain column names that exist in step1 data
+ - Use step2 patterns to identify which step1 variables are sources and which are targets
 """
 
     try:
@@ -177,64 +182,98 @@ def main():
         print(f"[2/4] Normal dataset - using full metadata")
         step1_input = cleaned_step1_data
     
-    # Split analysis: groups and recodes separately
-    print(f"[2/4] Split analysis: groups + recodes separately")
+    # Parallel analysis: groups and recodes simultaneously
+    print(f"[2/4] Parallel analysis: groups + recodes simultaneously")
     
-    # Find groups
-    print(f"[2/4] Finding groups...")
-    groups_start = time.time()
-    groups = find_groups_only(step1_input, step2_data)
-    print(f"[2/4] ✓ Groups found: {len(groups)} ({time.time() - groups_start:.1f}s)")
+    import concurrent.futures
     
-    # Find recodes
-    print(f"[2/4] Finding recodes...")
-    recodes_start = time.time()
-    recodes = find_recodes_only(step1_input, step2_data)
-    print(f"[2/4] ✓ Recodes found: {len(recodes)} ({time.time() - recodes_start:.1f}s)")
+    analysis_start = time.time()
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        # Submit both tasks in parallel
+        groups_future = executor.submit(find_groups_only, step1_input, step2_data)
+        recodes_future = executor.submit(find_recodes_only, step1_input, step2_data)
+        
+        # Wait for both to complete
+        groups = groups_future.result()
+        recodes = recodes_future.result()
     
-    # Combine in Python
-    result = {"groups": groups, "recoding": recodes}
+    print(f"[2/4] ✓ Parallel analysis complete: {len(groups)} groups + {len(recodes)} recodes ({time.time() - analysis_start:.1f}s)")
+    
+    # Create final structure in the required format
+    final_structure = {
+        "recodings": recodes,
+        "multiSelect": groups,
+        "typeOfNan": []
+    }
     print(f"[2/4] ✓ Combined in Python: {len(groups)} groups + {len(recodes)} recodes")
     
-    # Validate
+    # VALIDATION: Flag invalid variables that don't exist in step1 data
+    print(f"[3/4] 🔍 VALIDATION CHECK")
     step1_codes_set = set(step1_codes)
-    invalid_vars = []
     
-    for group in result.get('groups', []):
-        for var in group.get('columns', []):
-            if var not in step1_codes_set:
-                invalid_vars.append(f"Group: {var}")
+    # Check multiSelect groups
+    invalid_groups = []
+    for i, group in enumerate(final_structure.get('multiSelect', [])):
+        invalid_columns = [var for var in group.get('columns', []) if var not in step1_codes_set]
+        if invalid_columns:
+            invalid_groups.append({
+                'group_id': group.get('id', i),
+                'invalid_columns': invalid_columns
+            })
     
-    for recode in result.get('recoding', []):
+    # Check recodings
+    invalid_recodes = []
+    for i, recode in enumerate(final_structure.get('recodings', [])):
+        issues = []
+        # Check source codes
         for var in recode.get('codes', []):
             if var not in step1_codes_set:
-                invalid_vars.append(f"Recode codes: {var}")
+                issues.append(f"source '{var}' not in step1")
+        # Check target recode
         target = recode.get('recode', '')
         if target and target not in step1_codes_set:
-            invalid_vars.append(f"Recode target: {target}")
+            issues.append(f"target '{target}' not in step1")
+        
+        if issues:
+            invalid_recodes.append({
+                'recode_id': recode.get('id', i),
+                'issues': issues
+            })
     
-    print(f"[3/4] Validation:")
-    if invalid_vars:
-        print(f"🚨 Found {len(invalid_vars)} variables NOT in step1 codes:")
-        for var in invalid_vars[:10]:
-            print(f"  - {var}")
-        if len(invalid_vars) > 10:
-            print(f"  ... and {len(invalid_vars) - 10} more")
+    # Report validation results
+    total_issues = len(invalid_groups) + len(invalid_recodes)
+    
+    if total_issues == 0:
+        print(f"✅ VALIDATION PASSED: All variables exist in step1 data")
     else:
-        print(f"✅ All variables valid - only step1 codes used")
+        print(f"🚨 VALIDATION FAILED: {total_issues} issues found")
+        print(f"📊 Step1 has {len(step1_codes)} valid variables")
+        
+        if invalid_groups:
+            print(f"\n❌ INVALID MULTISELECT GROUPS ({len(invalid_groups)}):")
+            for group in invalid_groups:
+                print(f"  Group {group['group_id']}: {group['invalid_columns']}")
+        
+        if invalid_recodes:
+            print(f"\n❌ INVALID RECODINGS ({len(invalid_recodes)}):")
+            for recode in invalid_recodes:
+                print(f"  Recode {recode['recode_id']}: {', '.join(recode['issues'])}")
+        
+        print(f"\n⚠️  These variables were generated by AI but don't exist in your data!")
+        print(f"💡 Consider reviewing step2 questionnaire analysis or step1 data extraction")
     
     # Save
     print(f"[4/4] Saving results")
     output_path = Path('Output') / f"{dataset_name}_final_structure.json"
     
     with open(output_path, 'w') as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
+        json.dump(final_structure, f, indent=2, ensure_ascii=False)
     
     print(f"\n{'='*60}")
     print(f"✓ Complete!")
     print(f"{'='*60}")
-    print(f"Groups: {len(result.get('groups', []))}")
-    print(f"Recodes: {len(result.get('recoding', []))}")
+    print(f"Groups: {len(final_structure.get('multiSelect', []))}")
+    print(f"Recodes: {len(final_structure.get('recodings', []))}")
     print(f"Total time: {time.time() - total_start:.1f}s")
     print(f"Output: {output_path}")
 

@@ -25,3 +25,7 @@ Thumbs.db
 # Project
 *.log
 .env
+
+# Data and Output directories
+Data/
+Output/
