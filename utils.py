@@ -20,7 +20,10 @@ def get_api_key():
     # Try Streamlit secrets first
     try:
         import streamlit as st
-        return st.secrets["GEMINI_API_KEY"]
+        api_key = st.secrets["GEMINI_API_KEY"]
+        # Don't use placeholder values
+        if api_key and api_key != "your_gemini_api_key_here":
+            return api_key
     except:
         pass
     
