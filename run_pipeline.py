@@ -111,8 +111,9 @@ def main():
             import json
             with open(step3_output) as f:
                 data = json.load(f)
-            groups = len(data.get('groups', []))
-            recodes = len(data.get('recoding', []))
+            # Support both old and new key formats
+            groups = len(data.get('multiSelect', data.get('groups', [])))
+            recodes = len(data.get('recodings', data.get('recoding', [])))
             print(f"🔍 Results: {groups} groups + {recodes} recodes")
         except:
             pass
