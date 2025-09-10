@@ -60,6 +60,7 @@ STEP2 CLUES (ALL questionnaire patterns): {json.dumps(step2_data)}
   * Code stem patterns (Q1_1, Q1_2, Q1_3 → Q1 group even if step2 missed it)
   * Identical/similar question text with different sub-options
   * Logical groupings that make business sense
+  * Questions that share a pattern in the code (QuestionExample1, QuestionExample2, etc.)
 
 ⚡ CRITICAL RULES:
 - Groups must have 2+ variables that LOGICALLY belong together
