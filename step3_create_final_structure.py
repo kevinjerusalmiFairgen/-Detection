@@ -45,11 +45,12 @@ STEP1 METADATA: {json.dumps(step1_metadata)}
 STEP2 CLUES (ALL questionnaire patterns): {json.dumps(step2_data)}
 
 🕵️ DETECTIVE ANALYSIS REQUIRED:
-1. **QUESTION TEXT SIMILARITY**: Look for similar question stems, contexts, topics
-2. **LOGICAL GROUPING**: Variables measuring same concept (brands, features, occasions, etc.)
-3. **ANSWER PATTERNS**: Similar possible_answers structure suggests related variables  
-4. **CODE PATTERNS**: Related codes often share prefixes but NOT ALWAYS
-5. **CONTEXTUAL LOGIC**: Use business/survey logic - what makes sense to group?
+1. **OBVIOUS NAMING PATTERNS**: Q1_1, Q1_2, Q1_3 or Brand_A, Brand_B - same stem with different suffixes
+2. **QUESTION TEXT SIMILARITY**: Look for similar question stems, contexts, topics
+3. **LOGICAL GROUPING**: Variables measuring same concept (brands, features, occasions, etc.)
+4. **ANSWER PATTERNS**: Similar possible_answers structure suggests related variables  
+5. **CODE PATTERNS**: Related codes often share prefixes but NOT ALWAYS
+6. **CONTEXTUAL LOGIC**: Use business/survey logic - what makes sense to group? What is part of the same question?
 
 🎯 MULTISELECT DETECTION CLUES:
 - Multiple variables asking about same topic (brands, activities, preferences)
@@ -64,7 +65,6 @@ STEP2 CLUES (ALL questionnaire patterns): {json.dumps(step2_data)}
 
 ⚡ CRITICAL RULES:
 - Groups must have 2+ variables that LOGICALLY belong together
-- Don't group random variables just because codes are similar
 - Use metadata intelligence: question_text + possible_answers + context
 - Each group should represent choices/options for same underlying question
 - **DETECTIVE MANDATE**: Find ALL multiselect groups, including those step2 missed
@@ -182,20 +182,22 @@ def main():
         print(f"[2/4] Normal dataset - using full metadata")
         step1_input = cleaned_step1_data
     
-    # Split analysis: groups and recodes separately
-    print(f"[2/4] Split analysis: groups + recodes separately")
+    # Parallel analysis: groups and recodes simultaneously
+    print(f"[2/4] Parallel analysis: groups + recodes simultaneously")
     
-    # Find groups
-    print(f"[2/4] Finding groups...")
-    groups_start = time.time()
-    groups = find_groups_only(step1_input, step2_data)
-    print(f"[2/4] ✓ Groups found: {len(groups)} ({time.time() - groups_start:.1f}s)")
+    import concurrent.futures
     
-    # Find recodes
-    print(f"[2/4] Finding recodes...")
-    recodes_start = time.time()
-    recodes = find_recodes_only(step1_input, step2_data)
-    print(f"[2/4] ✓ Recodes found: {len(recodes)} ({time.time() - recodes_start:.1f}s)")
+    analysis_start = time.time()
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        # Submit both tasks in parallel
+        groups_future = executor.submit(find_groups_only, step1_input, step2_data)
+        recodes_future = executor.submit(find_recodes_only, step1_input, step2_data)
+        
+        # Wait for both to complete
+        groups = groups_future.result()
+        recodes = recodes_future.result()
+    
+    print(f"[2/4] ✓ Parallel analysis complete: {len(groups)} groups + {len(recodes)} recodes ({time.time() - analysis_start:.1f}s)")
     
     # Create final structure in the required format
     final_structure = {
